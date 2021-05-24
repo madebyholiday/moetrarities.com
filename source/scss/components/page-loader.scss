@@ -1,0 +1,6 @@
+.c-page-loader {
+  @include fill(fixed);
+  background-color: $color-white;
+  z-index: $z-index-9;
+  pointer-events: none;
+}

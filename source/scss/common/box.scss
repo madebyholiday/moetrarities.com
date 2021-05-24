@@ -1,0 +1,20 @@
+.o-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.o-box__inner {
+  @include fill(absolute);
+}
+
+.o-box--1x1 {
+  padding-top: percentage(1/1); 
+}
+
+.o-box--3x2 {
+  padding-top: percentage(2/3); 
+}
+
+.o-box--16x9 {
+  padding-top: percentage(9/16);
+}

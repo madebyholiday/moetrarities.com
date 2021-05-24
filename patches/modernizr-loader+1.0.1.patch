@@ -1,0 +1,58 @@
+diff --git a/node_modules/modernizr-loader/index.js b/node_modules/modernizr-loader/index.js
+index 5ed0d3e..b0a5b7b 100644
+--- a/node_modules/modernizr-loader/index.js
++++ b/node_modules/modernizr-loader/index.js
+@@ -1,27 +1,37 @@
+ "use strict";
+ 
+ var modernizr = require("modernizr");
++var NativeModule = require("module");
+ 
+ function wrapOutput(output) {
+-    // Exposing Modernizr as a module.
+-    return ";(function(window){\n" +
+-           "var hadGlobal = 'Modernizr' in window;\n" +
+-           "var oldGlobal = window.Modernizr;\n" +
+-           output + "\n" +
+-           "module.exports = window.Modernizr;\n" +
+-           "if (hadGlobal) { window.Modernizr = oldGlobal; }\n" +
+-           "else { delete window.Modernizr; }\n" +
+-           "})(window);";
++  // Exposing Modernizr as a module.
++  return ";(function(window){\n" +
++         "var hadGlobal = 'Modernizr' in window;\n" +
++         "var oldGlobal = window.Modernizr;\n" +
++         output + "\n" +
++         "module.exports = window.Modernizr;\n" +
++         "if (hadGlobal) { window.Modernizr = oldGlobal; }\n" +
++         "else { delete window.Modernizr; }\n" +
++         "})(window);";
+ }
+ 
+ module.exports = function (config) {
+-    if (typeof this.cacheable === 'function') {
+-        this.cacheable();
+-    }
++  if (typeof this.cacheable === 'function') {
++    this.cacheable();
++  }
+ 
+-    var cb = this.async();
++  var cb = this.async();
+ 
+-    modernizr.build(this.exec(config, this.resource), function (output) {
+-        cb(null, wrapOutput(output));
+-    });
++  var exec = function(code, filename) {
++    var _module = new NativeModule(filename, this);
++    _module.paths = NativeModule._nodeModulePaths(this.context);
++    _module.filename = filename;
++    _module._compile(code, filename);
++    return _module.exports;
++  }
++  exec = exec.bind(this);
++
++  modernizr.build(exec(config, this.resource), function (output) {
++    cb(null, wrapOutput(output));
++  });
+ };

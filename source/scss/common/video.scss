@@ -1,0 +1,50 @@
+.o-video {
+  position: relative;
+  overflow: hidden;
+  
+  video {
+    display: block;
+    max-width: 100%;
+    backface-visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+
+  &.is-playing-video video {
+    opacity: 1;
+  }
+
+  .is-mobile {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    
+    + * {
+      display: none;
+      
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+    }
+  }
+}
+
+.o-video--cover {
+  @include fill(absolute);
+  
+  video {
+    @include fill(relative);
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.o-video--contain {
+  @include fill(absolute);
+  
+  video {
+    @include fill(relative);
+    object-fit: contain;
+    object-position: center;
+  }
+}

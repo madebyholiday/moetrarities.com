@@ -1,0 +1,40 @@
+/* Colors */
+$color-black:           #000000;
+$color-white:           #ffffff;
+
+/* Layout */
+$header-height-mobile:           70px;
+$header-height-desktop:          75px;
+
+$container-padding-mobile:       35px;
+$container-padding-mobile-large: 35px;
+$container-padding-tablet:       50px;
+$container-padding-tablet-large: 50px;
+$container-padding-desktop:      75px;
+$container-padding-large:        100px;
+$container-padding-xlarge:       100px;
+
+$grid-column-gutter:             50px;
+$grid-column-count:              12;
+
+$breakpoint-mobile-medium:       375px;
+$breakpoint-mobile-large:        568px;
+$breakpoint-tablet:              768px;
+$breakpoint-tablet-large:        900px;
+$breakpoint-desktop:             1024px;
+$breakpoint-large:               1200px;
+$breakpoint-xlarge:              1440px;
+$breakpoint-xxlarge:             1600px;
+$breakpoint-xxxlarge:            1920px;
+
+$mq-mobile-medium: '(min-width: #{$breakpoint-mobile-medium})';
+$mq-mobile-large:  '(min-width: #{$breakpoint-mobile-large})';
+$mq-tablet:        '(min-width: #{$breakpoint-tablet})';
+$mq-tablet-large:  '(min-width: #{$breakpoint-tablet-large})';
+$mq-desktop:       '(min-width: #{$breakpoint-desktop})';
+$mq-large:         '(min-width: #{$breakpoint-large})';
+$mq-xlarge:        '(min-width: #{$breakpoint-xlarge})';
+$mq-xxlarge:       '(min-width: #{$breakpoint-xxlarge})';
+$mq-xxxlarge:      '(min-width: #{$breakpoint-xxxlarge})';
+
+$transition-ease: cubic-bezier(.075,.82,.165,1);

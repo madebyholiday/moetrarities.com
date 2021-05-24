@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="{{ rev('/static/images/favicon.png') }}" />
+    <link rel="stylesheet" href="https://use.typekit.net/zsc6omy.css">
+
+    <script type="text/javascript">
+      window.App = {}
+    </script>
+
+    {% include '/partials/_bundle' %}
+    
+    {{ head() }}    
+  </head>    
+
+  {%- set bodyClass -%}
+    {%- if entry is defined -%}
+      page-{{ entry.getSection().name | kebab ?: 'home' }} page-{{ entry.getSection().name | kebab ?: 'home' }}--{{ entry.title | kebab ?: 'home' }}
+    {%- elseif category is defined -%}
+      page-category-{{ category.group | kebab }}  
+    {%- else -%}
+      page-404
+    {%- endif -%}
+  {%- endset -%}
+
+  {%- set namespace -%}
+    {%- if entry is defined -%}        
+      {{ entry.getSection().name | kebab ?: 'home' }}
+    {%- elseif category is defined -%}
+      {{ category.group | kebab }}-category
+    {%- elseif craft.app.request.segments | last -%}
+      {{ craft.app.request.segments | last | kebab }}  
+    {%- endif -%}      
+  {%- endset -%}
+  
+  <body class="{{ bodyClass | replace('/\\s+/', ' ') | trim }}"
+        data-barba="wrapper">
+    {{ beginBody() }}
+
+    {% include '/components/_page-loader' %}
+    
+    <div data-barba="container"
+         data-barba-namespace="{{ namespace }}">
+      <meta itemprop="body-class"
+            content="{{ bodyClass | replace('/\\s+/', ' ') | trim }}">      
+      {% include '/components/_header' %}
+      <div>
+        <main class="c-main js-main">
+          {% include '/components/_page-transition' %}
+          <div class="c-main__content">
+            {% block content %}{% endblock %}
+          </div>
+        </main>
+        {% include '/components/_footer' %}
+      </div>
+    </div>
+    {{ endBody() }}        
+  </body>
+</html>

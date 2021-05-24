@@ -1,0 +1,13 @@
+.o-svg {
+  position: relative;
+
+  > svg,
+  > img {
+    @include fill(absolute);
+    overflow: visible;
+  }
+}
+
+.o-svg--logo-inline {
+  /*padding-top: percentage(37.4/237.7);*/
+}

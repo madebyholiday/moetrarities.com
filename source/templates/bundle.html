@@ -1,0 +1,23 @@
+<% const assets = compilation.getAssets() %>
+
+<% for (key in htmlWebpackPlugin.files.js) { %>
+  <% var name = htmlWebpackPlugin.files.js[key] %>
+  <% for (key in assets) { %>
+    <% var hash = assets[key].info.contenthash %>
+    <% if ( name.match(hash) ) { %>
+      <% name = name.replace('.' + hash, '') %>
+    <% } %>
+  <% } %>
+  {% do view.registerJsFile(rev('<%= name %>'), { defer: true }) %}
+<% } %>
+
+<% for (key in htmlWebpackPlugin.files.css) { %>
+  <% var name = htmlWebpackPlugin.files.css[key] %>
+  <% for (key in assets) { %>
+    <% var hash = assets[key].info.contenthash %>
+    <% if ( name.match(hash) ) { %>
+      <% name = name.replace('.' + hash, '').replace('../css/', '') %>
+    <% } %>
+  <% } %>
+  {% do view.registerCssFile(rev('<%= name %>')) %}
+<% } %>

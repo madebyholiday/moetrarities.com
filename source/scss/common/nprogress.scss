@@ -1,0 +1,10 @@
+/* Make clicks pass-through */
+#nprogress .bar {
+  background: #8DBBDF;
+  z-index: 899;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  box-shadow: 0 0 10px #8DBBDF, 0 0 5px #8DBBDF;
+}

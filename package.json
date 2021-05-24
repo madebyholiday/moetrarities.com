@@ -1,0 +1,60 @@
+{
+  "name": "moetrarities.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV='development' webpack -c webpack.config.js",
+    "build": "NODE_ENV='production' webpack -c webpack.config.js",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madebyholiday/moetrarities.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madebyholiday/moetrarities.com/issues"
+  },
+  "homepage": "https://github.com/madebyholiday/moetrarities.com#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "autoprefixer": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^5.0.0-alpha.15",
+    "imports-loader": "^1.2.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^1.3.3",
+    "modernizr": "^3.11.4",
+    "modernizr-loader": "^1.0.1",
+    "node-sass": "^5.0.0",
+    "patch-package": "^6.2.2",
+    "postcss-loader": "^4.1.0",
+    "sass-loader": "^10.1.0",
+    "source-map-loader": "^2.0.0",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-manifest-plugin": "^3.0.0"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "bluebird": "^3.7.2",
+    "core-js": "^3.8.1",
+    "custom-event-polyfill": "^1.0.7",
+    "dom4": "^2.1.6",
+    "gsap": "^3.5.1",
+    "jquery": "^3.5.1",
+    "jquery.easing": "^1.4.1",
+    "lazysizes": "^5.3.0-beta1",
+    "lodash": "^4.17.20",
+    "nprogress": "^0.2.0",
+    "objectFitPolyfill": "^2.3.0",
+    "scrollmagic": "^2.0.8",
+    "slick-carousel": "^1.8.1"
+  }
+}

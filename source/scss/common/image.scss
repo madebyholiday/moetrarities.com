@@ -1,0 +1,71 @@
+img {
+  max-width: 100%;
+  user-select: none;
+}
+
+.o-image {
+  position: relative;
+  overflow: hidden;
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .is-mobile {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+    
+    + * {
+      display: none;
+      
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+    }
+  }
+
+  &[class*=radius] {
+    transform: translateZ(0);
+  }
+}
+
+.o-image--cover {
+  @include fill(absolute);
+
+  picture {
+    height: 100%;
+  }
+    
+  img, svg {
+    @include fill(relative);
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.o-image--contain {
+  @include fill(absolute);
+
+  picture {
+    height: 100%;
+  }
+  
+  img {
+    @include fill(relative);
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.o-image--lazy {  
+  img {
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  img.lazyloaded {
+    opacity: 1;
+  }
+}
