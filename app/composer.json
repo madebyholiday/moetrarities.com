@@ -3,6 +3,7 @@
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/cms": "^3.6.4",
     "nystudio107/craft-imageoptimize": "1.6.33",
+    "nystudio107/craft-seomatic": "3.3.42",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

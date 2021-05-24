@@ -1,1 +1,60 @@
-<header></header>
+<header class="c-header js-header">
+  <div class="c-header__eyebrow">
+    <div class="c-header__domain">Moët Hennessy Private</div>
+    <nav class="c-nav-user">
+      <ul>
+        <li>
+          <a>Account</a>
+        </li>
+        <li class="c-nav-user__cellar">
+          <a>
+            <span>My Cellar</span> <span class="count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="c-header__main">
+    <div class="c-header__menu-toggle-wrapper">
+      <button class="c-menu-toggle">
+        <div class="c-menu-toggle__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="c-header__logo-wrapper">
+      <div class="c-header__logo">
+        <a href="siteurl()">
+          <div class="o-svg o-svg--logo">
+            {{ svg('@webroot/assets/static/images/logo.svg') }}
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <nav class="c-nav-primary">
+      <ul>
+        <li><a>Products</a></li>
+        <li><a>Domains</a></li>
+        <li><a>Experiences</a></li>
+      </ul>
+    </nav>
+
+    <nav class="c-nav-secondary">
+      <ul>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="c-header__mobile-cart-wrapper">
+      <div class="c-header__mobile-cart">
+        <span>0</span>
+      </div>
+    </div>
+  </div>   
+</header>

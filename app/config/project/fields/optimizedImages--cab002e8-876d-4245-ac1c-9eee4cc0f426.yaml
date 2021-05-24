@@ -1,0 +1,141 @@
+contentColumnType: text
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: optimizedImages
+instructions: ''
+name: 'Optimized Images'
+searchable: false
+settings:
+  displayDominantColorPalette: '1'
+  displayLazyLoadPlaceholderImages: '1'
+  displayOptimizedImageVariants: '1'
+  ignoreFilesOfType:
+    - image/svg
+    - image/gif
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '2000'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+        -
+          - quality
+          - '100'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '1200'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '100'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '992'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '768'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '576'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '60'
+        -
+          - format
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

@@ -5,3 +5,21 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   user-select: none;
 }
+
+.t-normal-caps {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 500;
+}
+
+.t-small-caps {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 500;
+}
+
+a {
+  cursor: pointer;
+}

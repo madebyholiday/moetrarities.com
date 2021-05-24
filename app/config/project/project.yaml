@@ -1,4 +1,4 @@
-dateModified: 1621883004
+dateModified: 1621886020
 email:
   fromEmail: richard@madeby.holiday
   fromName: Rarities
@@ -11,7 +11,12 @@ plugins:
   image-optimize:
     edition: standard
     enabled: true
+    licenseKey: OT08DXXOGO6FBJIS4OUSZY58
     schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.9
 system:
   edition: pro
   live: true

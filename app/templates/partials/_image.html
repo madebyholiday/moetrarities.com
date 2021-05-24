@@ -1,0 +1,79 @@
+{% if fit is not defined %}
+{% set fit = 'cover' %}
+{% endif %}
+
+{% if class is not defined %}
+{% set class = '' %}
+{% endif %}
+
+{% if lazyload is not defined %}
+{% set lazyload = true %}
+{% endif %}
+
+{% if preload is not defined %}
+{% set preload = false %}
+{% endif %}
+
+<div class="o-image o-image--{{ fit }} {% if lazyload %}o-image--lazy{% endif %} {{ class }}">
+  {% if mobileImage is defined and mobileImage %}
+  <picture class="is-mobile">
+    <source    
+      srcset="{{ mobileImage.optimizedImages.srcsetWebP() }}" 
+      sizes="100vw"
+      type="image/webp" />
+    <img
+      style="object-position:{% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %};"
+      {% if lazyload %}
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      {% endif %}
+      draggable="false"
+      {% if lazyload %}
+      class="lazyload"
+      {% endif %}
+      {% if mobileImage.extension == 'gif' %}
+      {% if lazyload %}data-{% endif %}src="{{ mobileImage.url() }}"
+      {% else %}
+      {% if lazyload %}data-{% endif %}src="{{ mobileImage.optimizedImages.src() }}"
+      {% if lazyload %}data-{% endif %}srcset="{{ mobileImage.optimizedImages.srcset() }}"
+      sizes="auto"
+      {% endif %}
+      {% if preload %}
+      data-preload="{{ mobileImage.optimizedImages.src() }}"
+      {% endif %}
+      data-object-fit="{{ fit }}"
+      data-object-position="{% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %}"
+      alt="{{ mobileImage.title }}" />
+  </picture>
+  {% endif %}
+
+  {% if image is defined and image %}
+  <picture>
+    <source
+      srcset="{{ image.optimizedImages.srcsetWebP() }}" 
+      sizes="100vw"
+      type="image/webp" />
+    <img
+      style="object-position:{% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %};"
+      {% if lazyload %}
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      {% endif %}
+      draggable="false"
+      {% if lazyload %}
+      class="lazyload"
+      {% endif %}
+      {% if image.extension == 'gif' %}
+      {% if lazyload %}data-{% endif %}src="{{ image.url() }}"
+      {% else %}
+      {% if lazyload %}data-{% endif %}src="{{ image.optimizedImages.src() }}"
+      {% if lazyload %}data-{% endif %}srcset="{{ image.optimizedImages.srcset() }}"
+      sizes="auto"
+      {% endif %}
+      {% if preload %}
+      data-preload="{{ image.optimizedImages.src() }}"
+      {% endif %}
+      data-object-fit="{{ fit }}"
+      data-object-position="{% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %}"
+      alt="{{ image.title }}" />
+  </picture>
+  {% endif %}
+</div>

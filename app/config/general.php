@@ -34,4 +34,10 @@ return [
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
+
+    'aliases' => [
+      '@primarySiteUrl' => getenv('PRIMARY_SITE_URL'),
+      '@assetBaseUrl' => getenv('ASSETS_BASE_URL'),
+      '@assetBasePath' => getenv('ASSETS_BASE_PATH')
+    ]
 ];
