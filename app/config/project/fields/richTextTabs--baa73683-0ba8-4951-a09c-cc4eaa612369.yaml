@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: richTextTabs
+instructions: ''
+name: 'Rich Text Tabs'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_richtexttabs}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

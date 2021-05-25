@@ -30,12 +30,16 @@ body {
   font-family: 'Gotham';
   font-weight: 300;
   color: $color-black;
-  background-color: darken($color-spring-wood, 50%);
+  background-color: $color-spring-wood;
   overscroll-behavior-y: none;
   padding-top: $header-height-mobile;
 
   @include breakpoint(tablet) {
-    padding-top: $header-height-desktop + $header-eyebrow-height-desktop;;    
+    padding-top: $header-height-desktop + $header-eyebrow-height-desktop;
+  }
+
+  &.is-transparent-header {
+    padding-top: 0;
   }
    
   &.is-loading,

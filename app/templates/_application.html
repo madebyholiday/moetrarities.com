@@ -19,12 +19,15 @@
 
   {%- set bodyClass -%}
     {%- if entry is defined -%}
-      page-{{ entry.getSection().name | kebab ?: 'home' }} page-{{ entry.getSection().name | kebab ?: 'home' }}--{{ entry.title | kebab ?: 'home' }}
+      page-{{ entry.getSection().name | kebab ?: 'home' }} page-{{ entry.getSection().name | kebab ?: 'home' }}--{{ entry.title | kebab ?: 'home' }} 
     {%- elseif category is defined -%}
       page-category-{{ category.group | kebab }}  
     {%- else -%}
-      page-404
+      page-404 
     {%- endif -%}
+    {% if entry.type == 'brand' %}
+      is-transparent-header
+    {% endif %}
   {%- endset -%}
 
   {%- set namespace -%}

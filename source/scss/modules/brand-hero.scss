@@ -1,0 +1,59 @@
+.m-brand-hero {
+  position: relative;
+  height: 150vw;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    height: 60vw;
+    max-height: 750px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $color-spring-wood;
+    height: 75px;
+    width: 50%;
+    z-index: 2;
+
+    @include breakpoint(tablet) {
+      height: 100px;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $color-spring-wood;
+    height: 25px;
+    width: 50%;
+    z-index: 2;
+
+    @include breakpoint(tablet) {
+      height: 30px;
+    }
+  }
+}
+
+.m-brand-hero__asset {
+  @include fill(absolute);  
+}
+
+.m-brand-hero__logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  z-index: 3;
+  background-color: $color-spring-wood;
+  border-radius: 50%;
+
+  @include breakpoint(tablet) {
+    width: 175px;
+  }
+}

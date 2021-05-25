@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: logo
+instructions: ''
+name: Logo
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:1f6a8e8a-e8d6-4571-b504-c0109b5feb6a' # Images
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add a logo'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:1f6a8e8a-e8d6-4571-b504-c0109b5feb6a' # Images
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:1f6a8e8a-e8d6-4571-b504-c0109b5feb6a' # Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

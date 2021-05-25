@@ -204,9 +204,6 @@ class Application {
 
   onWindowWillreveal () {
     this.$body.addClass('is-revealed')
-
-    if ( !this.$body.hasClass('page-home') ) 
-      window.App.scroll.start()
   }
 
   onWindowNavigate ( e, url ) {

@@ -27,6 +27,24 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: efd5463b-0d13-4a5b-9e63-a7553e5adaa4 # Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 137d4feb-8994-4ed2-8c8b-fa575599d9a4 # Attribution
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: bde9e72f-0718-4522-99d5-f28abbb76ce7 # Object Position
             instructions: null
             label: null

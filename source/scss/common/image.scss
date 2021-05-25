@@ -3,10 +3,7 @@ img {
   user-select: none;
 }
 
-.o-image {
-  position: relative;
-  overflow: hidden;
-  
+.o-image {  
   img {
     display: block;
     max-width: 100%;
@@ -31,29 +28,29 @@ img {
   }
 }
 
-.o-image--cover {
+.o-image--fill {
   @include fill(absolute);
+}
 
+.o-image--cover {  
   picture {
     height: 100%;
   }
     
   img, svg {
-    @include fill(relative);
+    @include fill(absolute);
     object-fit: cover;
     object-position: center;
   }
 }
 
 .o-image--contain {
-  @include fill(absolute);
-
   picture {
     height: 100%;
   }
   
   img {
-    @include fill(relative);
+    @include fill(absolute);
     object-fit: contain;
     object-position: center;
   }

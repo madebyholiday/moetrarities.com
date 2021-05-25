@@ -6,13 +6,27 @@
   color: $color-black;
   z-index: $z-index-8;
   background-color: $color-spring-wood;
+
+  body:not(.is-resizing) & {
+    transition: color 300ms ease;
+  }  
+  
+  body.is-transparent-header & {
+    color: $color-white;
+    background-color: transparent;    
+  }
+  
+  @include breakpoint(desktop) {
+    &:hover {
+      color: $color-black !important;
+    }
+  }
 }
 
 .c-header__eyebrow {
   position: relative;
   display: none;
   height: $header-eyebrow-height-desktop;
-  color: $color-black;
   border-bottom: solid 1px transparentize($color-black, .75);
   padding: 0 $container-padding-mobile;
   z-index: 2;
@@ -23,6 +37,10 @@
       border-color 300ms ease 500ms;
   }  
 
+  body.is-transparent-header & {
+    border-bottom: solid 1px transparentize($color-white, .75);
+  }
+  
   body.is-menu-open & {
     color: $color-white;
     border-bottom: solid 1px transparentize($color-white, .75);
@@ -41,6 +59,21 @@
   @include breakpoint(desktop) {
     padding: 0 $container-padding-desktop;
     background-color: $color-spring-wood;
+
+    body:not(.is-resizing) & {
+      transition:
+        background-color 300ms ease,
+        border-color 300ms ease;
+    }  
+    
+    body.is-transparent-header & {
+      background-color: transparent;
+    }
+
+    .c-header:hover & {
+      background-color: $color-spring-wood;
+      border-bottom: solid 1px transparentize($color-black, .75);
+    }
   }
 }
 
@@ -67,11 +100,26 @@
   body:not(.is-resizing) & {
     transition: border-color 300ms ease 500ms;
   }
+
+  body.is-transparent-header & {
+    border-left: solid 1px transparentize($color-white, .75);
+    transition: border-color 300ms ease;
+  }
   
   body.is-menu-open & {
     border-left: solid 1px transparentize($color-white, .75);
     transition: border-color 300ms ease;
-  }  
+  }
+  
+  @include breakpoint(desktop) {
+    body:not(.is-resizing) & {
+      transition: border-color 300ms ease;
+    }
+
+    .c-header:hover & {
+      border-left: solid 1px transparentize($color-black, .75);      
+    }
+  }
 }
 
 .c-nav-user ul li a {
@@ -110,6 +158,18 @@
   @include breakpoint(desktop) {
     padding: 0 $container-padding-desktop;
     background-color: $color-spring-wood;
+    
+    body:not(.is-resizing) & {
+      transition: background-color 300ms ease;
+    }    
+
+    body.is-transparent-header & {
+      background-color: transparent;
+    }
+    
+    .c-header:hover & {
+      background-color: $color-spring-wood;
+    }
   }
 }
 
@@ -135,6 +195,20 @@
     body.is-menu-open & {
       fill: $color-white;
       transition: fill 300ms ease 200ms;
+    }
+
+    body.is-transparent-header & {
+      fill: $color-white;
+    }
+
+    @include breakpoint(desktop) {
+      body:not(.is-resizing) & {
+        transition: fill 300ms ease;
+      }
+      
+      .c-header:hover & {
+        fill: $color-black;
+      }
     }
   }
 }
@@ -162,12 +236,16 @@
   position: absolute;
   display: block;
   background-color: $color-black;
-  height: 1px;
+  height: 1px;  
   
   body:not(.is-resizing) & {
     transition:
       width 300ms ease,
       background-color 300ms ease 400ms;
+  }
+
+  body.is-transparent-header & {
+    background-color: $color-white;
   }
 
   body.is-menu-open & {
@@ -229,10 +307,15 @@
       color 300ms ease 400ms,
       background-color 300ms ease 400ms;
   }
-  
-  body.is-menu-open & {
-    background-color: $color-white;
+
+  body.is-transparent-header & {
     color: $color-black;
+    background-color: $color-white;
+  }
+    
+  body.is-menu-open & {
+    color: $color-black;
+    background-color: $color-white;
     transition:
       color 300ms ease 200ms,
       background-color 300ms ease 200ms;
@@ -291,6 +374,16 @@
 
   @include breakpoint(desktop) {
     display: block;
+    opacity: 0;
+    visibility: hidden;
+
+    .c-header:hover & {
+      opacity: 1;
+      visibility: visible;
+      transition:
+        visibility 300ms ease 200ms,
+        opacity 300ms ease 200ms;
+    }
   }
 }
 
@@ -348,6 +441,7 @@
 
 .c-nav-dropdown-block--featured-image {
   max-width: 450px;
+  flex: 1;
 }
 
 /* Nav Secondary */

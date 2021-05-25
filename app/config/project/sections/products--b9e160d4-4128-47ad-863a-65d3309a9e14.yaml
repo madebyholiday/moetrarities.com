@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: products
+name: Products
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: # Rarities
+    enabledByDefault: true
+    hasUrls: true
+    template: products/_entry
+    uriFormat: 'products/{slug}'
+structure:
+  maxLevels: 1
+  uid: b5085b8a-4186-479d-a9c3-cf6c2d1aea19
+type: structure

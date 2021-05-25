@@ -1,0 +1,16 @@
+<div class="m-brand-hero">
+  <div class="m-brand-hero__asset">
+    {% include '/partials/_image' with {
+      image: entry.heroImage.one(),
+      box: false
+    }%}
+  </div>
+  <div class="m-brand-hero__logo">
+    <div class="o-box o-box--1x1">
+      {% include '/partials/_image' with {
+        image: entry.logo.one(),
+        box: false
+      }%}
+    </div>    
+  </div>
+</div>

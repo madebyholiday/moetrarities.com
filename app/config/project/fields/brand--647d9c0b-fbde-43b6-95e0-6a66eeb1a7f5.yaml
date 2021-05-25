@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: brand
+instructions: ''
+name: Brand
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add a brand'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:38f82feb-a29d-41bf-99fd-e274400842e6' # Brands
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

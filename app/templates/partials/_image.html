@@ -14,9 +14,12 @@
 {% set preload = false %}
 {% endif %}
 
-<div class="o-responsive-image-container">
-  {% if mobileImage is defined and mobileImage %}  
-  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} is-mobile">    
+<div class="o-responsive-image-container">  
+  {% if mobileImage is defined and mobileImage %}
+  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} is-mobile">
+    {% if box %}
+    <div class="o-box" style="padding-top: {{(mobileImage.height / mobileImage.width) * 100 }}%;">
+      {% endif %}
     <picture>
       <source    
         data-srcset="{{ mobileImage.optimizedImages.srcsetWebP() }}" 
@@ -41,11 +44,17 @@
         {% if preload %}preload{% endif %}
         alt="{{ mobileImage.title }}" />
     </picture>
-  </div>
+    {% if box %}
+    </div>
+    {% endif %}
+  </div>  
   {% endif %}
   
   {% if image is defined and image %}
-  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }}">
+  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} o-image--{{ image.objectFit }} {{ class }} {% if not box %}o-image--fill{% endif %}">
+    {% if box %}
+    <div class="o-box" style="padding-top: {{(image.height / image.width) * 100 }}%;">
+      {% endif %}
     <picture>
       <source
         data-srcset="{{ image.optimizedImages.srcsetWebP() }}" 
@@ -70,6 +79,9 @@
         {% if preload %}preload{% endif %}
         alt="{{ image.title }}" />
     </picture>
+    {% if box %}
+    </div>
+    {% endif %}
   </div>
   {% endif %}
 </div>

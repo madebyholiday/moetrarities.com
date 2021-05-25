@@ -1,0 +1,26 @@
+enableVersioning: true
+handle: brands
+name: Brands
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: # Rarities
+    enabledByDefault: true
+    hasUrls: true
+    template: brands/_entry
+    uriFormat: 'brands/{slug}'
+structure:
+  maxLevels: 1
+  uid: 376ab600-4217-4b21-9fc8-5e5e460687dd
+type: structure
