@@ -1,0 +1,28 @@
+handle: footerSecondary
+instructions: ''
+maxNodes: ''
+name: 'Footer - Secondary'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: null # Rarities
+sortOrder: 6
+structure:
+  maxLevels: '1'
+  uid: 9414e21e-d38d-4a1a-959f-2e3cd79bb473

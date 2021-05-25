@@ -137,6 +137,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-facebook:before {
+  content: "\e906"; }
+
+.icon-twitter:before {
+  content: "\e905"; }
+
+.icon-instagram:before {
+  content: "\e904"; }
+
 .icon-carat-right:before {
   content: "\e903"; }
 
@@ -169,6 +178,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .05em;
+  font-weight: 500; }
+
+.t-xsmall-caps, .c-footer-nav-secondary ul li a {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
   font-weight: 500; }
 
 a {
@@ -1581,7 +1596,11 @@ body {
   font-weight: 300;
   color: #131212;
   background-color: #9b7956;
-  overscroll-behavior-y: none; }
+  overscroll-behavior-y: none;
+  padding-top: 70px; }
+  @media (min-width: 768px) {
+    body {
+      padding-top: 115px; } }
   body.is-loading *:not(.c-page-loader), body.is-navigating *:not(.c-page-loader) {
     cursor: wait !important;
     pointer-events: none; }
@@ -1972,6 +1991,134 @@ body {
 
 .c-mobile-menu-link-list__links > ul > li > a {
   font-size: 14px; }
+
+.c-footer {
+  text-align: center;
+  padding: 50px 0 0 0;
+  color: #ffffff;
+  background-color: #131212; }
+
+.c-footer .container {
+  max-width: 1000px; }
+
+.c-footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 50px 0; }
+  @media (min-width: 768px) {
+    .c-footer__content {
+      flex-direction: row; } }
+
+.c-footer__stamp {
+  width: 100px;
+  margin: 0 0 50px 0; }
+  @media (min-width: 768px) {
+    .c-footer__stamp {
+      margin: 0 50px 0 0; } }
+  @media (min-width: 1024px) {
+    .c-footer__stamp {
+      width: 110px; } }
+
+@media (min-width: 768px) {
+  .c-footer-nav-groups {
+    flex: 1; } }
+
+@media (min-width: 768px) {
+  .c-footer-nav-group {
+    display: flex; } }
+
+@media (min-width: 768px) {
+  .c-footer-nav-group--dr {
+    flex-direction: row-reverse;
+    justify-content: space-between; } }
+
+.c-footer-nav-primary {
+  margin: 0 0 50px 0; }
+  @media (min-width: 768px) {
+    .c-footer-nav-primary {
+      margin: 0 0 20px 0;
+      flex: 1; } }
+
+.c-footer-nav-primary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  @media (min-width: 768px) {
+    .c-footer-nav-primary ul {
+      display: flex;
+      justify-content: space-between; } }
+
+.c-footer-nav-primary ul li {
+  margin: 0 0 15px 0; }
+  .c-footer-nav-primary ul li:last-child {
+    margin-bottom: 0; }
+
+.c-footer-nav-primary ul li a {
+  font-family: 'freightdispcmp-pro';
+  font-size: 30px;
+  font-weight: 500; }
+
+.c-footer-nav-secondary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.c-footer-nav-secondary ul li {
+  margin: 0 0 20px 0; }
+  .c-footer-nav-secondary ul li:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .c-footer-nav-secondary ul li {
+      display: inline-block;
+      margin: 0 20px; }
+      .c-footer-nav-secondary ul li:first-child {
+        margin-left: 0; }
+      .c-footer-nav-secondary ul li:last-child {
+        margin-right: 0; } }
+
+.c-footer-nav-secondary ul li a {
+  color: #ACAEB0; }
+
+.c-footer-nav-social {
+  margin: 0 0 50px 0; }
+  @media (min-width: 768px) {
+    .c-footer-nav-social {
+      margin: 0; } }
+
+.c-footer-nav-social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.c-footer-nav-social ul li {
+  display: inline-block;
+  margin: 0 15px; }
+  @media (min-width: 768px) {
+    .c-footer-nav-social ul li {
+      margin: 0 10px; } }
+  .c-footer-nav-social ul li:first-child {
+    margin-left: 0; }
+  .c-footer-nav-social ul li:last-child {
+    margin-right: 0; }
+
+.c-footer-nav-social ul li a {
+  font-size: 0;
+  color: transparent; }
+  .c-footer-nav-social ul li a:before {
+    font-size: 20px;
+    color: #ffffff; }
+    @media (min-width: 768px) {
+      .c-footer-nav-social ul li a:before {
+        font-size: 16px; } }
+
+.c-footer__copyright {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5em;
+  padding: 10px 0;
+  color: #ACAEB0;
+  border-top: solid 1px rgba(255, 255, 255, 0.3); }
 
 .c-page-loader {
   position: fixed;

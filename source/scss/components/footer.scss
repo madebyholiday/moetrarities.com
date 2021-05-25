@@ -1,0 +1,173 @@
+.c-footer {
+  text-align: center;
+  padding: 50px 0 0 0;
+  color: $color-white;
+  background-color: $color-black;
+}
+
+.c-footer .container {
+  max-width: 1000px;
+}
+
+.c-footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;    
+  }
+}
+
+.c-footer__stamp {
+  width: 100px;
+  margin: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0 50px 0 0;
+  }
+  
+  @include breakpoint(desktop) {
+    width: 110px;    
+  }
+}
+
+.c-footer-nav-groups {
+  @include breakpoint(tablet) {
+    flex: 1;
+  }
+}
+
+.c-footer-nav-group {
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+}
+
+.c-footer-nav-group--dr {
+  @include breakpoint(tablet) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }  
+}
+
+.c-footer-nav-primary {
+  margin: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0 0 20px 0;
+    flex: 1;
+  }  
+}
+
+.c-footer-nav-primary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-footer-nav-primary ul li {
+  margin: 0 0 15px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-footer-nav-primary ul li a {
+  font-family: 'freightdispcmp-pro';
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.c-footer-nav-secondary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-footer-nav-secondary ul li {
+  margin: 0 0 20px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(tablet) {
+    display: inline-block;
+    margin: 0 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.c-footer-nav-secondary ul li a {
+  @extend .t-xsmall-caps;
+  color: $color-gray;
+}
+
+.c-footer-nav-social {
+  margin: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+}
+
+.c-footer-nav-social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-footer-nav-social ul li {
+  display: inline-block;
+  margin: 0 15px;
+
+  @include breakpoint(tablet) {
+    margin: 0 10px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.c-footer-nav-social ul li a {
+  font-size: 0;
+  color: transparent;
+
+  &:before {
+    font-size: 20px;
+    color: $color-white;
+
+    @include breakpoint(tablet) {
+      font-size: 16px;
+    }
+  }  
+}
+
+.c-footer__copyright {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5em;
+  padding: 10px 0;
+  color: $color-gray;
+  border-top: solid 1px transparentize($color-white, .7);
+}

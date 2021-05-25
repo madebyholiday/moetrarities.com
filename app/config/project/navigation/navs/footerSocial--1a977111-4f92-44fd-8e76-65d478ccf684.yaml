@@ -1,0 +1,28 @@
+handle: footerSocial
+instructions: ''
+maxNodes: ''
+name: 'Footer - Social'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: null # Rarities
+sortOrder: 7
+structure:
+  maxLevels: null
+  uid: e5f2c2b8-b181-436c-9477-ce3bee01a73d
