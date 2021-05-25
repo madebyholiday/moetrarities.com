@@ -1,0 +1,67 @@
+field: e8fc9977-c0bd-4a08-b442-73dc1f3847fa # Items
+fieldLayouts:
+  1e60e2cf-88c3-4eef-ad64-e1da0efe8e7e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 44160020-7380-4582-a7b8-3fdf572b9f9c # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ad8f9120-14a9-41f0-bdc9-406449c8f13f # Entry
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  44160020-7380-4582-a7b8-3fdf572b9f9c: # Title
+    contentColumnType: text
+    fieldGroup: null
+    handle: itemTitle
+    instructions: ''
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ad8f9120-14a9-41f0-bdc9-406449c8f13f: # Entry
+    contentColumnType: string
+    fieldGroup: null
+    handle: entry
+    instructions: ''
+    name: Entry
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Add an entry'
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries

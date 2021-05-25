@@ -17,7 +17,7 @@
   
   <div class="c-header__main">
     <div class="c-header__menu-toggle-wrapper">
-      <button class="c-menu-toggle">
+      <button class="c-menu-toggle js-menu-toggle">
         <div class="c-menu-toggle__icon">
           <span></span>
           <span></span>
@@ -38,9 +38,17 @@
 
     <nav class="c-nav-primary">
       <ul>
-        <li><a>Products</a></li>
-        <li><a>Domains</a></li>
-        <li><a>Experiences</a></li>
+        {% set nodes = craft.navigation.nodes().handle('headerPrimary').level(1).all() %}
+        {% for node in nodes %}
+        <li class="{% if node.subNavigationBlocks | length > 0 %}has-subnav{% endif %}">
+          <a href="{{ node.url }}">
+            <span>{{ node.title }}</span>
+            {% if node.subNavigationBlocks | length > 0 %}
+            <i></i>
+            {% endif %}
+          </a>
+        </li>
+        {% endfor %}
       </ul>
     </nav>
 
@@ -56,5 +64,63 @@
         <span>0</span>
       </div>
     </div>
-  </div>   
+  </div>
+
+  <div class="c-mobile-menu js-mobile-menu">
+    <div class="c-mobile-menu__inner">
+      <nav class="c-mobile-menu__nav">
+        <ul>
+          {% set nodes = craft.navigation.nodes().handle('headerPrimary').level(1).all() %}
+          {% for node in nodes %}
+          <li class="{% if node.subNavigationBlocks | length > 0 %}js-has-link-lists{% endif %}">
+            <a href="{{ node.url }}">
+              <span>{{ node.title }}</span>
+              {% if node.subNavigationBlocks | length > 0 %}
+              <i></i>
+              {% endif %}
+            </a>
+
+            {% if node.subNavigationBlocks | length > 0 %}            
+            <div class="c-mobile-menu-link-lists js-link-lists">
+              <div class="c-mobile-menu-link-lists__inner">
+                {% for block in node.subNavigationBlocks %}
+                {% if block.type == 'linkList' %}
+                <div class="c-mobile-menu-link-list">
+                  <div class="c-mobile-menu-link-list__title">
+                    {{ block.blockTitle }}
+                  </div>
+                  <div class="c-mobile-menu-link-list__links">
+                    <ul>
+                      {% for item in block.items %}
+                      <li>
+                        <a href="{{ item.entry.one().url }}">
+                          {{ item.itemTitle }}
+                        </a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </li>
+          {% endfor %}
+
+          {% set nodes = craft.navigation.nodes().handle('headerSecondary').level(1).all() %}
+          {% for node in nodes %}
+          <li>
+            <a href="{{ node.url }}">
+              <span>{{ node.title }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>      
+
+      
+    </div>
+  </div>
 </header>

@@ -1,0 +1,84 @@
+field: 67958eac-7892-498d-bf9e-7af8623246ff # Sub Navigation Blocks
+fieldLayouts:
+  370003f0-50bc-45b6-b476-9903647d7e0f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0d79b379-14eb-4efb-a6d9-73162deceeae # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e8fc9977-c0bd-4a08-b442-73dc1f3847fa # Items
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0d79b379-14eb-4efb-a6d9-73162deceeae: # Title
+    contentColumnType: text
+    fieldGroup: null
+    handle: blockTitle
+    instructions: ''
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e8fc9977-c0bd-4a08-b442-73dc1f3847fa: # Items
+    contentColumnType: string
+    fieldGroup: null
+    handle: items
+    instructions: ''
+    name: Items
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 44160020-7380-4582-a7b8-3fdf572b9f9c # Title
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ad8f9120-14a9-41f0-bdc9-406449c8f13f # Entry
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_1_items}}'
+      fieldLayout: table
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: linkList
+name: 'Link List'
+sortOrder: 1

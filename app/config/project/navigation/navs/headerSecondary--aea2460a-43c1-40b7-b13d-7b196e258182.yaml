@@ -1,0 +1,28 @@
+handle: headerSecondary
+instructions: ''
+maxNodes: ''
+name: 'Header - Secondary'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: null # Rarities
+sortOrder: 4
+structure:
+  maxLevels: null
+  uid: f9e5c328-14a2-445e-a6a6-c8d69d77f35a

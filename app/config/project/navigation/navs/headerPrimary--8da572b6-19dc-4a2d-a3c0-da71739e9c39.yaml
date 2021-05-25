@@ -1,0 +1,53 @@
+fieldLayouts:
+  a37110f4-5785-4640-b382-d78571c53917:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 67958eac-7892-498d-bf9e-7af8623246ff # Sub Navigation Blocks
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6f1a6bad-1517-4786-9d51-6b40970117fb
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Fields
+        sortOrder: 1
+handle: headerPrimary
+instructions: ''
+maxNodes: ''
+name: 'Header - Primary'
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Category:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions: '*'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: null # Rarities
+sortOrder: 1
+structure:
+  maxLevels: null
+  uid: 115fb8ef-f68c-4a20-a48b-43660a724fb3

@@ -41,9 +41,9 @@ handle: images
 hasUrls: true
 name: Images
 settings:
-  path: '@assetBasePath'
+  path: '@assetBasePath/uploads'
 sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: '@assetBaseUrl'
+url: '@assetBaseUrl/uploads'

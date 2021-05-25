@@ -1,4 +1,4 @@
-dateModified: 1621886020
+dateModified: 1621954681
 email:
   fromEmail: richard@madeby.holiday
   fromName: Rarities
@@ -13,10 +13,60 @@ plugins:
     enabled: true
     licenseKey: OT08DXXOGO6FBJIS4OUSZY58
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: QB4L2S36UFSSG4H8W5GGEYJS
+    schemaVersion: 1.0.21
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: 0FIOZ9PM9NKSYJ35D4YLZ3QG
     schemaVersion: 3.0.9
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '🚧⚙ '
+      devModeTitlePrefix: '🚧 '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: SEO
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
 system:
   edition: pro
   live: true
