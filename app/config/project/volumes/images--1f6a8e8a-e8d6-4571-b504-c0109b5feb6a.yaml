@@ -27,6 +27,24 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: bde9e72f-0718-4522-99d5-f28abbb76ce7 # Object Position
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c7ca6786-ae8e-41b6-973b-bf9eee901efd # Object Fit
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: cab002e8-876d-4245-ac1c-9eee4cc0f426 # Optimized Images
             instructions: null
             label: null

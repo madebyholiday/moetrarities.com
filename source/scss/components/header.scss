@@ -3,9 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;  
-  background-color: $color-spring-wood;
   color: $color-black;
   z-index: $z-index-8;
+  background-color: $color-spring-wood;
 }
 
 .c-header__eyebrow {
@@ -20,7 +20,6 @@
   body:not(.is-resizing) & {
     transition:
       color 300ms ease 500ms,
-      background-color 300ms ease 500ms,
       border-color 300ms ease 500ms;
   }  
 
@@ -29,7 +28,6 @@
     border-bottom: solid 1px transparentize($color-white, .75);
     transition:
       color 300ms ease,
-      background-color 300ms ease,
       border-color 300ms ease;
   }
 
@@ -42,6 +40,7 @@
 
   @include breakpoint(desktop) {
     padding: 0 $container-padding-desktop;
+    background-color: $color-spring-wood;
   }
 }
 
@@ -110,6 +109,7 @@
 
   @include breakpoint(desktop) {
     padding: 0 $container-padding-desktop;
+    background-color: $color-spring-wood;
   }
 }
 
@@ -282,11 +282,75 @@
   }  
 }
 
-.c-nav-primary ul li.is-open a i {
-  &:after {
+.c-nav-dropdowns {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: none;
 
-  }    
+  @include breakpoint(desktop) {
+    display: block;
+  }
 }
+
+.c-nav-dropdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background-color: $color-spring-wood;
+}
+
+
+.c-nav-dropdown-block {
+  margin: 0 50px;
+  font-size: 14px;
+
+  @include breakpoint(tablet) {
+    margin: 0 60px;
+  }
+}
+
+.c-nav-dropdown-block__title {
+  font-family: 'freightdispcmp-pro';
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 0 24px 0;
+}
+
+.c-nav-dropdown-block__links > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-nav-dropdown-block__links--long ul {
+  columns: 2;
+  column-gap: 50px;
+
+  @include breakpoint(xlarge) {
+    column-gap: 75px;    
+  }
+}
+
+.c-nav-dropdown-block__links > ul > li {
+  margin: 0 0 12px 0;
+}
+
+.c-nav-dropdown-block__links > ul > li > a {
+  font-weight: normal;
+}
+
+.c-nav-dropdown-block--featured-image {
+  max-width: 450px;
+}
+
+/* Nav Secondary */
 
 .c-nav-secondary {
   flex: 1;

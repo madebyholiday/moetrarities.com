@@ -1,7 +1,3 @@
-{% if fit is not defined %}
-{% set fit = 'cover' %}
-{% endif %}
-
 {% if class is not defined %}
 {% set class = '' %}
 {% endif %}
@@ -10,70 +6,70 @@
 {% set lazyload = true %}
 {% endif %}
 
+{% if box is not defined %}
+{% set box = true %}
+{% endif %}
+
 {% if preload is not defined %}
 {% set preload = false %}
 {% endif %}
 
-<div class="o-image o-image--{{ fit }} {% if lazyload %}o-image--lazy{% endif %} {{ class }}">
-  {% if mobileImage is defined and mobileImage %}
-  <picture class="is-mobile">
-    <source    
-      srcset="{{ mobileImage.optimizedImages.srcsetWebP() }}" 
-      sizes="100vw"
-      type="image/webp" />
-    <img
-      style="object-position:{% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %};"
-      {% if lazyload %}
-      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-      {% endif %}
-      draggable="false"
-      {% if lazyload %}
-      class="lazyload"
-      {% endif %}
-      {% if mobileImage.extension == 'gif' %}
-      {% if lazyload %}data-{% endif %}src="{{ mobileImage.url() }}"
-      {% else %}
-      {% if lazyload %}data-{% endif %}src="{{ mobileImage.optimizedImages.src() }}"
-      {% if lazyload %}data-{% endif %}srcset="{{ mobileImage.optimizedImages.srcset() }}"
-      sizes="auto"
-      {% endif %}
-      {% if preload %}
-      data-preload="{{ mobileImage.optimizedImages.src() }}"
-      {% endif %}
-      data-object-fit="{{ fit }}"
-      data-object-position="{% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %}"
-      alt="{{ mobileImage.title }}" />
-  </picture>
+<div class="o-responsive-image-container">
+  {% if mobileImage is defined and mobileImage %}  
+  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} is-mobile">    
+    <picture>
+      <source    
+        data-srcset="{{ mobileImage.optimizedImages.srcsetWebP() }}" 
+        data-sizes="auto"
+        type="image/webp" />      
+      <img      
+        class="{% if lazyload %}lazyload{% endif %}"      
+        style="object-fit: {% if mobileImage.objectFit | length %}{{ mobileImage.objectFit }}{% else %}cover{% endif %}; object-position: {% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %};"
+        {% if lazyload %}
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        {% endif %}
+        draggable="false"    
+        {% if mobileImage.extension == 'gif' %}
+        {% if lazyload %}data-{% endif %}src="{{ mobileImage.url() }}"
+        {% else %}
+        {% if lazyload %}data-{% endif %}src="{{ mobileImage.optimizedImages.src() }}"
+        {% if lazyload %}data-{% endif %}srcset="{{ mobileImage.optimizedImages.srcset() }}"
+        data-sizes="auto"
+        {% endif %}
+        data-object-fit="{% if mobileImage.objectFit | length %}{{ mobileImage.objectFit }}{% else %}cover{% endif %}"
+        data-object-position="{% if mobileImage.objectPosition %}{{ mobileImage.objectPosition }}{% else %}center{% endif %}"
+        {% if preload %}preload{% endif %}
+        alt="{{ mobileImage.title }}" />
+    </picture>
+  </div>
   {% endif %}
-
+  
   {% if image is defined and image %}
-  <picture>
-    <source
-      srcset="{{ image.optimizedImages.srcsetWebP() }}" 
-      sizes="100vw"
-      type="image/webp" />
-    <img
-      style="object-position:{% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %};"
-      {% if lazyload %}
-      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-      {% endif %}
-      draggable="false"
-      {% if lazyload %}
-      class="lazyload"
-      {% endif %}
-      {% if image.extension == 'gif' %}
-      {% if lazyload %}data-{% endif %}src="{{ image.url() }}"
-      {% else %}
-      {% if lazyload %}data-{% endif %}src="{{ image.optimizedImages.src() }}"
-      {% if lazyload %}data-{% endif %}srcset="{{ image.optimizedImages.srcset() }}"
-      sizes="auto"
-      {% endif %}
-      {% if preload %}
-      data-preload="{{ image.optimizedImages.src() }}"
-      {% endif %}
-      data-object-fit="{{ fit }}"
-      data-object-position="{% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %}"
-      alt="{{ image.title }}" />
-  </picture>
+  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }}">
+    <picture>
+      <source
+        data-srcset="{{ image.optimizedImages.srcsetWebP() }}" 
+        data-sizes="auto"
+        type="image/webp" />
+      <img      
+        class="{% if lazyload %}lazyload{% endif %}"
+        style="object-fit: {% if image.objectFit | length %}{{ image.objectFit }}{% else %}cover{% endif %}; object-position: {% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %};"
+        {% if lazyload %}
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        {% endif %}
+        draggable="false"
+        {% if image.extension == 'gif' %}
+        {% if lazyload %}data-{% endif %}src="{{ image.url() }}"
+        {% else %}
+        {% if lazyload %}data-{% endif %}src="{{ image.optimizedImages.src() }}"
+        {% if lazyload %}data-{% endif %}srcset="{{ image.optimizedImages.srcset() }}"
+        data-sizes="auto"
+        {% endif %}
+        data-object-fit="{% if image.objectFit | length %}{{ image.objectFit }}{% else %}cover{% endif %}"
+        data-object-position="{% if image.objectPosition %}{{ image.objectPosition }}{% else %}center{% endif %}"
+        {% if preload %}preload{% endif %}
+        alt="{{ image.title }}" />
+    </picture>
+  </div>
   {% endif %}
 </div>

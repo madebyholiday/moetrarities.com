@@ -49,6 +49,6 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
-handle: feature
-name: Feature
+handle: featuredImage
+name: 'Featured Image'
 sortOrder: 2

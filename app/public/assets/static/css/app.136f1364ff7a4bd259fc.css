@@ -96,7 +96,7 @@
   font-display: swap; }
 
 @font-face {
-  font-family: 'Gotham Book';
+  font-family: 'Gotham';
   src: url("/assets/static/fonts/Gotham-Book.woff2") format("woff2"), url("/assets/static/fonts/Gotham-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -1580,7 +1580,7 @@ body {
   font-family: 'Gotham';
   font-weight: 300;
   color: #131212;
-  background-color: #FAF8F6;
+  background-color: #9b7956;
   overscroll-behavior-y: none; }
   body.is-loading *:not(.c-page-loader), body.is-navigating *:not(.c-page-loader) {
     cursor: wait !important;
@@ -1592,9 +1592,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FAF8F6;
   color: #131212;
-  z-index: 800; }
+  z-index: 800;
+  background-color: #FAF8F6; }
 
 .c-header__eyebrow {
   position: relative;
@@ -1605,11 +1605,11 @@ body {
   padding: 0 30px;
   z-index: 2; }
   body:not(.is-resizing) .c-header__eyebrow {
-    transition: color 300ms ease 500ms, background-color 300ms ease 500ms, border-color 300ms ease 500ms; }
+    transition: color 300ms ease 500ms, border-color 300ms ease 500ms; }
   body.is-menu-open .c-header__eyebrow {
     color: #ffffff;
     border-bottom: solid 1px rgba(255, 255, 255, 0.25);
-    transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease; }
+    transition: color 300ms ease, border-color 300ms ease; }
   @media (min-width: 768px) {
     .c-header__eyebrow {
       display: flex;
@@ -1618,7 +1618,8 @@ body {
       padding: 0 50px; } }
   @media (min-width: 1024px) {
     .c-header__eyebrow {
-      padding: 0 75px; } }
+      padding: 0 75px;
+      background-color: #FAF8F6; } }
 
 .c-nav-user {
   height: 100%; }
@@ -1666,7 +1667,8 @@ body {
       padding: 0 50px; } }
   @media (min-width: 1024px) {
     .c-header__main {
-      padding: 0 75px; } }
+      padding: 0 75px;
+      background-color: #FAF8F6; } }
 
 .c-header__logo-wrapper {
   flex: 1 0 190px;
@@ -1783,6 +1785,65 @@ body {
     content: "\e900";
     font-size: 22px; }
 
+.c-nav-dropdowns {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: none; }
+  @media (min-width: 1024px) {
+    .c-nav-dropdowns {
+      display: block; } }
+
+.c-nav-dropdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background-color: #FAF8F6; }
+
+.c-nav-dropdown-block {
+  margin: 0 50px;
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    .c-nav-dropdown-block {
+      margin: 0 60px; } }
+
+.c-nav-dropdown-block__title {
+  font-family: 'freightdispcmp-pro';
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 0 24px 0; }
+
+.c-nav-dropdown-block__links > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.c-nav-dropdown-block__links--long ul {
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-gap: 50px;
+       column-gap: 50px; }
+  @media (min-width: 1440px) {
+    .c-nav-dropdown-block__links--long ul {
+      -moz-column-gap: 75px;
+           column-gap: 75px; } }
+
+.c-nav-dropdown-block__links > ul > li {
+  margin: 0 0 12px 0; }
+
+.c-nav-dropdown-block__links > ul > li > a {
+  font-weight: normal; }
+
+.c-nav-dropdown-block--featured-image {
+  max-width: 450px; }
+
+/* Nav Secondary */
 .c-nav-secondary {
   flex: 1;
   display: none; }

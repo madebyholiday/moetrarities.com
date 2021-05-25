@@ -30,7 +30,7 @@ body {
   font-family: 'Gotham';
   font-weight: 300;
   color: $color-black;
-  background-color: $color-spring-wood; 
+  background-color: darken($color-spring-wood, 50%);
   overscroll-behavior-y: none;
    
   &.is-loading,

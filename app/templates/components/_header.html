@@ -28,7 +28,7 @@
 
     <div class="c-header__logo-wrapper">
       <div class="c-header__logo">
-        <a href="siteurl()">
+        <a href="{{ siteUrl() }}">
           <div class="o-svg o-svg--logo">
             {{ svg('@webroot/assets/static/images/logo.svg') }}
           </div>
@@ -40,7 +40,7 @@
       <ul>
         {% set nodes = craft.navigation.nodes().handle('headerPrimary').level(1).all() %}
         {% for node in nodes %}
-        <li class="{% if node.subNavigationBlocks | length > 0 %}has-subnav{% endif %}">
+        <li class="js-nav-primary-item" data-id="{{ node.id }}">
           <a href="{{ node.url }}">
             <span>{{ node.title }}</span>
             {% if node.subNavigationBlocks | length > 0 %}
@@ -54,8 +54,14 @@
 
     <nav class="c-nav-secondary">
       <ul>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
+        {% set nodes = craft.navigation.nodes().handle('headerSecondary').level(1).all() %}
+        {% for node in nodes %}
+        <li>
+          <a href="{{ node.url }}">
+            <span>{{ node.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
       </ul>
     </nav>
 
@@ -66,6 +72,45 @@
     </div>
   </div>
 
+  <div class="c-nav-dropdowns">
+    {% set nodes = craft.navigation.nodes().handle('headerPrimary').level(1).all() %}
+    
+    <div class="c-nav-dropdowns">
+      {% for node in nodes %}
+      {% if node.subNavigationBlocks | length > 0 %}
+      <div class="c-nav-dropdown js-nav-dropdown" data-id="{{ node.id }}">
+        {% for block in node.subNavigationBlocks %}
+        <div class="c-nav-dropdown-block c-nav-dropdown-block--{{ block.type | kebab }}">
+          {% if block.type == 'linkList' %}          
+          <div class="c-nav-dropdown-block__title">
+            {{ block.blockTitle }}
+          </div>
+          <div class="c-nav-dropdown-block__links c-nav-dropdown-block__links--{{ block.items | length > 6 ? 'long' : 'short' }}">
+            <ul>
+              {% for item in block.items %}
+              <li>
+                <a href="{{ item.entry.one().url }}">
+                  {{ item.itemTitle }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% elseif block.type == 'featuredImage' %}          
+          <div class="c-nav-dropdown-block__image">
+            {% include '/partials/_image' with {
+              'image': block.image.one()
+            } %}
+          </div>
+          {% endif %}          
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  
   <div class="c-mobile-menu js-mobile-menu">
     <div class="c-mobile-menu__inner">
       <nav class="c-mobile-menu__nav">

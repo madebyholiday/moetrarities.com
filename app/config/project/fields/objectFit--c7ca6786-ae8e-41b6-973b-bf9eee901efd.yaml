@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: objectFit
+instructions: ''
+name: 'Object Fit'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Cover
+        -
+          - value
+          - cover
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Contain
+        -
+          - value
+          - contain
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown
