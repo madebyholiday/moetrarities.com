@@ -103,11 +103,7 @@ class Application {
   destroy () {
     this.animationManager.destroy()
     this.header.destroy()
-    this.footer.destroy()
-    this.pageModules.destroy()
-    this.modalGallery.destroy()
-    
-    window.App.scroll.destroy()
+    this.footer.destroy()   
   }
 
   setScrollRestoration ( type ) {

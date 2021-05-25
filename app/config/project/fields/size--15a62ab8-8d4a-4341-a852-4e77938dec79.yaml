@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 94619819-5c53-4602-aeac-7c2e5359e615 # Product
+handle: size
+instructions: ''
+name: Size
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

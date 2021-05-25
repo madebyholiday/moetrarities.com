@@ -1688,8 +1688,17 @@ body {
   height: 100%;
   padding: 0 25px; }
 
-.c-nav-user ul li:last-child a {
-  padding-right: 0; }
+.c-nav-user__account a {
+  padding-right: 0 !important; }
+  @media (min-width: 1024px) {
+    .c-nav-user__account a {
+      padding-right: 25px !important; } }
+
+.c-nav-user__cellar {
+  display: none; }
+  @media (min-width: 1024px) {
+    .c-nav-user__cellar {
+      display: block; } }
 
 .c-nav-user__cellar span {
   display: block; }
