@@ -1,0 +1,38 @@
+fieldLayouts:
+  63ed6379-7de6-49f1-9d3f-9a852045cc9d:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: experiencesIndex
+hasTitleField: false
+name: 'Experiences Index'
+section: 4f29a97d-d232-4e7f-99a8-85d7f30a420b # Experiences Index
+sortOrder: 1
+titleFormat: Experiences
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

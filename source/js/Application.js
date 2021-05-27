@@ -100,6 +100,7 @@ class Application {
     this.setScrollRestoration('manual')
     this.playInlineVideos()
     objectFitPolyfill()
+    window.scrollTo(0,0)
   }
 
   destroy () {

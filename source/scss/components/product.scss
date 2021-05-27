@@ -1,0 +1,27 @@
+.c-product {
+  background-color: $color-pampas;
+  padding: 30px;
+  transition: background-color 400ms ease;
+
+  &:hover {
+    background-color: darken($color-pampas, 5%);
+  }
+}
+
+.c-product__title {
+  @extend .t-h3;
+  margin: 0;
+}
+
+.c-product__brand {
+  @extend .t-h6;
+  margin: 0 0 5px 0;
+}
+
+.c-product__image {
+  margin: 20px 0 0 0;
+}
+
+.c-product__image img {
+  object-fit: contain !important;
+}

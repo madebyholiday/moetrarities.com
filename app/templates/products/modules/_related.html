@@ -1,0 +1,22 @@
+{% if entry.products | length > 0 %}
+<div class="m-related-products">  
+  <div class="container">
+    <div class="row">
+      <div class="col-dk-10 col-dk-push-1">
+        <div class="m-related-products__header">
+          <h6 class="m-related-products__title">
+            {{ entry.relatedTitle ? entry.relatedTitle : 'Similar Offers' }}
+          </h6>
+        </div>
+        <div class="row">
+          {% for product in entry.products.all() %}
+          <div class="col-tb-4">
+            {% include '/components/_product' with { product: product } %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

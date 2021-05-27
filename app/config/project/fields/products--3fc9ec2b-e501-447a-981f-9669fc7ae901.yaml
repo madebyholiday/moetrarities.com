@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: 6cc45595-4d22-44c5-a299-c9d64e01864d # Assets
+handle: products
+instructions: ''
+name: Products
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add a product'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:b9e160d4-4128-47ad-863a-65d3309a9e14' # Products
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

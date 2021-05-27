@@ -1,5 +1,5 @@
 fieldLayouts:
-  d183b4ed-2aae-4878-90a8-cc8837717543:
+  b72250f2-d2c6-40ec-a284-7bfed1f5b53a:
     tabs:
       -
         elements:
@@ -27,7 +27,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 47eaa35e-391f-4599-b181-0dfdafa85779 # Hero Image
+            fieldUid: 4f0f45ee-6285-497b-89e7-ca5659c26c2b # Body
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
             instructions: ''
             label: ''
             required: '1'
@@ -40,46 +49,38 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
+            fieldUid: 1318ea66-9a2e-4f4f-9ed9-8e74967b4a89 # Image
             instructions: ''
-            label: Description
+            label: 'Index Image'
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 5a3762c3-bdd5-4e14-9b14-254a7c6ee23e # Image Gallery
-            instructions: 'Images display at 3:2 on desktop'
-            label: ''
+            fieldUid: 885715a3-eecb-4ec7-8531-5108e896fd52 # Experience Categories
+            instructions: ''
+            label: Categories
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            style: tip
-            tip: 'Content displays on product detail pages.'
-            type: craft\fieldlayoutelements\Tip
-        name: Summary
-        sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: e762d0f3-5afa-4d15-b44e-309f34f78fcd # Logo
+            fieldUid: dd9605f6-deef-4b1b-8dbc-cbd120db865d # Experience Category
             instructions: ''
-            label: ''
-            required: '1'
+            label: 'Primary Category'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Attributes
-        sortOrder: 3
-handle: brand
+        sortOrder: 2
+handle: experience
 hasTitleField: true
-name: Brand
-section: 38f82feb-a29d-41bf-99fd-e274400842e6 # Brands
+name: Experience
+section: 25aef36f-c397-4e41-a229-632bdc12bb3b # Experiences
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

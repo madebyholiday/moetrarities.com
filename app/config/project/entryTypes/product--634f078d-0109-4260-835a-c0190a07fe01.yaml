@@ -98,6 +98,43 @@ fieldLayouts:
       -
         elements:
           -
+            heading: Products
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 3cba8f71-c48d-44da-85ff-9a266453a160 # Related Title
+            instructions: ''
+            label: Title
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3fc9ec2b-e501-447a-981f-9669fc7ae901 # Products
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: Editorial
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 552fa9b3-fce0-4feb-8f32-91959ef60225 # Editorials
+            instructions: ''
+            label: Entries
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Related
+        sortOrder: 3
+      -
+        elements:
+          -
             fieldUid: 647d9c0b-fbde-43b6-95e0-6a66eeb1a7f5 # Brand
             instructions: ''
             label: ''
@@ -106,8 +143,17 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 1318ea66-9a2e-4f4f-9ed9-8e74967b4a89 # Image
+            instructions: ''
+            label: 'Index Image'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Attributes
-        sortOrder: 3
+        sortOrder: 4
 handle: product
 hasTitleField: true
 name: Product

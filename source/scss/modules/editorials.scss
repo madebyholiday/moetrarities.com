@@ -1,0 +1,7 @@
+.m-editorials {
+  margin: 100px 0;
+
+  @include breakpoint(desktop) {
+    margin: 150px 0;
+  } 
+}

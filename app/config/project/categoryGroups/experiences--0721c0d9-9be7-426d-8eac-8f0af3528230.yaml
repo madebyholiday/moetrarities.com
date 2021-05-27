@@ -1,0 +1,40 @@
+fieldLayouts:
+  ddce4db5-eac0-4115-b282-0b9bcdf146f9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: experiences
+name: Experiences
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: # Rarities
+    hasUrls: true
+    template: experiences/index
+    uriFormat: 'experiences/{slug}'
+structure:
+  maxLevels: null
+  uid: 20963de6-9c44-4251-a64d-084b09e36f93

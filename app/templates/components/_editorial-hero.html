@@ -1,0 +1,38 @@
+{% if entry.type == 'experience' and entry.experienceCategory.one() %}
+{% set eyebrow = entry.experienceCategory.one() %}
+{% else %}
+{% set eyebrow = craft.entries.section('experiencesIndex').one() %}
+{% endif %}
+
+<div class="c-editorial-hero">
+  <div class="row">
+    <div class="col-tb-6">
+      <div class="c-editorial-hero__image">
+        <a href="{{ entry.url }}">
+          {% include '/partials/_image' with {
+            image: entry.image.one()
+          } %}
+        </a>
+      </div>
+    </div>
+    <div class="col-tb-6 col-lg-5 col-lg-push-1">
+      <div class="c-editorial-hero__details">
+        {% if eyebrow %}
+        <h6 class="c-editorial-hero__eyebrow">{{ eyebrow.title }}</h6>
+        {% endif %}
+
+        <h3 class="c-editorial-hero__title">
+          <a href="{{ entry.url }}">
+            {{ entry.title }}
+          </a>
+        </h3>
+        <div class="c-editorial-hero__body rte">
+          {{ entry.excerpt }}
+        </div>
+
+        <a class="c-editorial-hero__read-more"
+           href="{{ entry.url }}">Read More</a>
+      </div>      
+    </div>
+  </div>
+</div>

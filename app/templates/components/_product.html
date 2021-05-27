@@ -1,0 +1,14 @@
+<div class="c-product">
+  <a href="{{ product.url }}">
+    <div class="c-product__brand">{{ product.brand.one().title }}</div>
+    <h3 class="c-product__title">{{ product.title }}</h3>
+    <div class="c-product__image">
+      <div class="o-box o-box--1x1">
+        {% include '/partials/_image' with {
+          image: product.image.one(),
+          box: false
+        } %}
+      </div>
+    </div>
+  </a>
+</div>

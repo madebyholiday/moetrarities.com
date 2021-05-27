@@ -1,0 +1,17 @@
+{% if entry.editorials | length %}
+<div class="m-editorials">
+  <div class="container">
+    <div class="row">
+      <div class="col-dk-10 col-dk-push-1">
+        {% for editorial in entry.editorials.all() %}        
+        {% if loop.index0 == 0 %}
+        {% include '/components/_editorial-hero' with { entry: editorial } %}
+        {% else %}
+        {% include '/components/_editorial' with { entry: editorial } %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
