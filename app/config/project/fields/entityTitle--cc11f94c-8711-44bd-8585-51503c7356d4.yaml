@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: ab7fd0d9-e6e4-4a24-a93a-99c9c075a42b # Editorial
+handle: entityTitle
+instructions: ''
+name: Title
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

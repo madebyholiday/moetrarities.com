@@ -1,0 +1,55 @@
+/* Button */
+
+.redactor-dropdown-item-o-button--primary {
+  text-transform: uppercase;
+}
+
+.redactor-styles .o-button--primary {
+  text-transform: uppercase;
+  border: solid 1px;
+  padding: 10px;
+}
+
+/* T small */
+
+.redactor-dropdown-item-t-small {
+  font-size: 90%;
+}
+
+.redactor-styles .t-small {
+  font-size: 90%;
+}
+
+/* T Large */
+
+.redactor-dropdown-item-t-large {
+  font-size: 120%;
+}
+
+.redactor-styles .t-large {
+  font-size: 120%;
+}
+
+/* T XLarge */
+
+.redactor-dropdown-item-t-xlarge {
+  font-size: 140%;
+}
+
+.redactor-styles .t-xlarge {
+  font-size: 140%;
+}
+
+/* T XXLarge */
+
+.redactor-dropdown-item-t-xxlarge {
+  font-size: 150%;
+}
+
+.redactor-styles .t-xxlarge {
+  font-size: 150%;
+}
+
+/* ul#alerts { */
+/*   display: none !important; */
+/* } */

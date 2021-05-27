@@ -1,0 +1,83 @@
+<div class="m-media-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 col-xl-push-1">
+        <div class="row {% if module.leftRightSelect == 'right'%}row--tb-reverse{% endif %}">
+          {% set mediaClass = '' %}
+          {% if module.leftRightSelect == 'left' %}
+            {% if module.normalWideSelect == 'wide' %}
+              {% set mediaClass = 'col-tb-6 col-dk-7' %}
+            {% else %}
+              {% set mediaClass = 'col-tb-6' %}
+            {% endif %} 
+          {% else %}
+            {% if module.normalWideSelect == 'wide' %}
+              {% set mediaClass = 'col-tb-6 col-dk-7 col-dk-push-1' %}
+            {% else %}
+              {% set mediaClass = 'col-tb-6 col-dk-push-1' %}
+            {% endif %} 
+          {% endif %}
+          
+          <div class="{{ mediaClass }}">
+            {% if module.entityTitle or module.entitySubtitle %}
+            <div class="m-media-text__text-header is-mobile">
+              {% if module.entityTitle %}
+              <div class="m-media-text__title">
+                {{ module.entityTitle }}
+              </div>
+              {% endif %}
+              {% if module.entitySubtitle %}
+              <div class="m-media-text__subtitle">
+                {{ module.entitySubtitle }}
+              </div>
+              {% endif %}
+            </div>
+            {% endif %}
+            
+            <div class="m-media-text__media">
+              {% include '/partials/_image' with {
+              image: module.image.one()
+              }%}
+            </div>
+          </div>
+          
+          {% set textClass = '' %}
+          {% if module.leftRightSelect == 'left' %}
+            {% if module.normalWideSelect == 'wide' %}
+              {% set textClass = 'col-tb-6 col-dk-4 col-dk-push-1' %}
+            {% else %}
+              {% set textClass = 'col-tb-6 col-dk-5 col-dk-push-1' %}
+            {% endif %} 
+          {% else %}          
+            {% if module.normalWideSelect == 'wide' %}
+              {% set textClass = 'col-tb-6 col-dk-4' %}
+            {% else %}
+              {% set textClass = 'col-tb-6 col-dk-5' %}
+            {% endif %} 
+          {% endif %}
+          
+          <div class="{{ textClass }}">
+            <div class="m-media-text__text">
+              {% if module.entityTitle or module.entitySubtitle %}
+              <div class="m-media-text__text-header is-tablet">
+                {% if module.entityTitle %}
+                <div class="m-media-text__title">
+                  {{ module.entityTitle }}
+                </div>
+                {% endif %}
+                {% if module.entitySubtitle %}
+                <div class="m-media-text__subtitle">
+                  {{ module.entitySubtitle }}
+                </div>
+                {% endif %}
+              </div>
+              {% endif %}
+              
+              <div class="rte">{{ module.body }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

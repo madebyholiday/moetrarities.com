@@ -1,4 +1,4 @@
-dateModified: 1622126402
+dateModified: 1622132876
 email:
   fromEmail: richard@madeby.holiday
   fromName: Rarities
@@ -8,6 +8,13 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ''
+      cssFile: '@assetBaseUrl/static/admin/css/app.css'
   image-optimize:
     edition: standard
     enabled: true
@@ -18,6 +25,11 @@ plugins:
     enabled: true
     licenseKey: QB4L2S36UFSSG4H8W5GGEYJS
     schemaVersion: 1.0.21
+  neo:
+    edition: standard
+    enabled: true
+    licenseKey: 6P7MMNSL34TCPE5353DC5IKU
+    schemaVersion: 2.8.16
   redactor:
     edition: standard
     enabled: true

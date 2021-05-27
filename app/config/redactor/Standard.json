@@ -44,6 +44,14 @@
         "class": "t-xlarge"
       }
     },
+    "t-xxlarge": {
+      "title": "XX Large Text",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p",
+        "class": "t-xxlarge"
+      }
+    },       
     "h1": {
       "title": "Heading 1",
       "api": "module.block.format",

@@ -177,13 +177,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 75px;
   font-weight: normal; }
 
-.t-h2, .c-editorial-hero__title {
+.t-h2, .c-editorial-hero__title, .m-media-text__title {
   font-family: "freightdispcmp-pro";
   font-size: 40px;
   font-weight: 500;
   line-height: 1em; }
   @media (min-width: 768px) {
-    .t-h2, .c-editorial-hero__title {
+    .t-h2, .c-editorial-hero__title, .m-media-text__title {
       font-size: 50px; } }
 
 .t-h3, .c-product__title {
@@ -192,13 +192,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
   font-weight: 500; }
 
-.t-h6, .c-product__brand, .c-editorial-hero__eyebrow, .c-product-details__brand, .m-brand-summary__eyebrow h6, .m-related-products__title {
+.t-h6, .c-product__brand, .c-editorial-hero__eyebrow, .c-product-details__brand, .m-brand-summary__eyebrow h6, .m-related-products__title, .m-text__eyebrow {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .075em;
   font-weight: 500; }
 
-.t-normal, .rte, .rte p, .c-product-price {
+.t-normal, .rte, .c-product-price {
   font-size: 14px;
   line-height: 1.6em; }
 
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Gotham';
   font-size: 12px; }
 
-.t-small-caps, .c-header__domain, .c-nav-user ul li a, .c-nav-secondary ul li a, .c-accordion-item__header, .c-tabs__nav ul li button, .c-editorial-hero__read-more, .m-brand-summary__learn-more {
+.t-small-caps, .c-header__domain, .c-nav-user ul li a, .c-nav-secondary ul li a, .c-accordion-item__header, .c-tabs__nav ul li button, .c-editorial-hero__read-more, .m-brand-summary__learn-more, .m-media-text__subtitle {
   font-family: 'Gotham';
   font-size: 11px;
   line-height: 1.6em;
@@ -231,6 +231,24 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: 500; }
+
+.t-large, .m-brand-summary__body {
+  font-family: "freightdispcmp-pro";
+  font-size: 26px;
+  line-height: 1.18em;
+  font-weight: 600;
+  margin: 0; }
+  .t-large:not(:first-child), .m-brand-summary__body:not(:first-child) {
+    text-indent: 1em; }
+  @media (min-width: 768px) {
+    .t-large, .m-brand-summary__body {
+      font-size: 36px; } }
+  @media (min-width: 768px) {
+    .t-large, .m-brand-summary__body {
+      font-size: 36px; } }
+  @media (min-width: 1024px) {
+    .t-large, .m-brand-summary__body {
+      font-size: 40px; } }
 
 .t-large, .m-brand-summary__body {
   font-family: "freightdispcmp-pro";
@@ -2211,4 +2229,34 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 0 30px 0; }
+
+.m-text {
+  margin: 50px 0; }
+  @media (min-width: 768px) {
+    .m-text {
+      margin: 75px 0; } }
+  @media (min-width: 1024px) {
+    .m-text {
+      margin: 100px 0; } }
+
+.m-text__eyebrow {
+  margin: 0 0 30px 0; }
+  @media (min-width: 768px) {
+    .m-text__eyebrow {
+      margin: 0 0 50px 0; } }
+
+.m-media-text__text-header {
+  margin: 0 0 30px 0; }
+  .m-media-text__text-header.is-tablet {
+    display: none; }
+  @media (min-width: 768px) {
+    .m-media-text__text-header {
+      margin-top: 30px; }
+      .m-media-text__text-header.is-mobile {
+        display: none; }
+      .m-media-text__text-header.is-tablet {
+        display: block; } }
+
+.m-media-text__title {
+  margin: 0 0 .25em 0; }
 

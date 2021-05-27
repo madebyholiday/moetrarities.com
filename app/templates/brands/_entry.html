@@ -2,4 +2,7 @@
 
 {% block content %}
 {% include '/brands/modules/_hero' %}
+{% for module in entry.pageModules.all() %}
+  {% include '/modules/_' ~ module.type | kebab %}
+{% endfor %}
 {% endblock %}
