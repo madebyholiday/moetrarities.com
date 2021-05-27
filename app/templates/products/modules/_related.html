@@ -8,12 +8,15 @@
             {{ entry.relatedTitle ? entry.relatedTitle : 'Similar Offers' }}
           </h6>
         </div>
-        <div class="row">
-          {% for product in entry.products.all() %}
-          <div class="col-tb-4">
-            {% include '/components/_product' with { product: product } %}
+        
+        <div class="m-related-products__products">
+          <div class="row">
+            {% for product in entry.products.all() %}
+            <div class="col-tb-4">
+              {% include '/components/_product' with { product: product } %}           
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
     </div>

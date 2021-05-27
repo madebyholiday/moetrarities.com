@@ -2,6 +2,7 @@
   background-color: $color-pampas;
   padding: 30px;
   transition: background-color 400ms ease;
+  margin: 0 0 $grid-column-gutter 0;
 
   &:hover {
     background-color: darken($color-pampas, 5%);

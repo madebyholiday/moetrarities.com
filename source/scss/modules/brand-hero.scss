@@ -43,6 +43,10 @@
   @include fill(absolute);  
 }
 
+.m-brand-hero__asset .o-image-caption {
+  display: none;
+}
+
 .m-brand-hero__logo {
   position: absolute;
   bottom: 0;

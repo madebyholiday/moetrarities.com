@@ -25,3 +25,33 @@
     background-color: darken($color-rhino, 10%);
   }
 }
+
+.o-button--icon {
+  display: flex;
+  align-items: center;
+
+  span:nth-child(1) {
+    display: block;
+    @extend .t-normal;
+    margin: 0 24px 0 0;
+  }
+  
+  span:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: $color-bronze;
+    border: solid 1px $color-bronze;
+    border-radius: 50%;
+    transition:
+      color 400ms ease,
+      border-color 400ms ease;
+  }
+
+  &:hover span:nth-child(2) {
+    color: $color-black;
+    border: solid 1px $color-black;    
+  }
+}

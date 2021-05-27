@@ -15,3 +15,11 @@
 .m-related-products__title {
   @extend .t-h6;
 }
+
+.m-related-products__products {
+  @include breakpoint(tablet) {
+    [class*="col-"]:nth-last-child(-n+3) .c-product {
+      margin-bottom: 0;
+    }
+  }
+}

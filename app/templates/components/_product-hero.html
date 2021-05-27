@@ -1,0 +1,34 @@
+<div class="c-product-hero">
+
+  <div class="row row--tb-align-center">
+    <div class="col-tb-6 col-lg-7">
+      <a href="{{ product.url }}">
+        <div class="c-product-hero__image">
+          {% include '/partials/_image' with {
+            image: product.image.one()
+          } %}
+        </div>
+      </a>
+    </div>
+    <div class="col-tb-6 col-dk-5 col-dk-push-1 col-lg-4">
+      <div class="c-product-hero__brand">{{ product.brand.one().title }}</div>
+      <h3 class="c-product-hero__title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h3>
+      
+      <div class="c-product-hero__excerpt">
+        <div class="rte">
+          <p>{{ product.excerpt }}</p>
+        </div>
+      </div>
+
+      <div class="c-product-price">Suggested Retail Price: {{ product.price | currency(stripZeros=true) }} ({{ product.size }})</div>
+
+      <a class="o-button o-button--icon" href="{{ product.url }}">
+        <span>Explore</span>
+        <span><i class="icon-chevron-thin-right"></i></span>
+      </a>
+    </div>
+  </div>          
+
+</div>

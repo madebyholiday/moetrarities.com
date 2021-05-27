@@ -58,6 +58,10 @@
     &.row--tb-reverse {
       flex-direction: row-reverse;
     }
+
+    &.row--tb-align-center {
+      align-items: center;      
+    }
   }
   
   @include breakpoint(desktop) {

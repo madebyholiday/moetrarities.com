@@ -10,6 +10,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family:"freightdispcmp-pro";
   font-size: 75px;
   font-weight: normal;
+
+  @include breakpoint(tablet) {
+    font-size: 65px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 75px;
+  }
 }
 
 .t-h2 {
@@ -28,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   line-height: 1.2em;
   font-weight: 500;
+
+  @include breakpoint(desktop) {
+    font-size: 32px;
+  }
 }
 
 .t-h6 {

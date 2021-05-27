@@ -1,0 +1,39 @@
+<div class="m-featured-products">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 col-xl-push-1">
+        {% if module.entityTitle or module.entitySubtitle %}
+        <div class="m-featured-products__header">
+          {% if module.entityTitle %}
+          <div class="m-featured-products__title">
+            {{ module.entityTitle }}
+          </div>
+          {% endif %}
+          {% if module.entitySubtitle %}
+          <span>/</span>
+          <div class="m-featured-products__subtitle">
+            {{ module.entitySubtitle }}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="m-featured-products__products">
+          <div class="row">
+            {% for product in module.products.all() %}
+              {% if loop.index == 1 and module.normalHeroSelect == 'hero' %}
+              <div class="col-tb-12">
+                {% include '/components/_product-hero' with { product: product } %}
+              </div>
+              {% else %}
+              <div class="col-tb-4">
+                {% include '/components/_product' with { product: product } %}
+              </div>
+              {% endif %}            
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
