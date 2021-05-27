@@ -25,7 +25,8 @@
     {%- else -%}
       page-404 
     {%- endif -%}
-    {% if entry.type == 'brand' %}
+  {% if (entry is defined and entry.type == 'brand') or
+        (entry is defined and entry.type == 'productIndex') %}
       is-transparent-header
     {% endif %}
   {%- endset -%}

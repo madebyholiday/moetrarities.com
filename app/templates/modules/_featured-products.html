@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-xl-10 col-xl-push-1">
         {% if module.entityTitle or module.entitySubtitle %}
-        <div class="m-featured-products__header">
+        <div class="m-featured-products__header c-breadcrumbs">
           {% if module.entityTitle %}
-          <div class="m-featured-products__title">
+          <div class="c-breadcrumbs__title">
             {{ module.entityTitle }}
           </div>
           {% endif %}
           {% if module.entitySubtitle %}
           <span>/</span>
-          <div class="m-featured-products__subtitle">
+          <div class="c-breadcrumbs__subtitle">
             {{ module.entitySubtitle }}
           </div>
           {% endif %}

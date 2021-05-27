@@ -11,7 +11,6 @@
 }
 
 .m-featured-products__header {
-  display: flex;
   margin: 0 0 40px 0;
 
   @include breakpoint(tablet) {
@@ -20,31 +19,6 @@
 
   @include breakpoint(desktop) {
     margin: 0 0 75px 0;
-  }
-}
-
-.m-featured-products__title {
-  font-family: 'Gotham';
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  font-weight: 500;
-}
-
-.m-featured-products__subtitle {
-  font-family: 'Gotham';
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  font-weight: normal;
-}
-
-.m-featured-products__header span {
-  font-size: 12px;
-  margin: 0 10px;
-
-  @include breakpoint(tablet) {
-    margin: 0 15px;
   }
 }
 

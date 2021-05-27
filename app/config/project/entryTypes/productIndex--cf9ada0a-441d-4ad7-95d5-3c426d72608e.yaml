@@ -1,0 +1,93 @@
+fieldLayouts:
+  a516aa4c-4bdb-472c-abf0-c4f3928dfd8a:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            heading: Image
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 47eaa35e-391f-4599-b181-0dfdafa85779 # Hero Image
+            instructions: ''
+            label: Image
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: Copy
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: cc11f94c-8711-44bd-8585-51503c7356d4 # Title
+            instructions: ''
+            label: 'Eyebrow Title'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 66116a0a-e8a8-455a-af9d-4035d4516014 # Subtitle
+            instructions: ''
+            label: 'Eyebrow Subtitle'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 3fc9ec2b-e501-447a-981f-9669fc7ae901 # Products
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Products
+        sortOrder: 2
+handle: productIndex
+hasTitleField: true
+name: 'Product Index'
+section: 6c0263b3-7820-46ca-b7ac-d0ed864488dd # Product Index
+sortOrder: 1
+titleFormat: Products
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

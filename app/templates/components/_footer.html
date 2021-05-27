@@ -1,52 +1,56 @@
 <footer class="c-footer">
   <div class="container">
-    <div class="c-footer__content">
-      <div class="c-footer__stamp">
-        <div class="o-box o-box--1x1">
-          <div class="o-image o-image--cover">
-            <img src="/assets/static/images/stamp.png" />
+    <div class="row">
+      <div class="col-tb-10 col-tb-push-1 col-dk-9">
+        <div class="c-footer__content">
+          <div class="c-footer__stamp">
+            <div class="o-box o-box--1x1">
+              <div class="o-image o-image--cover">
+                <img src="/assets/static/images/stamp.png" />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="c-footer-nav-groups">
-        <div class="c-footer-nav-group">
-          <nav class="c-footer-nav-primary">
-            <ul>
-              {% set nodes = craft.navigation.nodes().handle('footerPrimary').level(1).all() %}
-              {% for node in nodes %}
-              <li>
-                <a href="{{ node.url }}">
-                  <span>{{ node.title }}</span>               
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
-        </div>
-        <div class="c-footer-nav-group c-footer-nav-group--dr">
-          <nav class="c-footer-nav-social">
-            <ul>
-              {% set nodes = craft.navigation.nodes().handle('footerSocial').level(1).all() %}
-              {% for node in nodes %}
-              <li>
-                {{ node.link }}
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
+          <div class="c-footer-nav-groups">
+            <div class="c-footer-nav-group">
+              <nav class="c-footer-nav-primary">
+                <ul>
+                  {% set nodes = craft.navigation.nodes().handle('footerPrimary').level(1).all() %}
+                  {% for node in nodes %}
+                  <li>
+                    <a href="{{ node.url }}">
+                      <span>{{ node.title }}</span>               
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
+            <div class="c-footer-nav-group c-footer-nav-group--dr">
+              <nav class="c-footer-nav-social">
+                <ul>
+                  {% set nodes = craft.navigation.nodes().handle('footerSocial').level(1).all() %}
+                  {% for node in nodes %}
+                  <li>
+                    {{ node.link }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
 
-          <nav class="c-footer-nav-secondary">
-            <ul>
-              {% set nodes = craft.navigation.nodes().handle('footerSecondary').level(1).all() %}
-              {% for node in nodes %}
-              <li>
-                <a href="{{ node.url }}">
-                  <span>{{ node.title }}</span>               
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </nav>
+              <nav class="c-footer-nav-secondary">
+                <ul>
+                  {% set nodes = craft.navigation.nodes().handle('footerSecondary').level(1).all() %}
+                  {% for node in nodes %}
+                  <li>
+                    <a href="{{ node.url }}">
+                      <span>{{ node.title }}</span>               
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>

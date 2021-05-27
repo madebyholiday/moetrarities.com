@@ -1,0 +1,30 @@
+.c-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.5em;
+}
+
+.c-breadcrumbs__title {
+  font-family: 'Gotham';
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 500;
+}
+
+.c-breadcrumbs__subtitle {
+  font-family: 'Gotham';
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: normal;
+}
+
+.c-breadcrumbs span {
+  font-size: 12px;
+  margin: 0 10px;
+
+  @include breakpoint(tablet) {
+    margin: 0 15px;
+  }
+}

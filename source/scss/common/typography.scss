@@ -120,25 +120,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.t-large {
-  font-family: "freightdispcmp-pro";
-  font-size: 32px;
-  line-height: 1.18em;
-  font-weight: 600;
-
-  @include breakpoint(tablet) {
-    font-size: 36px;
-  }
-
-  @include breakpoint(desktop) {
-    font-size: 40px;
-  }
-}
-
 .t-xlarge {
   font-family: "freightdispcmp-pro";
   font-size: 40px;
-  line-height: 1.18em;
+  line-height: 1.15em;
   font-weight: 500;
 
   @include breakpoint(tablet) {

@@ -1,0 +1,23 @@
+enableVersioning: true
+handle: productIndex
+name: 'Product Index'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  3e2858d8-00c1-48d3-84dc-a1508ebb5603: # Rarities
+    enabledByDefault: true
+    hasUrls: true
+    template: products/index
+    uriFormat: products
+type: single

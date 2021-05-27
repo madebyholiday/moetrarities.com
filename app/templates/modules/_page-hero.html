@@ -1,0 +1,47 @@
+<div class="m-page-hero">
+  <div class="m-page-hero__asset">
+    {% include '/partials/_image' with {
+      image: entry.heroImage.one(),
+      box: false
+    }%}
+
+    <div class="m-page-hero__title">
+      <div class="container">
+        <div class="row">
+          <div class="col-mb-9 col-mb-push-1">
+            {{ entry.title }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    {% if entry.entityTitle or entry.entitySubtitle %}
+    <div class="row">
+      {% if entry.entityTitle or entry.entitySubtitle %}
+      <div class="col-mb-9 col-mb-push-1">
+        <div class="m-page-hero__header c-breadcrumbs">
+          {% if entry.entityTitle %}
+          <div class="c-breadcrumbs__title">
+            {{ entry.entityTitle }}
+          </div>
+          {% endif %}
+          {% if entry.entitySubtitle %}
+          <span>/</span>
+          <div class="c-breadcrumbs__subtitle">
+            {{ entry.entitySubtitle }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-tb-10 col-tb-push-1 col-dk-8 col-lg-7">
+        <div class="m-page-hero__body">
+          <p>{{ entry.excerpt }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

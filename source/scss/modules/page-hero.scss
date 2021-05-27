@@ -1,0 +1,57 @@
+.m-page-hero {
+  position: relative;
+  margin: 0 0 50px 0;
+}
+
+.m-page-hero__asset {
+  position: relative;
+  height: 150vw;
+  overflow: hidden;
+
+  @include breakpoint(tablet) {
+    height: 60vw;
+    max-height: 750px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $color-spring-wood;
+    height: 50px;
+    width: calc(100% - #{percentage(1/$grid-column-count)});
+    z-index: 2;
+
+    @include breakpoint(tablet) {
+      height: 75px;
+    }
+  }
+}
+
+.m-page-hero__title {
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+  color: $color-white;
+  font-family: "freightdispcmp-pro";
+  font-size: 70px;
+  line-height: 1em;
+  font-weight: 400;
+
+  @include breakpoint(tablet) {
+    font-size: 100px;    
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 120px;    
+  }
+}
+
+.m-page-hero__asset .o-image-caption {
+  display: none;
+}
+
+.m-page-hero__body {
+  @extend .t-xlarge;
+}
