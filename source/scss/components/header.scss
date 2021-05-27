@@ -1,19 +1,28 @@
+/* Header */
+
 .c-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;  
-  color: $color-black;
+  width: 100%;
   z-index: $z-index-8;
+  color: $color-black;
   background-color: $color-spring-wood;
 
   body:not(.is-resizing) & {
-    transition: color 300ms ease;
+    transition:
+      background-color 300ms ease,   
+      color 300ms ease;
   }  
   
   body.is-transparent-header & {
     color: $color-white;
     background-color: transparent;    
+  }
+
+  body.is-scrolled & {
+    color: $color-black;
+    background-color: $color-spring-wood;    
   }
   
   @include breakpoint(desktop) {
@@ -22,6 +31,8 @@
     }
   }
 }
+
+/* Header Eyebrow */
 
 .c-header__eyebrow {
   position: relative;
@@ -39,6 +50,10 @@
 
   body.is-transparent-header & {
     border-bottom: solid 1px transparentize($color-white, .75);
+  }
+
+  body.is-scrolled & {
+    border-bottom: solid 1px transparentize($color-black, .75);    
   }
   
   body.is-menu-open & {
@@ -70,6 +85,10 @@
       background-color: transparent;
     }
 
+    body.is-scrolled & {
+      background-color: $color-spring-wood;      
+    }
+
     .c-header:hover & {
       background-color: $color-spring-wood;
       border-bottom: solid 1px transparentize($color-black, .75);
@@ -80,6 +99,8 @@
 .c-header__domain {
   @extend .t-small-caps;
 }
+
+/* User Nav */
 
 .c-nav-user {
   height: 100%;
@@ -105,6 +126,10 @@
     border-left: solid 1px transparentize($color-white, .75);
     transition: border-color 300ms ease;
   }
+
+  body.is-scrolled & {
+    border-left: solid 1px transparentize($color-black, .75);
+  } 
   
   body.is-menu-open & {
     border-left: solid 1px transparentize($color-white, .75);
@@ -178,12 +203,18 @@
     body.is-transparent-header & {
       background-color: transparent;
     }
+
+    body.is-scrolled & {
+      background-color: $color-spring-wood;      
+    }
     
     .c-header:hover & {
       background-color: $color-spring-wood;
     }
   }
 }
+
+/* Logo */
 
 .c-header__logo-wrapper {
   flex: 1 0 190px;
@@ -203,19 +234,31 @@
     body:not(.is-resizing) & {
       transition: fill 300ms ease 400ms;
     }
-    
-    body.is-menu-open & {
-      fill: $color-white;
-      transition: fill 300ms ease 200ms;
-    }
-
+   
     body.is-transparent-header & {
       fill: $color-white;
     }
 
+    body.is-scrolled & {
+      fill: $color-black;
+    }
+
+    body.is-scrolling & {
+      transition: fill 300ms ease;
+    }
+
+    body.is-menu-open & {
+      fill: $color-white;
+      transition: fill 300ms ease 200ms;
+    }
+    
     @include breakpoint(desktop) {
       body:not(.is-resizing) & {
         transition: fill 300ms ease;
+      }
+
+      body.is-scrolled & {
+        fill: $color-black;
       }
       
       .c-header:hover & {
@@ -260,6 +303,20 @@
     background-color: $color-white;
   }
 
+  body.is-scrolled & {
+    background-color: $color-black;    
+  }
+
+  body.is-scrolling & {
+    transition: fill 300ms ease;
+  }
+  
+  body.is-scrolled.is-scrolling & {
+    transition:
+      width 300ms ease,
+      background-color 300ms ease;
+  }
+
   body.is-menu-open & {
     background-color: $color-white;
     transition:
@@ -273,7 +330,7 @@
   }
 
   &:nth-child(2) {
-    top: 50%;
+   top: 50%;
     width: 75%;
   }
     
@@ -323,6 +380,17 @@
   body.is-transparent-header & {
     color: $color-black;
     background-color: $color-white;
+  }
+
+  body.is-scrolled & {
+    background-color: $color-black;
+    color: $color-white;    
+  }
+
+  body.is-scrolling & {
+    transition:
+      color 300ms ease,
+      background-color 300ms ease;
   }
     
   body.is-menu-open & {

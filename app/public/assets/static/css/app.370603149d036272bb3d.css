@@ -1399,23 +1399,28 @@ body {
     pointer-events: none; }
 
 /* Components */
+/* Header */
 .c-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  color: #131212;
   z-index: 800;
+  color: #131212;
   background-color: #FAF8F6; }
   body:not(.is-resizing) .c-header {
-    transition: color 300ms ease; }
+    transition: background-color 300ms ease,    color 300ms ease; }
   body.is-transparent-header .c-header {
     color: #ffffff;
     background-color: transparent; }
+  body.is-scrolled .c-header {
+    color: #131212;
+    background-color: #FAF8F6; }
   @media (min-width: 1024px) {
     .c-header:hover {
       color: #131212 !important; } }
 
+/* Header Eyebrow */
 .c-header__eyebrow {
   position: relative;
   display: none;
@@ -1427,6 +1432,8 @@ body {
     transition: color 300ms ease 500ms, border-color 300ms ease 500ms; }
   body.is-transparent-header .c-header__eyebrow {
     border-bottom: solid 1px rgba(255, 255, 255, 0.25); }
+  body.is-scrolled .c-header__eyebrow {
+    border-bottom: solid 1px rgba(19, 18, 18, 0.25); }
   body.is-menu-open .c-header__eyebrow {
     color: #ffffff;
     border-bottom: solid 1px rgba(255, 255, 255, 0.25);
@@ -1445,10 +1452,13 @@ body {
         transition: background-color 300ms ease, border-color 300ms ease; }
       body.is-transparent-header .c-header__eyebrow {
         background-color: transparent; }
+      body.is-scrolled .c-header__eyebrow {
+        background-color: #FAF8F6; }
       .c-header:hover .c-header__eyebrow {
         background-color: #FAF8F6;
         border-bottom: solid 1px rgba(19, 18, 18, 0.25); } }
 
+/* User Nav */
 .c-nav-user {
   height: 100%; }
 
@@ -1467,6 +1477,8 @@ body {
   body.is-transparent-header .c-nav-user ul li {
     border-left: solid 1px rgba(255, 255, 255, 0.25);
     transition: border-color 300ms ease; }
+  body.is-scrolled .c-nav-user ul li {
+    border-left: solid 1px rgba(19, 18, 18, 0.25); }
   body.is-menu-open .c-nav-user ul li {
     border-left: solid 1px rgba(255, 255, 255, 0.25);
     transition: border-color 300ms ease; }
@@ -1518,9 +1530,12 @@ body {
         transition: background-color 300ms ease; }
       body.is-transparent-header .c-header__main {
         background-color: transparent; }
+      body.is-scrolled .c-header__main {
+        background-color: #FAF8F6; }
       .c-header:hover .c-header__main {
         background-color: #FAF8F6; } }
 
+/* Logo */
 .c-header__logo-wrapper {
   flex: 1 0 190px;
   max-width: 190px; }
@@ -1534,14 +1549,20 @@ body {
   max-width: 200px; }
   body:not(.is-resizing) .c-header__logo path {
     transition: fill 300ms ease 400ms; }
+  body.is-transparent-header .c-header__logo path {
+    fill: #ffffff; }
+  body.is-scrolled .c-header__logo path {
+    fill: #131212; }
+  body.is-scrolling .c-header__logo path {
+    transition: fill 300ms ease; }
   body.is-menu-open .c-header__logo path {
     fill: #ffffff;
     transition: fill 300ms ease 200ms; }
-  body.is-transparent-header .c-header__logo path {
-    fill: #ffffff; }
   @media (min-width: 1024px) {
     body:not(.is-resizing) .c-header__logo path {
       transition: fill 300ms ease; }
+    body.is-scrolled .c-header__logo path {
+      fill: #131212; }
     .c-header:hover .c-header__logo path {
       fill: #131212; } }
 
@@ -1569,6 +1590,12 @@ body {
     transition: width 300ms ease, background-color 300ms ease 400ms; }
   body.is-transparent-header .c-menu-toggle span {
     background-color: #ffffff; }
+  body.is-scrolled .c-menu-toggle span {
+    background-color: #131212; }
+  body.is-scrolling .c-menu-toggle span {
+    transition: fill 300ms ease; }
+  body.is-scrolled.is-scrolling .c-menu-toggle span {
+    transition: width 300ms ease, background-color 300ms ease; }
   body.is-menu-open .c-menu-toggle span {
     background-color: #ffffff;
     transition: width 300ms ease, background-color 300ms ease 200ms; }
@@ -1609,6 +1636,11 @@ body {
   body.is-transparent-header .c-header__mobile-cart {
     color: #131212;
     background-color: #ffffff; }
+  body.is-scrolled .c-header__mobile-cart {
+    background-color: #131212;
+    color: #ffffff; }
+  body.is-scrolling .c-header__mobile-cart {
+    transition: color 300ms ease, background-color 300ms ease; }
   body.is-menu-open .c-header__mobile-cart {
     color: #131212;
     background-color: #ffffff;
