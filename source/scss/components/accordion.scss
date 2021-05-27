@@ -1,0 +1,46 @@
+.c-accordion {
+  position: relative;
+}
+
+.c-accordion-item {
+  position: relative;
+  border-top: solid 1px $color-gray;
+
+  &:last-child {
+    border-bottom: solid 1px $color-gray;
+  }
+}
+
+.c-accordion-item__header {
+  @extend .t-small-caps;
+  position: relative;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: padding 500ms ease;
+ 
+}
+
+.c-accordion-item__header__adornment {
+  @include v-center(absolute);
+  right: 0px;
+
+  &:before {
+    font-family: 'icomoon';
+    content: "\e900";
+    font-size: 20px;
+    
+    .is-open & {
+      content: "\e902";
+    }    
+  }  
+}
+
+.c-accordion-item__content {
+  display: none;
+  overflow: hidden;  
+}
+
+.c-accordion-item__content__inner {
+  padding: 0 10px 30px 10px;
+  transition: padding 500ms ease;  
+}

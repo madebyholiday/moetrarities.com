@@ -1,0 +1,36 @@
+.c-tabs {
+  
+}
+
+.c-tabs__nav {
+  margin: 0 0 10px 0;
+}
+
+.c-tabs__nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-tabs__nav ul li {
+  display: inline-block;
+  margin: 0 12px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.c-tabs__nav ul li {
+  @extend .t-link-decoration;
+}
+
+.c-tabs__nav ul li button {
+  @extend .t-small-caps;
+}  
+
+

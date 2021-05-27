@@ -1,0 +1,51 @@
+.m-product-hero {
+  margin: 40px 0 0 0;
+
+  @include breakpoint(tablet) {
+    margin: 75px 0 0 0;
+  }
+}
+
+.c-product-media {
+  margin: 0 0 40px 0;
+}
+
+.c-product-details__title {
+  @extend .t-h1;
+  margin: 0 0 30px 0;
+}
+
+.c-product-details__brand {
+  @extend .t-h6;
+  margin: 0;
+}
+
+.c-product-details__accordion {
+  margin: 30px 0 0 0;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.c-product-details__tabs {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+}
+
+.c-product-price {
+  @extend .t-normal;
+  font-style: italic;
+  margin: 2em 0 1em 0;
+}
+
+.c-product-actions {
+  margin: 50px 0 0 0;
+}
+
+.c-product-actions__request {
+  width: 100%;
+}

@@ -32,7 +32,7 @@
 
   {%- set namespace -%}
     {%- if entry is defined -%}        
-      {{ entry.getSection().name | kebab ?: 'home' }}
+      {{ entry.type | kebab ?: 'home' }}
     {%- elseif category is defined -%}
       {{ category.group | kebab }}-category
     {%- elseif craft.app.request.segments | last -%}

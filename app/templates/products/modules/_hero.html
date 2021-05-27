@@ -1,0 +1,88 @@
+<div class="m-product-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 col-xl-push-1">
+        <div class="row row--tb-reverse">
+          <div class="col-tb-6 col-lg-push-1">
+            <div class="c-product-media js-product-media">
+              {% for image in entry.images.all() %}
+              <div class="c-product-media__image">
+                {% include '/partials/_image' with {
+                image: image
+                } %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-tb-6 col-lg-5">
+            <div class="c-product-details">
+              <h2 class="c-product-details__brand">{{ entry.brand.one().title }}</h2>
+              <h1 class="c-product-details__title">{{ entry.title }}</h1>
+
+              {% set details = [
+                { name: 'About', key: 'about' },
+                { name: 'Tasting Notes', key: 'tastingNotes' },
+                { name: 'Pairings', key: 'pairings' },
+                { name: 'Aging', key: 'aging' }
+              ] %}
+
+              <div class="c-product-details__tabs c-tabs js-tabs">
+                <nav class="c-tabs__nav">
+                  <ul>
+                    {% for detail in details %}
+                    {% if entry[detail.key] %}
+                    <li class="js-nav-item">
+                      <button>{{ detail.name }}</button>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                  </ul>
+                </nav>
+                <div class="c-tabs__items js-items">
+                  {% for detail in details %}
+                  {% if entry[detail.key] %}
+                  <div class="c-tabs__item">
+                    <div class="rte">
+                      {{ entry[detail.key] }}
+                    </div>
+                    
+                    {% if detail.key == 'about' %}
+                    <div class="c-product-price">Suggested Retail Price: {{ entry.price | currency(stripZeros=true) }} ({{ entry.size }})</div>
+                    {% endif %}
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+              
+              <div class="c-product-details__accordion c-accordion js-accordion">
+                {% for detail in details %}
+                {% if entry[detail.key] %}
+                <div class="c-accordion-item js-item">
+                  <div class="c-accordion-item__header js-item-header">
+                    {{ detail.name }}
+                    <i class="c-accordion-item__header__adornment"></i>
+                  </div>
+                  <div class="c-accordion-item__content js-item-content">
+                    <div class="rte">
+                      {{ entry[detail.key] }}                  
+                    </div>
+                    {% if detail.key == 'about' %}
+                    <div class="c-product-price">Suggested Retail Price: {{ entry.price | currency(stripZeros=true) }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endif %}
+                {% endfor %}                        
+              </div>
+
+              <div class="c-product-actions">
+                <button class="c-product-actions__request o-button o-button--primary">Request to Purchase</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

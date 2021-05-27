@@ -31,6 +31,11 @@
 @import 'components/footer';
 @import 'components/page-loader';
 @import 'components/page-transition';
+@import 'components/accordion';
+@import 'components/tabs';
+@import 'components/media-gallery';
 
 /* Modules */
+@import 'modules/product-hero';
 @import 'modules/brand-hero';
+@import 'modules/brand-summary';

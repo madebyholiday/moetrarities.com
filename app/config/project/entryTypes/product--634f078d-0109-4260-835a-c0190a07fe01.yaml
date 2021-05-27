@@ -28,36 +28,36 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 263e1056-afb5-429d-b3b8-287f2a050408 # About
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
             fieldUid: 6266cc6d-2bc8-451f-bc34-9087cc4b2eba # Price
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
           -
             fieldUid: 15a62ab8-8d4a-4341-a852-4e77938dec79 # Size
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 25
           -
             fieldUid: 128d077b-94b8-4567-9cc9-2e5af3177542 # Images
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -99,9 +99,9 @@ fieldLayouts:
         elements:
           -
             fieldUid: 647d9c0b-fbde-43b6-95e0-6a66eeb1a7f5 # Brand
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

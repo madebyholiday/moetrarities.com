@@ -28,9 +28,9 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 47eaa35e-391f-4599-b181-0dfdafa85779 # Hero Image
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -40,16 +40,42 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Body - Textarea
+            instructions: ''
+            label: Description
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5a3762c3-bdd5-4e14-9b14-254a7c6ee23e # Image Gallery
+            instructions: 'Images display at 3:2 on desktop'
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            style: tip
+            tip: 'Content displays on product detail pages.'
+            type: craft\fieldlayoutelements\Tip
+        name: Summary
+        sortOrder: 2
+      -
+        elements:
+          -
             fieldUid: e762d0f3-5afa-4d15-b44e-309f34f78fcd # Logo
-            instructions: null
-            label: null
-            required: false
+            instructions: ''
+            label: ''
+            required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
         name: Attributes
-        sortOrder: 2
+        sortOrder: 3
 handle: brand
 hasTitleField: true
 name: Brand

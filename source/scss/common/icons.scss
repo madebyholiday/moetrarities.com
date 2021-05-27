@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-thin-down:before {
+  content: "\e90a";
+}
+.icon-chevron-thin-up:before {
+  content: "\e907";
+}
+.icon-chevron-thin-right:before {
+  content: "\e908";
+}
+.icon-chevron-thin-left:before {
+  content: "\e909";
+}
 .icon-facebook:before {
   content: "\e906";
 }

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 6cc45595-4d22-44c5-a299-c9d64e01864d # Assets
+handle: imageGallery
+instructions: ''
+name: 'Image Gallery'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_imagegallery}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

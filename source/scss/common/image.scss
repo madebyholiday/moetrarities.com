@@ -1,3 +1,7 @@
+figure {
+  margin: 0;
+}
+
 img {
   max-width: 100%;
   user-select: none;
@@ -66,3 +70,42 @@ img {
     opacity: 1;
   }
 }
+
+.o-image-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 2;
+  color: $color-white;
+}
+
+.o-image-caption--light {
+  color: $color-white;
+}
+
+.o-image-caption--dark {
+  color: $color-black;
+}
+
+.o-image-caption__label {
+  font-family: 'Gotham';
+  font-size: 11px;
+  line-height: 1.6em;
+  text-transform: uppercase;
+  letter-spacing: .075em;
+  font-weight: normal;
+  margin: 0 0 7px 0;
+}
+
+.o-image-caption__body {
+  @extend .t-small;
+  margin: 0 0 5px 0;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.o-image-caption__attribution {
+  @extend .t-small;
+  font-weight: 300;
+}
+

@@ -16,7 +16,7 @@
 
 <div class="o-responsive-image-container">  
   {% if mobileImage is defined and mobileImage %}
-  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} is-mobile">
+  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} is-mobile">
     {% if box %}
     <div class="o-box" style="padding-top: {{(mobileImage.height / mobileImage.width) * 100 }}%;">
       {% endif %}
@@ -44,14 +44,23 @@
         {% if preload %}preload{% endif %}
         alt="{{ mobileImage.title }}" />
     </picture>
+    
+    {% if mobileImage.caption %}
+    <figcaption class="o-image-caption o-image-caption--{{ mobileImage.optimizedImages.lightness > 60 ? 'dark' : 'light' }}">
+      <div class="o-image-caption__label">Image</div>
+      <p class="o-image-caption__body">{{ mobileImage.caption }}</p>
+      <div class="o-image-caption__attribution">{{ mobileImage.attribution }}</div>
+    </figcaption>
+    {% endif %}
+    
     {% if box %}
     </div>
     {% endif %}
-  </div>  
+  </figure>  
   {% endif %}
   
   {% if image is defined and image %}
-  <div class="o-image {% if lazyload %}o-image--lazy{% endif %} o-image--{{ image.objectFit }} {{ class }} {% if not box %}o-image--fill{% endif %}">
+  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} o-image--{{ image.objectFit }} {{ class }} {% if not box %}o-image--fill{% endif %}">
     {% if box %}
     <div class="o-box" style="padding-top: {{(image.height / image.width) * 100 }}%;">
       {% endif %}
@@ -79,9 +88,18 @@
         {% if preload %}preload{% endif %}
         alt="{{ image.title }}" />
     </picture>
+
+    {% if image.caption %}
+    <figcaption class="o-image-caption o-image-caption--{{ image.optimizedImages.lightness > 60 ? 'dark' : 'light' }}">
+      <div class="o-image-caption__label">Image</div>
+      <p class="o-image-caption__body">{{ image.caption }}</p>
+      <div class="o-image-caption__attribution">{{ image.attribution }}</div>
+    </figcaption>
+    {% endif %}
+    
     {% if box %}
     </div>
     {% endif %}
-  </div>
+  </figure>
   {% endif %}
 </div>

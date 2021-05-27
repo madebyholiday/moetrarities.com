@@ -1,0 +1,62 @@
+{% set brand = entry.brand.one() %}
+
+<div class="m-brand-summary">
+  <div class="container">
+    <div class="row">
+      <div class="col-dk-10 col-dk-push-1">
+        <div class="m-brand-summary__intro">
+          <div class="row">
+            <div class="col-tb-3">
+              <div class="m-brand-summary__logo">
+                <div class="o-box o-box--1x1">
+                  {% include '/partials/_image' with {
+                  image: brand.logo.one(),
+                  box: false
+                  }%}
+                </div>    
+              </div>
+            </div>
+
+            <div class="col-tb-8 col-tb-push-1">
+              <div class="m-brand-summary__eyebrow">
+                <h6>About the Brand</h6>
+              </div>    
+              <div class="m-brand-summary__body">
+                {{ brand.bodyTextarea }}
+              </div>
+              <a class="m-brand-summary__learn-more" href="{{ brand.url }}">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>        
+      </div>      
+    </div>            
+  </div>
+
+  <div class="container container--gallery">
+    <div class="row">
+      <div class="col-dk-10 col-dk-push-1">
+        <div class="m-brand-summary__gallery">
+          <div class="c-media-gallery js-media-gallery">
+            <div class="c-media-gallery__items js-items">
+              {% for item in brand.imageGallery.all() %}
+              <div class="c-media-gallery__item">
+                <div class="c-media-gallery__item__asset">
+                  {% include '/partials/_image' with {
+                  image: item.image.one(),
+                  mobileImage: item.imageMobile.one(),
+                  box: false
+                  } %}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="c-media-gallery__arrows js-arrows"></div>
+            <div class="c-media-gallery__dots js-dots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

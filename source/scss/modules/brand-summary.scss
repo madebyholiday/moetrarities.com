@@ -1,0 +1,43 @@
+.m-brand-summary {
+  margin: 100px 0;
+
+  @include breakpoint(desktop) {
+    margin: 150px 0;
+  }
+}
+
+.m-brand-summary__intro {
+  margin: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0 0 75px 0;
+  }
+}
+
+.m-brand-summary__logo {
+  width: 150px;
+}
+
+.m-brand-summary__eyebrow {
+  margin: 0 0 40px 0;
+}
+
+.m-brand-summary__eyebrow h6 {
+  @extend .t-h6;
+}
+
+.m-brand-summary__body {
+  @extend .t-large;
+  margin: 0 0 40px 0;
+}
+
+.m-brand-summary__learn-more {
+  @extend .t-link-decoration-reverse;
+  @extend .t-small-caps;
+}
+
+.m-brand-summary .container--gallery {
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}

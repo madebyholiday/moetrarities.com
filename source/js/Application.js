@@ -24,6 +24,7 @@ import PageLoader from 'components/PageLoader'
 import Fade from 'transitions/Fade'
 
 import Home from 'views/Home'
+import Product from 'views/Product'
 
 class Application {
   constructor () {
@@ -77,7 +78,8 @@ class Application {
         )               
       },
       views: [
-        new Home
+        new Home,
+        new Product
       ],
       transitions: [
         new Fade

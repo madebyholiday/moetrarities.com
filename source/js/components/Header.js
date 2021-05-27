@@ -16,6 +16,7 @@ class Header {
     this.onMobileMenuItemHasLinkListsClick = this.onMobileMenuItemHasLinkListsClick.bind(this)
     this.onMenuToggleClick = this.onMenuToggleClick.bind(this)
     this.onNavPrimaryItemClick = this.onNavPrimaryItemClick.bind(this)
+    this.onMouseleave = this.onMouseleave.bind(this)
     this.onDocumentClick = this.onDocumentClick.bind(this)
     this.onWindowResize = this.onWindowResize.bind(this)    
 
@@ -27,12 +28,14 @@ class Header {
         .find('.js-has-link-lists > a')
         .on('click', this.onMobileMenuItemHasLinkListsClick)
     
+    this.$el.on('mouseleave', this.onMouseleave)
     this.$el.find('.js-nav-primary-item > a').on('click', this.onNavPrimaryItemClick)
     
   }
 
   destroy () {
-    
+    this.$document.off('click', this.onDocumentClick)
+    this.$window.off('resize', this.onWindowResize);    
   }
 
   openMobileMenu () {
@@ -128,6 +131,11 @@ class Header {
     } else {
       $linkLists.slideUp(400, 'easeInOutCubic')
     }
+  }
+
+  onMouseleave ( e ) {
+    if ( this.activeDropdownId )
+      this.closeDropdown(this.activeDropdownId)
   }
 
   onNavPrimaryItemClick ( e ) {

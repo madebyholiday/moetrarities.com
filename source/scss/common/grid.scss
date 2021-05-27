@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 $container-padding-mobile;
   margin: 0 auto;
-  max-width: $breakpoint-xxxlarge;
+  max-width: $breakpoint-xxlarge;
   
   @include breakpoint(tablet) {
     padding: 0 $container-padding-tablet;
@@ -22,14 +22,18 @@
 }
 
 .row {
-  position: relative; 
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: -($grid-column-gutter/2);
   margin-right: -($grid-column-gutter/2); 
   
   [class*='col-'] {
     position: relative;
     min-height: 1px;
-    padding: 0 $grid-column-gutter/2;    
+    padding: 0 $grid-column-gutter/2;
+    flex: 0 0 100%;
+    max-width: 100%;  
   }
 
   &.row--2x-gutter {
@@ -50,10 +54,22 @@
     }
   }
 
+  @include breakpoint(tablet) {
+    &.row--tb-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  @include breakpoint(desktop) {
+    &.row--dk-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
   @for $i from 1 through $grid-column-count {
     .col-mb-#{$i} {
-      float: left;
-      width: percentage($i/$grid-column-count);
+      flex: 0 0 percentage($i/$grid-column-count);
+      max-width: percentage($i/$grid-column-count);
     }
     .col-mb-push-#{$i} {
       margin-left: percentage($i/$grid-column-count);
@@ -63,40 +79,26 @@
   @include breakpoint(mobile-large) {
     @for $i from 1 through $grid-column-count {
       .col-mb-lg-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }    
-      .col-mb-lg-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-mb-lg-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
-      }
-      .col-mb-lg-pull-#{$i} {
-        margin-left: percentage(-$i/$grid-column-count);
-      }
+      }      
     }
   }      
 
   @include breakpoint(tablet) {
     @for $i from 1 through $grid-column-count {
       .col-tb-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
-      .col-tb-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-tb-push-0 {
         margin-left: 0%;
       }
       .col-tb-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
-      }
-      .col-tb-pull-#{$i} {
-        margin-left: percentage(-$i/$grid-column-count);
       }
     }
   }
@@ -104,21 +106,14 @@
   @include breakpoint(tablet-large) {
     @for $i from 1 through $grid-column-count {
       .col-tb-lg-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
-      .col-tb-lg-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-tb-lg-push-0 {
         margin-left: 0%;
       }
       .col-tb-lg-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
-      }
-      .col-tb-lg-pull-#{$i} {
-        margin-left: percentage(-$i/$grid-column-count);
       }
     }
   }
@@ -126,21 +121,14 @@
   @include breakpoint(desktop) {
     @for $i from 1 through $grid-column-count + 5 {
       .col-dk-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
-      .col-dk-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-dk-push-0 {
         margin-left: 0%;
       }
       .col-dk-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
-      }
-      .col-dk-pull-#{$i} {
-        margin-left: percentage(-$i/$grid-column-count);
       }
     }
   }
@@ -148,21 +136,14 @@
   @include breakpoint(large) {
     @for $i from 1 through $grid-column-count + 5 {
       .col-lg-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
-      .col-lg-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-lg-push-0 {
         margin-left: 0;
       }
       .col-lg-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
-      }
-      .col-lg-pull-#{$i} {
-        margin-left: percentage(-$i/$grid-column-count);
       }
     }
   }
@@ -170,13 +151,9 @@
   @include breakpoint(xlarge) {
     @for $i from 1 through $grid-column-count {
       .col-xl-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
-      .col-xl-#{$i}-half {
-        float: left;
-        width: percentage(($i + .5)/$grid-column-count);
-      }      
       .col-xl-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
       }
@@ -186,8 +163,8 @@
   @include breakpoint(xxlarge) {
     @for $i from 1 through $grid-column-count {
       .col-xxl-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
       .col-xxl-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
@@ -198,17 +175,12 @@
   @include breakpoint(xxxlarge) {    
     @for $i from 1 through $grid-column-count {
       .col-xxxl-#{$i} {
-        float: left;
-        width: percentage($i/$grid-column-count);
+        flex: 0 0 percentage($i/$grid-column-count);
+        max-width: percentage($i/$grid-column-count);
       }
       .col-xxxl-push-#{$i} {
         margin-left: percentage($i/$grid-column-count);
       }
     }
   }  
-}
-
-.container,
-.row {
-  @extend %clearfix;
 }
