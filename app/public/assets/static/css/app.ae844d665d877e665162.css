@@ -183,13 +183,13 @@ h1, h2, h3, h4, h5, h6 {
     .t-h1, .c-product-hero__title, .c-product-details__title {
       font-size: 75px; } }
 
-.t-h2, .c-editorial-hero__title, .m-media-text__title {
+.t-h2, .c-editorial-hero__title, .m-media-text__title, .m-follow__title {
   font-family: "freightdispcmp-pro";
   font-size: 40px;
   font-weight: 500;
   line-height: 1em; }
   @media (min-width: 768px) {
-    .t-h2, .c-editorial-hero__title, .m-media-text__title {
+    .t-h2, .c-editorial-hero__title, .m-media-text__title, .m-follow__title {
       font-size: 50px; } }
 
 .t-h3, .c-product__title {
@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
     .t-h3, .c-product__title {
       font-size: 32px; } }
 
-.t-h6, .c-product__brand, .c-product-hero__brand, .c-editorial-hero__eyebrow, .c-product-details__brand, .m-brand-summary__eyebrow h6, .m-related-products__title, .m-text__eyebrow {
+.t-h6, .c-product__brand, .c-product-hero__brand, .c-editorial-hero__eyebrow, .c-product-details__brand, .m-brand-summary__eyebrow h6, .m-related-products__title, .m-text__eyebrow, .m-media-text__eyebrow, .m-spotlight__eyebrow, .m-follow__eyebrow {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .075em;
@@ -209,6 +209,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .t-normal, .rte, .o-button--icon span:nth-child(1), .c-product-price {
   font-size: 14px;
+  line-height: 1.6em; }
+
+.t-normal-serif, .rte--serif {
+  font-family: "freight-display-pro";
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.6em; }
 
 .t-normal-caps, .c-nav-primary ul li a {
@@ -222,13 +228,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Gotham';
   font-size: 12px; }
 
-.t-small-caps, .c-header__domain, .c-nav-user ul li a, .c-nav-secondary ul li a, .c-accordion-item__header, .c-tabs__nav ul li button, .c-editorial-hero__read-more, .m-brand-summary__learn-more, .m-media-text__subtitle {
+.t-small-caps, .c-header__domain, .c-nav-user ul li a, .c-nav-secondary ul li a, .c-accordion-item__header, .c-tabs__nav ul li button, .c-editorial-hero__read-more, .m-brand-summary__learn-more, .m-media-text__subtitle, .m-quote__quote cite, .m-follow__link a {
   font-family: 'Gotham';
   font-size: 11px;
   line-height: 1.6em;
   text-transform: uppercase;
   letter-spacing: .075em;
-  font-weight: 500; }
+  font-weight: 400; }
 
 .t-xsmall {
   font-family: 'Gotham';
@@ -271,10 +277,22 @@ h1, h2, h3, h4, h5, h6 {
     .t-large, .m-brand-summary__body {
       font-size: 40px; } }
 
-.t-link-decoration, .t-link-decoration-reverse, .c-editorial-hero__read-more, .m-brand-summary__learn-more, .c-tabs__nav ul li {
+.t-xlarge, .m-quote__quote p {
+  font-family: "freightdispcmp-pro";
+  font-size: 40px;
+  line-height: 1.18em;
+  font-weight: 500; }
+  @media (min-width: 768px) {
+    .t-xlarge, .m-quote__quote p {
+      font-size: 46px; } }
+  @media (min-width: 1024px) {
+    .t-xlarge, .m-quote__quote p {
+      font-size: 54px; } }
+
+.t-link-decoration, .t-link-decoration-reverse, .c-editorial-hero__read-more, .m-brand-summary__learn-more, .c-tabs__nav ul li, .m-follow__link a {
   position: relative;
   display: inline-block; }
-  .t-link-decoration:after, .t-link-decoration-reverse:after, .c-editorial-hero__read-more:after, .m-brand-summary__learn-more:after, .c-tabs__nav ul li:after {
+  .t-link-decoration:after, .t-link-decoration-reverse:after, .c-editorial-hero__read-more:after, .m-brand-summary__learn-more:after, .c-tabs__nav ul li:after, .m-follow__link a:after {
     position: absolute;
     display: block;
     content: '';
@@ -287,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     will-change: width;
     transition: right 0s ease 300ms, left 0s ease 300ms, width 300ms cubic-bezier(0.25, 0.1, 0.25, 1); }
-  .t-link-decoration:hover:after, .t-link-decoration-reverse:hover:after, .c-editorial-hero__read-more:hover:after, .m-brand-summary__learn-more:hover:after, .c-tabs__nav ul li:hover:after, .t-link-decoration.is-active:after, .is-active.t-link-decoration-reverse:after, .is-active.c-editorial-hero__read-more:after, .is-active.m-brand-summary__learn-more:after, .c-tabs__nav ul li.is-active:after {
+  .t-link-decoration:hover:after, .t-link-decoration-reverse:hover:after, .c-editorial-hero__read-more:hover:after, .m-brand-summary__learn-more:hover:after, .c-tabs__nav ul li:hover:after, .m-follow__link a:hover:after, .t-link-decoration.is-active:after, .is-active.t-link-decoration-reverse:after, .is-active.c-editorial-hero__read-more:after, .is-active.m-brand-summary__learn-more:after, .c-tabs__nav ul li.is-active:after, .m-follow__link a.is-active:after {
     width: 100%;
     left: 0;
     right: auto;
@@ -311,6 +329,18 @@ a {
 
 i {
   font-style: normal; }
+
+::-moz-selection {
+  background: #B2ADA3;
+  color: #ffffff; }
+
+::selection {
+  background: #B2ADA3;
+  color: #ffffff; }
+
+::-moz-selection {
+  background: #B2ADA3;
+  color: #ffffff; }
 
 .container {
   position: relative;
@@ -2305,6 +2335,15 @@ body {
     .m-media-text {
       margin: 100px 0; } }
 
+.m-media-text__eyebrow {
+  margin: 0 0 40px 0; }
+  @media (min-width: 768px) {
+    .m-media-text__eyebrow {
+      margin: 0 0 50px 0; } }
+  @media (min-width: 1024px) {
+    .m-media-text__eyebrow {
+      margin: 0 0 75px 0; } }
+
 .m-media-text__text-header {
   margin: 0 0 30px 0; }
   .m-media-text__text-header.is-tablet {
@@ -2369,4 +2408,69 @@ body {
 @media (min-width: 768px) {
   .m-featured-products__products [class*="col-"]:nth-last-child(-n+3) .c-product {
     margin-bottom: 0; } }
+
+.m-quote {
+  text-align: center;
+  margin: 50px 0; }
+  @media (min-width: 768px) {
+    .m-quote {
+      margin: 75px 0; } }
+  @media (min-width: 1024px) {
+    .m-quote {
+      margin: 100px 0; } }
+
+.m-quote__quote {
+  margin: 0; }
+
+.m-quote__quote p {
+  margin: 0; }
+
+.m-quote__quote cite {
+  display: block;
+  margin: 50px 0 0 0; }
+
+.m-spotlight {
+  padding: 50px 0;
+  background-color: #F2F0EC; }
+  @media (min-width: 768px) {
+    .m-spotlight {
+      padding: 75px 0; } }
+  @media (min-width: 1024px) {
+    .m-spotlight {
+      padding: 100px 0; } }
+
+.m-spotlight__eyebrow {
+  margin: 0 0 30px 0; }
+
+.m-spotlight__image {
+  margin: 0 0 50px 0;
+  box-shadow: 0px 30px 65px rgba(0, 0, 0, 0.25); }
+  @media (min-width: 768px) {
+    .m-spotlight__image {
+      margin: 0; } }
+
+.m-follow {
+  margin: 50px 0; }
+  @media (min-width: 768px) {
+    .m-follow {
+      margin: 75px 0; } }
+  @media (min-width: 1024px) {
+    .m-follow {
+      margin: 100px 0; } }
+
+.m-follow__eyebrow {
+  margin: 0 0 10px 0; }
+
+.m-follow__title {
+  margin: 0 0 40px 0; }
+
+.m-follow__links {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.m-follow__link {
+  margin: 0 0 20px 0; }
+  .m-follow__link:last-child {
+    margin: 0; }
 

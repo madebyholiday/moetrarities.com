@@ -1,7 +1,13 @@
 <div class="m-media-text">
-  <div class="container">
+  <div class="container">    
     <div class="row">
       <div class="col-xl-10 col-xl-push-1">
+        {% if module.eyebrow %}
+        <div class="m-media-text__eyebrow">
+          {{ module.eyebrow }}
+        </div>
+        {% endif %}
+        
         <div class="row {% if module.leftRightSelect == 'right'%}row--tb-reverse{% endif %}">
           {% set mediaClass = '' %}
           {% if module.leftRightSelect == 'left' %}

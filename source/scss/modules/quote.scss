@@ -1,0 +1,27 @@
+.m-quote {
+  text-align: center;
+  margin: 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 75px 0;
+  }
+  
+  @include breakpoint(desktop) {
+    margin: 100px 0;
+  }
+}
+
+.m-quote__quote {
+  margin: 0;
+}
+
+.m-quote__quote p {
+  @extend .t-xlarge;
+  margin: 0;
+}
+
+.m-quote__quote cite {
+  display: block;
+  margin: 50px 0 0 0;
+  @extend .t-small-caps;
+}

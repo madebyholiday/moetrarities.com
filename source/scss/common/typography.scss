@@ -54,6 +54,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
 }
 
+.t-normal-serif {
+  font-family:"freight-display-pro";  
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+
 .t-normal-caps {
   font-family: 'Gotham';
   font-size: 13px;
@@ -73,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6em;
   text-transform: uppercase;
   letter-spacing: .075em;
-  font-weight: 500;
+  font-weight: 400;  
 }
 
 .t-xsmall {
@@ -125,6 +132,21 @@ h1, h2, h3, h4, h5, h6 {
 
   @include breakpoint(desktop) {
     font-size: 40px;
+  }
+}
+
+.t-xlarge {
+  font-family: "freightdispcmp-pro";
+  font-size: 40px;
+  line-height: 1.18em;
+  font-weight: 500;
+
+  @include breakpoint(tablet) {
+    font-size: 46px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 54px;
   }
 }
 
@@ -192,4 +214,17 @@ i {
 
 .rte {
   @extend .t-normal;
+}
+
+.rte--serif {
+  @extend .t-normal-serif;
+}
+
+::selection {
+  background: $color-bronze;
+  color: $color-white;
+}
+::-moz-selection {
+  background: $color-bronze;
+  color: $color-white;
 }

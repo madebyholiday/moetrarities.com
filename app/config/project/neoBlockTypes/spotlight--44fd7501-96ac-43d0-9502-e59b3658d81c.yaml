@@ -1,52 +1,63 @@
 childBlocks: ''
 field: 4a186240-4cb8-4774-8782-4e0d96e7e0d2 # Page Modules
 fieldLayouts:
-  0cb2289a-7734-4ada-97ad-c7741cc07a98:
+  7f15647b-ebe7-4dc7-ba91-b7d8c3b713dd:
     tabs:
       -
         elements:
           -
-            fieldUid: cc11f94c-8711-44bd-8585-51503c7356d4 # Title
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 66116a0a-e8a8-455a-af9d-4035d4516014 # Subtitle
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 3fc9ec2b-e501-447a-981f-9669fc7ae901 # Products
+            fieldUid: 1318ea66-9a2e-4f4f-9ed9-8e74967b4a89 # Image
             instructions: ''
             label: ''
             required: '1'
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
+            width: 100
+        name: Media
+        sortOrder: 1
+      -
+        elements:
           -
-            fieldUid: 87e5adce-325b-4169-931f-3e097fd39c68 # Normal / Hero - Select
-            instructions: ''
-            label: 'Lead Format'
+            fieldUid: 6a195cfb-9bdd-4b9c-9c29-f238997bff25 # Eyebrow
+            instructions: null
+            label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
-            width: 25
-        name: Content
-        sortOrder: 1
-handle: featuredProducts
+            width: 100
+          -
+            fieldUid: 4f0f45ee-6285-497b-89e7-ca5659c26c2b # Body
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Text
+        sortOrder: 2
+      -
+        elements:
+          -
+            heading: Layout
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: cc646fda-a838-4ede-ae03-065f3918d03c # Left / Right - Select
+            instructions: ''
+            label: 'Media Position'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 3
+handle: spotlight
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: 'Featured Products'
-sortOrder: 3
+name: Spotlight
+sortOrder: 5
 topLevel: true

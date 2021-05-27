@@ -5,4 +5,5 @@
 {% for module in entry.pageModules.all() %}
   {% include '/modules/_' ~ module.type | kebab %}
 {% endfor %}
+{% include '/modules/_follow' %}
 {% endblock %}

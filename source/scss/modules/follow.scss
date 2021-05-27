@@ -1,0 +1,43 @@
+.m-follow {
+  margin: 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 75px 0;
+  }
+  
+  @include breakpoint(desktop) {
+    margin: 100px 0;
+  }
+}
+
+.m-follow__eyebrow {
+  @extend .t-h6;
+  margin: 0 0 10px 0;
+}
+
+.m-follow__title {
+  @extend .t-h2;
+  margin: 0 0 40px 0;
+}
+
+.m-follow__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.m-follow__link {
+  margin: 0 0 20px 0;
+  
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.m-follow__link a {
+  @extend .t-link-decoration;
+  @extend .t-small-caps;
+}
+
+
+

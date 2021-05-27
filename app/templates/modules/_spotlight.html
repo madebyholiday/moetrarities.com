@@ -1,0 +1,30 @@
+<div class="m-spotlight">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 col-xl-push-1">
+        <div class="row {% if module.leftRightSelect == 'right'%}row--tb-reverse{% endif %}">
+          <div class="col-tb-6 col-dk-7 {% if module.leftRightSelect == 'right' %}col-dk-push-1{% endif %}">
+            <div class="m-spotlight__image">
+              {% include '/partials/_image' with {
+              image: module.image.one()
+              } %}
+            </div>
+          </div>
+          <div class="col-tb-6 col-dk-4 {% if module.leftRightSelect == 'left' %}col-dk-push-1{% endif %}">
+            {% if module.eyebrow %}
+            <div class="m-spotlight__eyebrow">
+              {{ module.eyebrow }}
+            </div>
+            {% endif %}
+            
+            <div class="m-spotlight__body">        
+              <div class="rte rte--serif">
+                {{ module.body }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="m-follow">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-10 col-xl-push-1">
+        <h6 class="m-follow__eyebrow">Follow</h6>
+        <h5 class="m-follow__title">{{ entry.title }}</h5>
+
+        <nav class="m-follow__nav">
+          <ul class="m-follow__links">
+            {% for link in entry.followLinks %}
+            <li class="m-follow__link">
+              <a href="{{ link.url }}">{{ link.linkTitle }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
