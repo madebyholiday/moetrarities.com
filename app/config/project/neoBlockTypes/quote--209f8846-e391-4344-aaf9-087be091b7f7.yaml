@@ -1,0 +1,34 @@
+childBlocks: ''
+field: b35c8f0f-938f-4a51-84fe-69672691817b # Animated Scenes
+fieldLayouts:
+  26a2d3e6-22e1-42df-af61-e05dc0fb4bb3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f37621db-e2e0-4cde-beff-7687c349c859 # Quote
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 137d4feb-8994-4ed2-8c8b-fa575599d9a4 # Attribution
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: quote
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: Quote
+sortOrder: 4
+topLevel: true

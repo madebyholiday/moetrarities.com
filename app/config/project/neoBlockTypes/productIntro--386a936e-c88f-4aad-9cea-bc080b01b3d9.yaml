@@ -1,0 +1,87 @@
+childBlocks: ''
+field: b35c8f0f-938f-4a51-84fe-69672691817b # Animated Scenes
+fieldLayouts:
+  4c6b311f-3e0c-4fd4-a573-db085c3a3618:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 9b19314d-ab73-4751-a481-4653a510e2d5 # Raw Images
+            instructions: ''
+            label: Images
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6a195cfb-9bdd-4b9c-9c29-f238997bff25 # Eyebrow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cc11f94c-8711-44bd-8585-51503c7356d4 # Title
+            instructions: ''
+            label: Title
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 66116a0a-e8a8-455a-af9d-4035d4516014 # Subtitle
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cc646fda-a838-4ede-ae03-065f3918d03c # Left / Right - Select
+            instructions: ''
+            label: 'Text Position'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9f505dfa-c441-4b2a-83dc-754fb1f98f39 # Product
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Text
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 0fada624-b808-4d53-baba-279c78070124 # Pixels
+            instructions: 'The amount of scrollable pixels the scene should pause for at the end of the sequence. '
+            label: 'Pause Duration'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 3
+handle: productIntro
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: 'Product Intro'
+sortOrder: 2
+topLevel: true

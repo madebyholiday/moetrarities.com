@@ -37,9 +37,11 @@
 @import 'components/product';
 @import 'components/product-hero';
 @import 'components/editorial-hero';
+@import 'components/editorial';
 @import 'components/breadcrumbs';
 
 /* Modules */
+@import 'modules/animated-scenes';
 @import 'modules/product-hero';
 @import 'modules/brand-hero';
 @import 'modules/brand-summary';
@@ -52,3 +54,4 @@
 @import 'modules/quote';
 @import 'modules/spotlight';
 @import 'modules/follow';
+@import 'modules/experiences';

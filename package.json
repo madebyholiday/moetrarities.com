@@ -48,6 +48,7 @@
     "custom-event-polyfill": "^1.0.7",
     "dom4": "^2.1.6",
     "gsap": "^3.5.1",
+    "intrinsic-scale": "^3.0.4",
     "jquery": "^3.5.1",
     "jquery.easing": "^1.4.1",
     "lazysizes": "^5.3.0-beta1",

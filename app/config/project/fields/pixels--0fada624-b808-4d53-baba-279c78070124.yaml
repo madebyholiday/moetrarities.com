@@ -1,0 +1,19 @@
+contentColumnType: integer(10)
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: pixels
+instructions: ''
+name: Pixels
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: '0'
+  max: null
+  min: '0'
+  prefix: null
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

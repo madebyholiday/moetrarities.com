@@ -20,7 +20,7 @@
     background-color: transparent;    
   }
 
-  body.is-scrolled & {
+  body:not(.page-home).is-scrolled & {
     color: $color-black;
     background-color: $color-spring-wood;    
   }
@@ -52,7 +52,7 @@
     border-bottom: solid 1px transparentize($color-white, .75);
   }
 
-  body.is-scrolled & {
+  body:not(.page-home).is-scrolled & {
     border-bottom: solid 1px transparentize($color-black, .75);    
   }
   
@@ -85,7 +85,7 @@
       background-color: transparent;
     }
 
-    body.is-scrolled & {
+    body:not(.page-home).is-scrolled & {
       background-color: $color-spring-wood;      
     }
 
@@ -127,7 +127,7 @@
     transition: border-color 300ms ease;
   }
 
-  body.is-scrolled & {
+  body:not(.page-home).is-scrolled & {
     border-left: solid 1px transparentize($color-black, .75);
   } 
   
@@ -204,7 +204,7 @@
       background-color: transparent;
     }
 
-    body.is-scrolled & {
+    body:not(.page-home).is-scrolled & {
       background-color: $color-spring-wood;      
     }
     
@@ -239,7 +239,7 @@
       fill: $color-white;
     }
 
-    body.is-scrolled & {
+    body:not(.page-home).is-scrolled & {
       fill: $color-black;
     }
 
@@ -257,7 +257,7 @@
         transition: fill 300ms ease;
       }
 
-      body.is-scrolled & {
+      body:not(.page-home).is-scrolled & {
         fill: $color-black;
       }
       
@@ -303,7 +303,7 @@
     background-color: $color-white;
   }
 
-  body.is-scrolled & {
+  body:not(.page-home).is-scrolled & {
     background-color: $color-black;    
   }
 
@@ -311,7 +311,7 @@
     transition: fill 300ms ease;
   }
   
-  body.is-scrolled.is-scrolling & {
+  body:not(.page-home).is-scrolled.is-scrolling & {
     transition:
       width 300ms ease,
       background-color 300ms ease;
@@ -382,7 +382,7 @@
     background-color: $color-white;
   }
 
-  body.is-scrolled & {
+  body:not(.page-home).is-scrolled & {
     background-color: $color-black;
     color: $color-white;    
   }

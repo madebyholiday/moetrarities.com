@@ -1,5 +1,5 @@
 fieldLayouts:
-  b6339e8f-b399-47c3-854d-f8906cc91bed:
+  eb01bd5e-6a90-4639-85b3-4f1d28f6871d:
     tabs:
       -
         elements:
@@ -23,25 +23,18 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
-            warning: null
-            width: 100
-          -
-            fieldUid: b35c8f0f-938f-4a51-84fe-69672691817b # Animated Scenes
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
+            type: craft\fieldlayoutelements\AssetTitleField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-handle: home
-hasTitleField: false
-name: Home
-section: e2369b9b-5152-4ce4-9aac-d727b035f9d0 # Home
-sortOrder: 1
-titleFormat: '{section.name|raw}'
+handle: users
+hasUrls: false
+name: Users
+settings:
+  path: '@assetBasePath/uploads/users'
+sortOrder: 2
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: ''

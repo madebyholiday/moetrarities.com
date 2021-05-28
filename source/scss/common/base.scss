@@ -41,6 +41,11 @@ body {
   &.is-transparent-header {
     padding-top: 0;
   }
+
+  &.page-home {
+    color: $color-white;
+    background-color: $color-black;
+  }
    
   &.is-loading,
   &.is-navigating {    
@@ -50,3 +55,9 @@ body {
     }
   }
 }
+
+main {
+  position: relative;
+  z-index: 1;
+}
+

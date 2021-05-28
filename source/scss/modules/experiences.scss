@@ -1,0 +1,11 @@
+.m-experiences {
+  
+}
+
+.m-experiences .c-editorial-hero {
+  margin: 0 0 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0 0 100px 0;
+  }
+}

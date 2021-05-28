@@ -1,8 +1,11 @@
 fieldLayouts:
-  a516aa4c-4bdb-472c-abf0-c4f3928dfd8a:
+  63ed6379-7de6-49f1-9d3f-9a852045cc9d:
     tabs:
       -
         elements:
+          -
+            heading: Copy
+            type: craft\fieldlayoutelements\Heading
           -
             autocapitalize: true
             autocomplete: false
@@ -47,42 +50,12 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-          -
-            heading: Copy
-            type: craft\fieldlayoutelements\Heading
-          -
-            fieldUid: cc11f94c-8711-44bd-8585-51503c7356d4 # Title
-            instructions: ''
-            label: 'Eyebrow Title'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
-            fieldUid: 66116a0a-e8a8-455a-af9d-4035d4516014 # Subtitle
-            instructions: ''
-            label: 'Eyebrow Subtitle'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 25
-          -
-            fieldUid: 52adb6fa-a30d-46da-93a0-9684815d778f # Entity Excerpt
-            instructions: ''
-            label: Excerpt
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Hero
         sortOrder: 1
       -
         elements:
           -
-            fieldUid: 3fc9ec2b-e501-447a-981f-9669fc7ae901 # Products
+            fieldUid: 46517e3e-9148-407e-ab0b-2e4dfb062a35 # Experiences
             instructions: null
             label: null
             required: false
@@ -90,13 +63,13 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
-        name: Products
+        name: Articles
         sortOrder: 2
-handle: productIndex
+handle: experienceIndex
 hasTitleField: true
-name: 'Product Index'
-section: 6c0263b3-7820-46ca-b7ac-d0ed864488dd # Product Index
+name: 'Experience Index'
+section: 4f29a97d-d232-4e7f-99a8-85d7f30a420b # Experience Index
 sortOrder: 1
-titleFormat: Products
+titleFormat: Experiences
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

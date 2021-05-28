@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: experiencesIndex
-name: 'Experiences Index'
+handle: experienceIndex
+name: 'Experience Index'
 previewTargets:
   -
     __assoc__:

@@ -4,9 +4,13 @@
 {% set eyebrow = craft.entries.section('experiencesIndex').one() %}
 {% endif %}
 
+{% if reverse is not defined %}
+{% set reverse = false %}
+{% endif %}
+
 <div class="c-editorial-hero">
-  <div class="row">
-    <div class="col-tb-6">
+  <div class="row {% if reverse %}row--tb-reverse{% endif %}">
+    <div class="col-tb-6 {% if reverse %}col-lg-push-1{% endif %}">
       <div class="c-editorial-hero__image">
         <a href="{{ entry.url }}">
           {% include '/partials/_image' with {
@@ -15,7 +19,7 @@
         </a>
       </div>
     </div>
-    <div class="col-tb-6 col-lg-5 col-lg-push-1">
+    <div class="col-tb-6 col-lg-5 {% if not reverse %}col-lg-push-1{% endif %}">
       <div class="c-editorial-hero__details">
         {% if eyebrow %}
         <h6 class="c-editorial-hero__eyebrow">{{ eyebrow.title }}</h6>

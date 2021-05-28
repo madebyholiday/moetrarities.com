@@ -1,0 +1,19 @@
+description: ''
+handle: privateClientManagers
+name: 'Private Client Managers'
+permissions:
+  - accesssitewhensystemisoff
+  - accesscpwhensystemisoff
+  - performupdates
+  - accessplugin-navigation
+  - accessplugin-seomatic
+  - accesscp
+  - customizesources
+  - registerusers
+  - moderateusers
+  - assignuserpermissions
+  - assignusergroups
+  - administrateusers
+  - impersonateusers
+  - editusers
+  - deleteusers

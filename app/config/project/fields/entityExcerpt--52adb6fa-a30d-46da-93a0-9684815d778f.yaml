@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: ab7fd0d9-e6e4-4a24-a93a-99c9c075a42b # Editorial
+handle: entityExcerpt
+instructions: ''
+name: 'Entity Excerpt'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '2'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

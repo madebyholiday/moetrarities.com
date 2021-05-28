@@ -1,0 +1,20 @@
+.c-editorial {
+  margin: 0 0 $grid-column-gutter 0;
+
+  @include breakpoint(tablet) {
+    margin: 0 0 $grid-column-gutter * 1.5 0;
+  }
+}
+
+.c-editorial__title {
+  @extend .t-h3;
+}
+
+.c-editorial__body {
+  margin: 0 0 40px 0;  
+}
+
+.c-editorial__read-more {
+  @extend .t-small-caps;
+  @extend .t-link-decoration-reverse;
+}

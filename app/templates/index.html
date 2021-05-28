@@ -1,6 +1,30 @@
 {% extends "/_application" %}
 
 {% block content %}
-home
+<div class="m-animated-scenes js-animated-scenes">
+  {% for scene in entry.animatedScenes.all() %}
+  <div class="c-animated-scene js-animated-scene"
+       data-images="{{ scene.rawImages.all() | map(i => i.url) | json_encode }}"
+       data-pause-duration="{{ scene.pixels }}">
+    {% if scene.type == 'productIntro' %}
+    {% set product = scene.product.one() %}
+    <div class="c-animated-scene-overlay c-animated-scene-overlay--{{ scene.leftRightSelect }}">
+      <div class="c-animated-scene-overlay__text js-text">
+        <div class="c-animated-scene-overlay__eyebrow">{{ scene.eyebrow }}</div>
+        <div class="c-animated-scene-overlay__title">{{ scene.entityTitle }}</div>
+        <div class="c-animated-scene-overlay__subtitle">{{ scene.entitySubtitle }}</div>
+        <a class="o-button o-button--icon o-button--ko"
+           href="{{ product.url }}">
+          <span>Explore</span>
+          <span><i class="icon-chevron-thin-right"></i></span>
+        </a>
+      </div>
+    </div>
+    {% endif %}
+    
+    <canvas class="js-canvas"></canvas>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
 

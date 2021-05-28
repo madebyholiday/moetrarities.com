@@ -1,4 +1,10 @@
-<div class="m-page-hero">
+{% set hasEntity = false %}
+
+{% if entry.entityTitle or entry.entitySubtitle or entry.entityExcerpt %}
+{% set hasEntity = true %}
+{% endif %}
+
+<div class="m-page-hero {% if hasEntity %}m-page-hero--has-entity{% endif %}">
   <div class="m-page-hero__asset">
     {% include '/partials/_image' with {
       image: entry.heroImage.one(),
@@ -8,8 +14,11 @@
     <div class="m-page-hero__title">
       <div class="container">
         <div class="row">
-          <div class="col-mb-9 col-mb-push-1">
-            {{ entry.title }}
+          <div class="col-mb-9 col-mb-push-1 col-dk-6">
+            <h1>{{ entry.title }}</h1>
+            {% if entry.excerpt %}
+            <p>{{ entry.excerpt }}</p>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -37,9 +46,11 @@
       </div>
       {% endif %}
       <div class="col-tb-10 col-tb-push-1 col-dk-8 col-lg-7">
+        {% if entry.entityExcerpt %}
         <div class="m-page-hero__body">
-          <p>{{ entry.excerpt }}</p>
+          <p>{{ entry.entityExcerpt }}</p>
         </div>
+        {% endif %}
       </div>
     </div>
     {% endif %}

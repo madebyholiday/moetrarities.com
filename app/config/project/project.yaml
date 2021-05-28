@@ -1,4 +1,4 @@
-dateModified: 1622157060
+dateModified: 1622220779
 email:
   fromEmail: richard@madeby.holiday
   fromName: Rarities
@@ -89,9 +89,3 @@ system:
   name: Rarities
   schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

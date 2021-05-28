@@ -1,21 +1,21 @@
 contentColumnType: string
-fieldGroup: 94619819-5c53-4602-aeac-7c2e5359e615 # Product
-handle: products
+fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
+handle: privateClients
 instructions: ''
-name: Products
+name: 'Private Clients'
 searchable: false
 settings:
   allowSelfRelations: false
   limit: ''
   localizeRelations: false
-  selectionLabel: 'Add a product'
-  showSiteMenu: true
+  selectionLabel: 'Add a client'
+  showSiteMenu: false
   source: null
   sources:
-    - 'section:b9e160d4-4128-47ad-863a-65d3309a9e14' # Products
+    - 'group:5353754a-7fa0-42d4-a51a-befd6e2f70de' # Private Clients
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null
 translationKeyFormat: null
 translationMethod: site
-type: craft\fields\Entries
+type: craft\fields\Users

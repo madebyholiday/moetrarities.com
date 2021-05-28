@@ -1,0 +1,61 @@
+.m-animated-scenes {
+  min-height: 100vh;
+  margin-bottom: 50vh;
+}
+
+.c-animated-scene {
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.c-animated-scene canvas {
+  position: fixed;
+  opacity: 0;
+  will-transform: opacity;
+  z-index: 1;
+}
+
+.c-animated-scene-overlay {
+  @include v-center(fixed);
+  z-index: 2;
+}
+
+.c-animated-scene-overlay--left {
+  left: $container-padding-mobile;
+
+  @include breakpoint(tablet) {
+    left: $container-padding-tablet;
+  }
+
+  @include breakpoint(desktop) {
+    left: $container-padding-desktop;
+  }
+
+  @include breakpoint(large) {
+    left: $container-padding-large;
+  }
+}
+
+.c-animated-scene-overlay--right {
+  left: 50%;  
+}
+
+.c-animated-scene-overlay__eyebrow {
+  @extend .t-h6;
+  margin: 0 0 40px 0;
+}
+
+.c-animated-scene-overlay__text {
+  opacity: 0;
+}
+
+.c-animated-scene-overlay__title,
+.c-animated-scene-overlay__subtitle {
+  font-family:"freightdispcmp-pro";
+  font-size: 70px;
+  line-height: .9em;
+}
+
+.c-animated-scene-overlay__subtitle {
+  margin: 0 0 50px 0;
+}

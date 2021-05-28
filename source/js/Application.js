@@ -21,7 +21,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import PageLoader from 'components/PageLoader'
 
-import Fade from 'transitions/Fade'
+import Wipe from 'transitions/Wipe'
 
 import Home from 'views/Home'
 import Product from 'views/Product'
@@ -82,7 +82,7 @@ class Application {
         new Product
       ],
       transitions: [
-        new Fade
+        new Wipe
       ]
     })    
   }

@@ -1,5 +1,5 @@
 fieldLayouts:
-  63ed6379-7de6-49f1-9d3f-9a852045cc9d:
+  756a1a4f-596b-425f-a889-f39f8e2eaca1:
     tabs:
       -
         elements:
@@ -23,16 +23,18 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\AssetTitleField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-handle: experiencesIndex
-hasTitleField: false
-name: 'Experiences Index'
-section: 4f29a97d-d232-4e7f-99a8-85d7f30a420b # Experiences Index
-sortOrder: 1
-titleFormat: Experiences
+handle: rawImages
+hasUrls: true
+name: 'Raw Images'
+settings:
+  path: '@assetBasePath/uploads/raw'
+sortOrder: 0
 titleTranslationKeyFormat: null
-titleTranslationMethod: site
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: '@assetBaseUrl/uploads/raw'

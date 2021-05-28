@@ -1,0 +1,60 @@
+childBlocks: ''
+field: b35c8f0f-938f-4a51-84fe-69672691817b # Animated Scenes
+fieldLayouts:
+  8ace3d9f-2176-4fa4-b65f-8c8cbfbe1a78:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 128d077b-94b8-4567-9cc9-2e5af3177542 # Images
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
+            instructions: ''
+            label: Body
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9f505dfa-c441-4b2a-83dc-754fb1f98f39 # Product
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Text
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 0fada624-b808-4d53-baba-279c78070124 # Pixels
+            instructions: 'The amount of scrollable pixels the scene should pause for at the end of the sequence. '
+            label: 'Pause Duration'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 3
+handle: productDetail
+maxBlocks: 0
+maxChildBlocks: 0
+maxSiblingBlocks: 0
+name: 'Product Detail'
+sortOrder: 3
+topLevel: true

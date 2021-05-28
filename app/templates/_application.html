@@ -25,8 +25,10 @@
     {%- else -%}
       page-404 
     {%- endif -%}
-  {% if (entry is defined and entry.type == 'brand') or
-        (entry is defined and entry.type == 'productIndex') %}
+  {% if (entry is defined and entry.type == 'home') or
+        (entry is defined and entry.type == 'brand') or
+        (entry is defined and entry.type == 'productIndex') or
+        (entry is defined and entry.type == 'experienceIndex') %}
       is-transparent-header
     {% endif %}
   {%- endset -%}
@@ -46,21 +48,20 @@
     {{ beginBody() }}
 
     {% include '/components/_page-loader' %}
+    {% include '/components/_page-transition' %}
     
-    <div data-barba="container"
+    <div class="site-container js-site-container"
+         data-barba="container"
          data-barba-namespace="{{ namespace }}">
       <meta itemprop="body-class"
             content="{{ bodyClass | replace('/\\s+/', ' ') | trim }}">      
-      {% include '/components/_header' %}
-      <div>
-        <main class="c-main js-main">
-          {% include '/components/_page-transition' %}
-          <div class="c-main__content">
-            {% block content %}{% endblock %}
-          </div>
-        </main>
-        {% include '/components/_footer' %}
-      </div>
+      {% include '/components/_header' %}      
+      <main class="c-main js-main">
+        <div class="c-main__content">
+          {% block content %}{% endblock %}
+        </div>
+      </main>
+      {% include '/components/_footer' %}     
     </div>
     {{ endBody() }}        
   </body>

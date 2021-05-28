@@ -1,18 +1,18 @@
 contentColumnType: string
-fieldGroup: 94619819-5c53-4602-aeac-7c2e5359e615 # Product
-handle: products
+fieldGroup: ab7fd0d9-e6e4-4a24-a93a-99c9c075a42b # Editorial
+handle: experiences
 instructions: ''
-name: Products
+name: Experiences
 searchable: false
 settings:
   allowSelfRelations: false
   limit: ''
   localizeRelations: false
-  selectionLabel: 'Add a product'
-  showSiteMenu: true
+  selectionLabel: 'Add an article'
+  showSiteMenu: false
   source: null
   sources:
-    - 'section:b9e160d4-4128-47ad-863a-65d3309a9e14' # Products
+    - 'section:25aef36f-c397-4e41-a229-632bdc12bb3b' # Experiences
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

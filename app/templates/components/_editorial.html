@@ -1,1 +1,29 @@
-no
+<div class="c-editorial">
+  <div class="row">
+    <div class="col-tb-6">
+      <div class="c-editorial__image">
+        <a href="{{ entry.url }}">
+          {% include '/partials/_image' with {
+            image: entry.image.one()
+          } %}
+        </a>
+      </div>
+    </div>
+    <div class="col-tb-6">
+      <div class="c-editorial__details">
+        <h3 class="c-editorial__title">
+          <a href="{{ entry.url }}">
+            {{ entry.title }}
+          </a>
+        </h3>
+        <div class="c-editorial__body rte">
+          {{ entry.excerpt }}
+        </div>
+
+        <a class="c-editorial__read-more"
+           href="{{ entry.url }}">Read More</a>
+      </div>      
+    </div>
+  </div>
+</div>
+

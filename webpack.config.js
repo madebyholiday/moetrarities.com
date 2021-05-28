@@ -151,6 +151,8 @@ module.exports = {
   watch: NODE_ENV == 'development',
   resolve: {
     alias: {
+      "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+      "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
       "preload-it": path.resolve(__dirname, "source/js/ext/preload-it.js"),
       modernizr$: path.resolve(__dirname, '.modernizrrc'),
       'application.scss': path.resolve(__dirname, 'source/scss/application.scss')

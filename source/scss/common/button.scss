@@ -32,7 +32,7 @@
 
   span:nth-child(1) {
     display: block;
-    @extend .t-normal;
+    @extend .t-small-caps;
     margin: 0 24px 0 0;
   }
   
@@ -48,10 +48,17 @@
     transition:
       color 400ms ease,
       border-color 400ms ease;
-  }
+  }  
 
   &:hover span:nth-child(2) {
     color: $color-black;
     border: solid 1px $color-black;    
+  }
+
+  &.o-button--ko {
+    span:nth-child(2) {
+      color: $color-white;
+      border: solid 1px $color-white;
+    }
   }
 }
