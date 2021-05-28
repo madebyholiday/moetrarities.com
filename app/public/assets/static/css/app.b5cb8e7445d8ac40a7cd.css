@@ -175,6 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 .t-h1, .c-product-hero__title, .c-product-details__title {
   font-family: "freightdispcmp-pro";
   font-size: 75px;
+  line-height: .9em;
   font-weight: normal; }
   @media (min-width: 768px) {
     .t-h1, .c-product-hero__title, .c-product-details__title {
@@ -1248,6 +1249,11 @@ img {
 
 .o-image--lazy img.lazyloaded {
   opacity: 1; }
+
+.o-image--blend {
+  background-color: #FAF8F6; }
+  .o-image--blend img {
+    mix-blend-mode: darken; }
 
 .o-image-caption {
   position: absolute;
@@ -2327,13 +2333,34 @@ main {
       margin: 75px 0 0 0; } }
 
 .c-product-media {
-  margin: 0 0 40px 0; }
+  margin: 0 0 40px 0;
+  cursor: pointer; }
+  .c-product-media .slick-dots {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center; }
+    .c-product-media .slick-dots li {
+      display: inline-block;
+      margin: 0 5px;
+      opacity: .5;
+      transition: opacity 400ms ease; }
+      .c-product-media .slick-dots li.slick-active {
+        opacity: 1; }
+    .c-product-media .slick-dots button {
+      font-size: 0;
+      marign: 0;
+      padding: 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #000000; }
 
 .c-product-details__title {
-  margin: 0 0 30px 0; }
+  margin: 0 0 40px 0; }
 
 .c-product-details__brand {
-  margin: 0; }
+  margin: 0 0 40px 0; }
 
 .c-product-details__accordion {
   margin: 30px 0 0 0; }
@@ -2412,6 +2439,12 @@ main {
   @media (min-width: 768px) {
     .m-brand-hero__logo {
       width: 175px; } }
+  @media (min-width: 1024px) {
+    .m-brand-hero__logo {
+      width: 200px; } }
+  @media (min-width: 1200px) {
+    .m-brand-hero__logo {
+      width: 220px; } }
 
 .m-brand-summary {
   margin: 100px 0; }

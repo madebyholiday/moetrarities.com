@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 6cc45595-4d22-44c5-a299-c9d64e01864d # Assets
+handle: backgroundBlend
+instructions: ''
+name: 'Background Blend'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Off'
+        -
+          - value
+          - 'off'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'On'
+        -
+          - value
+          - 'on'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

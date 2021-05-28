@@ -71,6 +71,14 @@ img {
   }
 }
 
+.o-image--blend {
+  background-color: $color-spring-wood;
+  
+  img {
+    mix-blend-mode: darken;
+  }
+}
+
 .o-image-caption {
   position: absolute;
   bottom: 25px;

@@ -60,4 +60,12 @@
   @include breakpoint(tablet) {
     width: 175px;
   }
+
+  @include breakpoint(desktop) {
+    width: 200px;
+  }
+
+  @include breakpoint(large) {
+    width: 220px;
+  }
 }

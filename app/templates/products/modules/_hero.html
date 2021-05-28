@@ -8,7 +8,7 @@
               {% for image in entry.images.all() %}
               <div class="c-product-media__image">
                 {% include '/partials/_image' with {
-                image: image
+                  image: image
                 } %}
               </div>
               {% endfor %}
@@ -23,7 +23,8 @@
                 { name: 'About', key: 'about' },
                 { name: 'Tasting Notes', key: 'tastingNotes' },
                 { name: 'Pairings', key: 'pairings' },
-                { name: 'Aging', key: 'aging' }
+                { name: 'Aging', key: 'aging' },
+                { name: 'Ratings', key: 'ratings' }
               ] %}
 
               <div class="c-product-details__tabs c-tabs js-tabs">
