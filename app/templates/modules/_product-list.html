@@ -1,3 +1,7 @@
+{% if category is defined %}
+{% set entry = category %}
+{% endif %}
+
 {% if entry.products | length > 0 %}
 <div class="m-products">  
   <div class="container">

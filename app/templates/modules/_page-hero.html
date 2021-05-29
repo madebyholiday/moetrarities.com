@@ -1,5 +1,9 @@
 {% set hasEntity = false %}
 
+{% if category is defined %}
+{% set entry = category %}
+{% endif %}
+
 {% if entry.entityTitle or entry.entitySubtitle or entry.entityExcerpt %}
 {% set hasEntity = true %}
 {% endif %}

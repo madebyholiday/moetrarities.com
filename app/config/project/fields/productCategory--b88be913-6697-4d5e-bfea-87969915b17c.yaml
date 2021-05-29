@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 94619819-5c53-4602-aeac-7c2e5359e615 # Product
+handle: productCategory
+instructions: ''
+name: 'Product Category'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'group:20caad27-a95c-4d88-871e-3858954442e4' # Products
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

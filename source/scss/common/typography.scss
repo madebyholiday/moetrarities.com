@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .t-normal {
   font-size: 14px;
-  line-height: 1.6em;
+  line-height: 1.7em;
 }
 
 .t-normal-serif {
@@ -207,6 +207,18 @@ i {
 
 .rte {
   @extend .t-normal;
+
+  strong {
+    font-weight: 500;
+  }
+  
+  a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .rte--serif {

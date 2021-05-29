@@ -16,7 +16,7 @@
 
 <div class="o-responsive-image-container">  
   {% if mobileImage is defined and mobileImage %}
-  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} {% if mobileImage.backgroundBlend == 'on' %}o-image--blend{% endif %} is-mobile">
+  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} {{ class }} {% if not box %}o-image--fill{% endif %} {% if mobileImage.backgroundBlend %}o-image--blend{% endif %} is-mobile">
     {% if box %}
     <div class="o-box" style="padding-top: {{(mobileImage.height / mobileImage.width) * 100 }}%;">
       {% endif %}
@@ -60,7 +60,7 @@
   {% endif %}
   
   {% if image is defined and image %}
-  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} o-image--{{ image.objectFit }} {{ class }} {% if not box %}o-image--fill{% endif %} {% if image.backgroundBlend == 'on' %}o-image--blend{% endif %}">
+  <figure class="o-image {% if lazyload %}o-image--lazy{% endif %} o-image--{{ image.objectFit }} {{ class }} {% if not box %}o-image--fill{% endif %} {% if image.backgroundBlend %}o-image--blend{% endif %}">
     {% if box %}
     <div class="o-box" style="padding-top: {{(image.height / image.width) * 100 }}%;">
       {% endif %}

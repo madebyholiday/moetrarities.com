@@ -89,7 +89,7 @@
             <ul>
               {% for item in block.items %}
               <li>
-                <a href="{{ item.entry.one().url }}">
+                <a href="{{ item.itemLink.url }}">
                   {{ item.itemTitle }}
                 </a>
               </li>
@@ -138,7 +138,7 @@
                     <ul>
                       {% for item in block.items %}
                       <li>
-                        <a href="{{ item.entry.one().url }}">
+                        <a href="{{ item.itemLink.url }}">
                           {{ item.itemTitle }}
                         </a>
                       </li>

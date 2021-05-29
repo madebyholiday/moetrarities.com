@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: ad8f9120-14a9-41f0-bdc9-406449c8f13f # Entry
+            fieldUid: ad8f9120-14a9-41f0-bdc9-406449c8f13f # Link
             instructions: null
             label: null
             required: true
@@ -44,24 +44,190 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  ad8f9120-14a9-41f0-bdc9-406449c8f13f: # Entry
-    contentColumnType: string
+  ad8f9120-14a9-41f0-bdc9-406449c8f13f: # Link
+    contentColumnType: text
     fieldGroup: null
-    handle: entry
+    handle: itemLink
     instructions: ''
-    name: Entry
+    name: Link
     searchable: false
     settings:
-      allowSelfRelations: false
-      limit: '1'
-      localizeRelations: false
-      selectionLabel: 'Add an entry'
-      showSiteMenu: true
-      source: null
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
+      allowCustomText: ''
+      allowTarget: ''
+      defaultText: ''
+      selectLinkText: ''
+      types:
+        __assoc__:
+          -
+            - fruitstudios\linkit\models\Email
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\Phone
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\Url
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - '1'
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+                -
+                  - allowAlias
+                  - '1'
+                -
+                  - allowMailto
+                  - '1'
+                -
+                  - allowHash
+                  - '1'
+                -
+                  - allowPaths
+                  - '1'
+          -
+            - fruitstudios\linkit\models\Twitter
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\Facebook
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\Instagram
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\LinkedIn
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - customPlaceholder
+                  - ''
+          -
+            - fruitstudios\linkit\models\Entry
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - '1'
+                -
+                  - customLabel
+                  - ''
+                -
+                  - sources
+                  - '*'
+                -
+                  - customSelectionLabel
+                  - ''
+          -
+            - fruitstudios\linkit\models\Category
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - '1'
+                -
+                  - customLabel
+                  - ''
+                -
+                  - sources
+                  - '*'
+                -
+                  - customSelectionLabel
+                  - ''
+          -
+            - fruitstudios\linkit\models\Asset
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - sources
+                  - '*'
+                -
+                  - customSelectionLabel
+                  - ''
+          -
+            - fruitstudios\linkit\models\User
+            -
+              __assoc__:
+                -
+                  - enabled
+                  - ''
+                -
+                  - customLabel
+                  - ''
+                -
+                  - sources
+                  - '*'
+                -
+                  - customSelectionLabel
+                  - ''
+                -
+                  - userPath
+                  - ''
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
+    translationMethod: none
+    type: fruitstudios\linkit\fields\LinkitField

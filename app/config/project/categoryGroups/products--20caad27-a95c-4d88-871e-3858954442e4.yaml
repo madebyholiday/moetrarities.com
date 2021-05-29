@@ -26,8 +26,72 @@ fieldLayouts:
             type: craft\fieldlayoutelements\TitleField
             warning: null
             width: 100
-        name: Content
+          -
+            fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: Image
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: 47eaa35e-391f-4599-b181-0dfdafa85779 # Hero Image
+            instructions: ''
+            label: Image
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            heading: Copy
+            type: craft\fieldlayoutelements\Heading
+          -
+            fieldUid: cc11f94c-8711-44bd-8585-51503c7356d4 # Title
+            instructions: ''
+            label: 'Eyebrow Title'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 66116a0a-e8a8-455a-af9d-4035d4516014 # Subtitle
+            instructions: ''
+            label: 'Eyebrow Subtitle'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 25
+          -
+            fieldUid: 52adb6fa-a30d-46da-93a0-9684815d778f # Entity Excerpt
+            instructions: ''
+            label: Excerpt
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Hero
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 3fc9ec2b-e501-447a-981f-9669fc7ae901 # Products
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Products
+        sortOrder: 2
 handle: products
 name: Products
 siteSettings:

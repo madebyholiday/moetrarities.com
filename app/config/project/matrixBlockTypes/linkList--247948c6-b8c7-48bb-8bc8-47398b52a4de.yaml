@@ -62,7 +62,7 @@ fields:
                   - width
                   - ''
           -
-            - ad8f9120-14a9-41f0-bdc9-406449c8f13f # Entry
+            - ad8f9120-14a9-41f0-bdc9-406449c8f13f # Link
             -
               __assoc__:
                 -
@@ -74,7 +74,7 @@ fields:
       minRows: ''
       placeholderKey: null
       propagationMethod: all
-      selectionLabel: ''
+      selectionLabel: 'Add an item'
       staticField: ''
     translationKeyFormat: null
     translationMethod: site

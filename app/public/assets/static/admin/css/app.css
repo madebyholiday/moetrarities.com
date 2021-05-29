@@ -10,6 +10,16 @@
   padding: 10px;
 }
 
+/* T Normal Caps */
+
+.redactor-dropdown-item-t-normal-caps {
+  text-transform: uppercase;
+}
+
+.redactor-styles .t-normal-caps {
+  text-transform: uppercase;
+}
+
 /* T small */
 
 .redactor-dropdown-item-t-small {
@@ -18,6 +28,18 @@
 
 .redactor-styles .t-small {
   font-size: 90%;
+}
+
+/* T small Caps */
+
+.redactor-dropdown-item-t-small-caps {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.redactor-styles .t-small-caps {
+  font-size: 90%;
+  text-transform: uppercase;
 }
 
 /* T Large */

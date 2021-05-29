@@ -18,7 +18,7 @@
 
     li {
       display: inline-block;
-      margin: 0 5px;
+      margin: 0 7px;
       opacity: .5;
       transition: opacity 400ms ease;
 
@@ -31,8 +31,8 @@
       font-size: 0;
       marign: 0;
       padding: 0;
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: $color-black;
     }
@@ -69,6 +69,7 @@
   @extend .t-normal;
   font-style: italic;
   margin: 2em 0 1em 0;
+  font-weight: normal;
 }
 
 .c-product-actions {

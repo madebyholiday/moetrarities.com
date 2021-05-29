@@ -17,6 +17,7 @@ class Tabs {
       rowS: 0,
       arrows: false,
       adaptiveHeight: true,
+      draggable: false,
       cssEase: 'cubic-bezier(.075,.82,.165,1)'      
     })
   }

@@ -40,7 +40,20 @@
 }
 
 .m-brand-hero__asset {
-  @include fill(absolute);  
+  @include fill(absolute);
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    content: '';
+    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 2;
+  }
 }
 
 .m-brand-hero__asset .o-image-caption {

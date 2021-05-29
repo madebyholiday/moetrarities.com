@@ -1,4 +1,4 @@
-dateModified: 1622227628
+dateModified: 1622293362
 email:
   fromEmail: richard@madeby.holiday
   fromName: Rarities
@@ -20,6 +20,11 @@ plugins:
     enabled: true
     licenseKey: OT08DXXOGO6FBJIS4OUSZY58
     schemaVersion: 1.0.0
+  linkit:
+    edition: standard
+    enabled: true
+    licenseKey: ZZJMLIJ06W3QPSLLGZB26EZA
+    schemaVersion: 1.0.8
   navigation:
     edition: standard
     enabled: true

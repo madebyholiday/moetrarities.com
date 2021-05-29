@@ -20,12 +20,28 @@
         "class": "t-normal"
       }
     },
+    "t-normal-caps": {
+      "title": "Normal Text (Caps)",
+      "api": "module.inline.format",
+      "args": {
+        "tag": "span",
+        "class": "t-normal-caps"
+      }
+    },
     "t-small": {
       "title": "Small Text",
       "api": "module.block.format",
       "args": {
         "tag": "p",
         "class": "t-small"
+      }
+    },
+    "t-small-caps": {
+      "title": "Small Text (Caps)",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p",
+        "class": "t-small-caps"
       }
     },
     "t-large": {

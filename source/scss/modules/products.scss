@@ -1,0 +1,17 @@
+.m-products [class*=col-] {
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+
+    .c-product {
+      flex: 1;     
+    }
+
+    .c-product a {
+      height: 100%;
+      display: flex;      
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}

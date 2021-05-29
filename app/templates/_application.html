@@ -28,7 +28,8 @@
   {% if (entry is defined and entry.type == 'home') or
         (entry is defined and entry.type == 'brand') or
         (entry is defined and entry.type == 'productIndex') or
-        (entry is defined and entry.type == 'experienceIndex') %}
+        (entry is defined and entry.type == 'experienceIndex') or
+        (category is defined and category.group == 'Products') %}
       is-transparent-header
     {% endif %}
   {%- endset -%}

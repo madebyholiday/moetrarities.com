@@ -16,6 +16,10 @@
 
 .m-brand-summary__logo {
   width: 150px;
+
+  @include breakpoint(desktop) {
+    width: 200px;
+  }
 }
 
 .m-brand-summary__eyebrow {

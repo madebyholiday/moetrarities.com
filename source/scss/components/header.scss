@@ -517,6 +517,7 @@
 
 .c-nav-dropdown-block__links > ul > li > a {
   font-weight: normal;
+  @extend .t-link-decoration;
 }
 
 .c-nav-dropdown-block--featured-image {

@@ -23,6 +23,16 @@
   margin: 20px 0 0 0;
 }
 
+.c-product__image .o-image {
+  background-color: $color-pampas !important;
+  transition: background-color 400ms ease;
+  
+  .c-product:hover & {
+    background-color: darken($color-pampas, 5%) !important;
+  }
+}
+
 .c-product__image img {
   object-fit: contain !important;
 }
+
