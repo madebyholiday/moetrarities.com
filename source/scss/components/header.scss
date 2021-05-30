@@ -17,7 +17,7 @@
   
   body.is-transparent-header & {
     color: $color-white;
-    background-color: transparent;    
+    background-color: transparent;
   }
 
   body:not(.page-home).is-scrolled & {
@@ -459,6 +459,7 @@
   bottom: 0;
   width: 100%;
   display: none;
+  transform: translateZ(0);
 
   @include breakpoint(desktop) {
     display: block;
