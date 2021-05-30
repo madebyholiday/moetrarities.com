@@ -3,11 +3,15 @@
   margin: 50px 0;
 
   @include breakpoint(tablet) {
-    margin: 75px 0;
+    margin: 100px 0;
   }
   
   @include breakpoint(desktop) {
-    margin: 100px 0;
+    margin: 120px 0;
+  }
+
+  @include breakpoint(large) {
+    margin: 150px 0;
   }
 }
 

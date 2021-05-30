@@ -40,7 +40,7 @@ class Home {
     let scene = new ScrollMagic.Scene({
       triggerHook: 0,
       triggerElement: element,
-      duration: imgs.length * pxPerImg
+      duration: (imgs.length * pxPerImg) + pxEndPause
     }).on('enter', e => {
       
     }).on('progress', e => {      

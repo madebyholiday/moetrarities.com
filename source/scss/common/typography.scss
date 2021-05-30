@@ -65,7 +65,6 @@ h1, h2, h3, h4, h5, h6 {
 .t-normal-serif {
   font-family:"freight-display-pro";  
   font-size: 16px;
-  font-weight: 500;
   line-height: 1.6em;
 }
 
@@ -102,6 +101,26 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: 500;
+}
+
+.t-medium {
+  font-family: "freightdispcmp-pro";
+  font-size: 24px;
+  line-height: 1.18em;
+  font-weight: 600;
+  margin: 0;
+  
+  @include breakpoint(tablet) {
+    font-size: 24px;
+  }
+  
+  @include breakpoint(tablet) {
+    font-size: 30px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 36px;
+  }
 }
 
 .t-large {
@@ -223,6 +242,10 @@ i {
 
 .rte--serif {
   @extend .t-normal-serif;
+
+  strong {
+    font-weight: 600;
+  }
 }
 
 ::selection {

@@ -1,7 +1,6 @@
 .m-brand-hero {
   position: relative;
   height: 150vw;
-  overflow: hidden;
 
   @include breakpoint(tablet) {
     height: 60vw;
@@ -41,6 +40,7 @@
 
 .m-brand-hero__asset {
   @include fill(absolute);
+  overflow: hidden;
 
   &:after {
     content: '';
@@ -64,7 +64,7 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(10%);
   width: 120px;
   z-index: 3;
   background-color: $color-spring-wood;

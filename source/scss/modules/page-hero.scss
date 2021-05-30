@@ -16,20 +16,7 @@
 
   &.m-page-hero--has-entity {
     margin: 0 0 50px 0;    
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    content: '';
-    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
-    pointer-events: none;
-    z-index: 2;
-  }
+  }  
 }
 
 .m-page-hero__asset {
@@ -49,6 +36,19 @@
       height: 60vw;
       max-height: 700px;
     }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    content: '';
+    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 2;
   }
 
   .m-page-hero--has-entity &:after {
@@ -72,6 +72,8 @@
   bottom: 20%;
   width: 100%;
   color: $color-white;
+  z-index: 3;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 
   .m-page-hero--has-entity & {
     bottom: 25%;
@@ -79,10 +81,10 @@
 }
 
 .m-page-hero__title h1 {
-  margin: 0;
+  margin: 0 0 .2em 0;;
   font-family: "freightdispcmp-pro";
   font-size: 70px;
-  line-height: 1em;
+  line-height: .9em;
   font-weight: 400;
 
   @include breakpoint(tablet) {
@@ -96,7 +98,7 @@
 
 .m-page-hero__title p {
   @extend .t-normal;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .m-page-hero__asset .o-image-caption {

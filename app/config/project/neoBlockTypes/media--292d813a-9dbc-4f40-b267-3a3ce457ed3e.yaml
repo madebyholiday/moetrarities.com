@@ -22,7 +22,7 @@ fieldLayouts:
             fieldUid: 0fada624-b808-4d53-baba-279c78070124 # Pixels
             instructions: 'The amount of scrollable pixels the scene should pause for at the end of the sequence. '
             label: 'Pause Duration'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

@@ -1,5 +1,5 @@
 fieldLayouts:
-  b72250f2-d2c6-40ec-a284-7bfed1f5b53a:
+  cdd6206e-8f43-4c0a-b19c-db255bf8d727:
     tabs:
       -
         elements:
@@ -29,7 +29,7 @@ fieldLayouts:
           -
             fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
             instructions: ''
-            label: Subtext
+            label: Subtitle
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,7 +84,7 @@ fieldLayouts:
           -
             fieldUid: 4a186240-4cb8-4774-8782-4e0d96e7e0d2 # Page Modules
             instructions: ''
-            label: ''
+            label: Modules
             required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -92,42 +92,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 2
-      -
-        elements:
-          -
-            fieldUid: 1318ea66-9a2e-4f4f-9ed9-8e74967b4a89 # Image
-            instructions: ''
-            label: 'Index Image'
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 885715a3-eecb-4ec7-8531-5108e896fd52 # Experience Categories
-            instructions: ''
-            label: Categories
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: dd9605f6-deef-4b1b-8dbc-cbd120db865d # Experience Category
-            instructions: ''
-            label: 'Primary Category'
-            required: ''
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Attributes
-        sortOrder: 3
-handle: experience
+handle: about
 hasTitleField: true
-name: Experience
-section: 25aef36f-c397-4e41-a229-632bdc12bb3b # Experiences
+name: About
+section: 10470e89-d4a6-40ff-9e62-c4d3db762b1f # About
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

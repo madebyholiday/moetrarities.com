@@ -430,8 +430,16 @@
   @extend .t-normal-caps;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: center;  
   padding: 0 20px;
+
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+
+  @include breakpoint(xlarge) {
+    padding: 0 40px;
+  }
 }
 
 .c-nav-primary ul li a i {
@@ -506,8 +514,12 @@
   columns: 2;
   column-gap: 50px;
 
+  @include breakpoint(large) {
+    column-gap: 100px;    
+  }
+
   @include breakpoint(xlarge) {
-    column-gap: 75px;    
+    column-gap: 100px;    
   }
 }
 
