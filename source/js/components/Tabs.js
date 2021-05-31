@@ -3,6 +3,7 @@ class Tabs {
     this.$el = el instanceof jQuery ? el : $(el)
     this.$items = this.$el.find('.js-items')
     this.$item = this.$el.find('.js-nav-item')
+    this.$nav = this.$el.find('.js-tabs-nav')
 
     this.onInit = this.onInit.bind(this)
     this.onBeforeChange = this.onBeforeChange.bind(this)
@@ -20,6 +21,9 @@ class Tabs {
       draggable: false,
       cssEase: 'cubic-bezier(.075,.82,.165,1)'      
     })
+
+    if ( this.$nav.find('ul').children().length === 1 )
+      this.$nav.hide()
   }
 
   destroy () {
