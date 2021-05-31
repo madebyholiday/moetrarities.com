@@ -86,5 +86,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Media + Text'
-sortOrder: 2
+sortOrder: 3
 topLevel: true

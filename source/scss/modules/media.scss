@@ -1,0 +1,11 @@
+.m-media {
+  margin: 50px 0;
+
+  @include breakpoint(tablet) {
+    margin: 75px 0;
+  }
+  
+  @include breakpoint(desktop) {
+    margin: 100px 0;
+  }
+}

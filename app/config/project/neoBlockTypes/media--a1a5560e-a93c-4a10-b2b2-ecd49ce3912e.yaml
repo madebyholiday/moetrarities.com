@@ -1,21 +1,12 @@
 childBlocks: ''
 field: 4a186240-4cb8-4774-8782-4e0d96e7e0d2 # Page Modules
 fieldLayouts:
-  919d7140-dcf3-492c-b844-4fdf1a389b4b:
+  e09a918d-6e8c-48b5-884f-3ce945db3420:
     tabs:
       -
         elements:
           -
-            fieldUid: f37621db-e2e0-4cde-beff-7687c349c859 # Quote
-            instructions: ''
-            label: ''
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 137d4feb-8994-4ed2-8c8b-fa575599d9a4 # Attribution
+            fieldUid: 1318ea66-9a2e-4f4f-9ed9-8e74967b4a89 # Image
             instructions: null
             label: null
             required: false
@@ -25,10 +16,10 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: quote
+handle: media
 maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
-name: Quote
-sortOrder: 5
+name: Media
+sortOrder: 2
 topLevel: true
