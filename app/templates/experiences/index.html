@@ -6,22 +6,14 @@
 <div class="m-experiences">  
   <div class="container">
     {% for experience in entry.experiences.all() %}
-    {% if loop.index0 == 0 %}
     <div class="row">
       <div class="col-xl-10 col-xl-push-1">
         {% include '/components/_editorial-hero' with {
           entry: experience,
-          reverse: true
+          reverse: loop.index is divisible by(2)
         } %}
       </div>
-    </div>
-    {% else %}
-    <div class="row">
-      <div class="col-tb-10 col-tb-push-1 col-lg-8 col-lg-push-2">
-        {% include '/components/_editorial' with { entry: experience } %}
-      </div>          
-    </div>
-    {% endif %}
+    </div>    
     {% endfor %}
   </div>
 </div>

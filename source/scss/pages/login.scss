@@ -24,15 +24,19 @@
 }
 
 .m-login-screen__logo {
-  width: 200px;
+  width: 150px;
   margin: 30px 0;
 
   @include breakpoint(tablet) {
-    width: 250px;
+    width: 200px;
+  }
+
+  @include breakpoint(desktop) {
     margin: 50px 0;
   }
 
   @media (min-height:900px) {
+    width: 250px;
     margin: 75px 0;
   }
 }

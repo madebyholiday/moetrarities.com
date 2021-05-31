@@ -1,0 +1,18 @@
+fieldLayouts:
+  751a8d2e-59ff-4927-9a2d-b4b57d3f02f6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0d848775-b087-474f-a218-f86678265ce0 # To Email
+            instructions: 'Comma separated list of email addresses to receive inquiry submissions.'
+            label: Recipients
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: inquiries
+name: Inquiries

@@ -1,4 +1,4 @@
-dateModified: 1622471761
+dateModified: 1622481090
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'The Rarities'
@@ -23,7 +23,7 @@ plugins:
       prependSender: 'The Rarities'
       prependSubject: ''
       successFlashMessage: 'Your message has been sent.'
-      toEmail: richard@pgandco.com
+      toEmail: $SYSTEM_EMAIL_ADDRESS
   cp-css:
     edition: standard
     enabled: true

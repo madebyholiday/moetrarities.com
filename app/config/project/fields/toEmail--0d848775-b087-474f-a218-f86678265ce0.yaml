@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 6cc45595-4d22-44c5-a299-c9d64e01864d # Assets
+handle: toEmail
+instructions: 'Comma separated list of email addresses.'
+name: 'To Email'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

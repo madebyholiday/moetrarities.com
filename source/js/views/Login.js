@@ -61,7 +61,7 @@ class Login {
           }
 
           if ( $form.attr('id') === 'inquire' ) {
-            $form.find('.js-message').html('Thank you for your inquiry. A private client manager will be in touch.')
+            $form.find('.js-message').html('Thank you for your inquiry. <br />A private client manager will be in touch.')
           }
         } else {
           if ( data.error ) {

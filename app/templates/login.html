@@ -84,6 +84,7 @@
         {{ actionInput('contact-form/send') }}
         <input type="hidden" name="subject" value="Membership Inquiry" />
         <input type="hidden" name="message" value="I'm interested in a Rarities membership." />
+        <input type="hidden" name="toEmail" value="{{ inquiries.toEmail | hash }}" />
         
         <div class="c-form__errors js-errors"></div>
         <div class="c-form__message js-message"></div>
