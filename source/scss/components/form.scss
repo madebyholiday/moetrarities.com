@@ -41,6 +41,12 @@ select:-webkit-autofill:focus {
       background-color: rgba(255,255,255, .2);
     }
   }
+
+  transition: opacity 200ms ease;
+  
+  &.is-loading {
+    opacity: .5;
+  }
 }
 
 .c-form__group {
@@ -68,7 +74,9 @@ select:-webkit-autofill:focus {
 
 .c-form__errors,
 .c-form__message {
+  text-align: center;
   @extend .t-normal;
+  font-weight: normal;
 }
 
 .o-checkbox {

@@ -1,16 +1,47 @@
-.c-login-wrapper {
+.m-login-screen {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0 $container-padding-mobile;
+  justify-content: flex-start;
+  padding: 0 10px;
   height: 100vh;
+  overflow: auto;
+}
+
+.m-login-screen__background {
+  @include fill(absolute);
+  z-index: 1;
+}
+
+.m-login-screen__content {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.m-login-screen__logo {
+  width: 200px;
+  margin: 30px 0;
+
+  @include breakpoint(tablet) {
+    width: 250px;
+    margin: 50px 0;
+  }
+
+  @media (min-height:900px) {
+    margin: 75px 0;
+  }
 }
 
 .c-login-form {
+  position: relative;
   padding: 30px;
   width: 100%;
-  max-width: 500px;
-  background: radial-gradient(rgba(255,255,255,.25), rgba(255,255,255,.05));
+  background: radial-gradient(rgba(0,0,0,.95), rgba(0,0,0,.4));
 
   @include breakpoint(tablet) {
     padding: 50px;

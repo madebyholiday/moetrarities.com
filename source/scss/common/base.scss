@@ -48,10 +48,6 @@ body {
     background-color: $color-black;
     padding-top: 0;
   }
-
-  &.page-login {
-    background-color: grey;
-  }
    
   &.is-loading,
   &.is-navigating {    

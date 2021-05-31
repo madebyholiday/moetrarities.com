@@ -1,0 +1,43 @@
+{% if fit is not defined %}
+{% set fit = 'cover' %}
+{% endif %}
+
+{% if autoplay is not defined %}
+{% set autoplay = true %}
+{% endif %}
+
+{% if videoClass is not defined %}
+{% set videoClass = '' %}
+{% endif %}
+
+{% if videoAttributes is not defined %}
+{% set videoAttributes = '' %}
+{% endif %}
+
+<div class="o-video o-video--{{ fit }} js-video js-inline-video">
+  {% if mobileVideo is defined and mobileVideo %}
+  <video
+    loop {% if autoplay %}autoplay{% endif %} muted playsinline
+    style="object-position:{% if mobileVideo.objectPosition %}{{ mobileVideo.objectPosition }}{% else %}center{% endif %};"
+    class="is-mobile {{ videoClass }}"
+    src="{{ mobileVideo.url }}"
+    data-object-fit="{{ fit }}"
+    data-object-position="{% if mobileVideo.objectPosition %}{{ mobileVideo.objectPosition }}{% else %}center{% endif %}"
+    type="video/mp4"
+    {{ videoAttributes }}>
+  </video>
+  {% endif %}
+
+  {% if video is defined and video %}
+  <video
+    loop {% if autoplay %}autoplay{% endif %} muted playsinline
+    style="object-position:{% if video.objectPosition %}{{ video.objectPosition }}{% else %}center{% endif %};"
+    class="{{ videoClass }}"
+    src="{{ video.url }}"
+    data-object-fit="{{ fit }}"
+    data-object-position="{% if video.objectPosition %}{{ video.objectPosition }}{% else %}center{% endif %}"
+    type="video/mp4"
+    {{ videoAttributes }}>
+  </video>
+  {% endif %}
+</div>

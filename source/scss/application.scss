@@ -40,7 +40,6 @@
 @import 'components/editorial';
 @import 'components/breadcrumbs';
 @import 'components/form';
-@import 'components/login-form';
 
 /* Modules */
 @import 'modules/animated-scenes';
@@ -58,3 +57,6 @@
 @import 'modules/follow';
 @import 'modules/experiences';
 @import 'modules/products';
+
+/* Pages */
+@import 'pages/login';
