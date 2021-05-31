@@ -1,13 +1,29 @@
-dateModified: 1622379403
+dateModified: 1622471761
 email:
-  fromEmail: richard@madeby.holiday
-  fromName: Rarities
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: $SYSTEM_EMAIL_ADDRESS
+  fromName: 'The Rarities'
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    password: $SYSTEM_EMAIL_PASSWORD
+    timeout: '10'
+    username: $SYSTEM_EMAIL_ADDRESS
+  transportType: craft\mail\transportadapters\Gmail
 plugins:
   assetrev:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: 'The Rarities'
+      prependSubject: ''
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: richard@pgandco.com
   cp-css:
     edition: standard
     enabled: true
@@ -91,6 +107,7 @@ plugins:
 system:
   edition: pro
   live: true
-  name: Rarities
+  name: 'The Rarities'
+  retryDuration: null
   schemaVersion: 3.6.8
   timeZone: America/Los_Angeles

@@ -17,13 +17,11 @@
     {{ head() }}    
   </head>    
 
-  {% requireLogin %}
-  
   {%- set bodyClass -%}
     {%- if entry is defined -%}
       page-{{ entry.getSection().name | kebab ?: 'home' }} page-{{ entry.getSection().name | kebab ?: 'home' }}--{{ entry.title | kebab ?: 'home' }} 
     {%- elseif category is defined -%}
-      page-category-{{ category.group | kebab }}  
+      page-category-{{ category.group | kebab }}
     {%- else -%}
       page-404 
     {%- endif -%}
@@ -54,20 +52,17 @@
     {{ beginBody() }}
 
     {% include '/components/_page-loader' %}
-    {% include '/components/_page-transition' %}
     
     <div class="site-container js-site-container"
          data-barba="container"
          data-barba-namespace="{{ namespace }}">
       <meta itemprop="body-class"
             content="{{ bodyClass | replace('/\\s+/', ' ') | trim }}">      
-      {% include '/components/_header' %}      
       <main class="c-main js-main">
         <div class="c-main__content">
           {% block content %}{% endblock %}
         </div>
-      </main>
-      {% include '/components/_footer' %}     
+      </main>   
     </div>
     {{ endBody() }}        
   </body>

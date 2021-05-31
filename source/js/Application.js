@@ -25,6 +25,7 @@ import Wipe from 'transitions/Wipe'
 
 import Home from 'views/Home'
 import Product from 'views/Product'
+import Login from 'views/Login'
 
 class Application {
   constructor () {
@@ -79,7 +80,8 @@ class Application {
       },
       views: [
         new Home,
-        new Product
+        new Product,
+        new Login
       ],
       transitions: [
         new Wipe

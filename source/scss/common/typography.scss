@@ -194,6 +194,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.t-link-decoration--ko {
+  @extend .t-link-decoration;
+  &:after {
+    background-color: $color-white;
+  }
+}
+
 .t-link-decoration-reverse {
   @extend .t-link-decoration;
   

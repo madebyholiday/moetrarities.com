@@ -1,0 +1,86 @@
+{% extends "/_login" %}
+
+{% block content %}
+
+<div class="c-login-wrapper">
+  <div class="c-login-form">
+    <nav class="c-login-form__nav js-nav">
+      <ul>
+        <li class="is-active js-toggle-form js-nav-item" data-form="sign-in"><button>Welcome</button></li>
+        <li class="js-toggle-form js-nav-item" data-form="inquire"><button>Inquire</button></li>
+      </ul>
+    </nav>    
+    
+    <form id="sign-in" class="c-form c-form--ko js-form is-active" method="post" accept-charset="UTF-8">
+      {{ csrfInput() }}
+      {{ actionInput('users/login') }}
+
+      <div class="c-form__errors js-errors"></div>
+      <div class="c-form__message js-message"></div>
+      
+      <div class="c-form__group">
+        <label>Username or Email</label>
+        <input type="text" name="loginName" required />
+      </div>
+      <div class="c-form__group">
+        <label>Password</label>
+        <input type="password" name="password" required />
+      </div>
+      <div class="c-form__group">
+        <div class="o-checkbox">
+          <input id="user-rememberme" type="checkbox" name="rememberMe" />
+          <label for="user-rememberme">Keep Me Signed In</label>
+        </div>
+      </div>
+      <div class="c-form__actions">
+        <button class="o-button o-button--primary">Sign In</button>
+      </div>
+      <div class="c-form__footer">
+        <a class="js-toggle-form" data-form="forgot-password">Forgot Password?</a>
+      </div>
+    </form>
+
+    <form id="forgot-password" class="c-form c-form--ko js-form" method="post" accept-charset="UTF-8">
+      {{ csrfInput() }}
+      {{ actionInput('users/send-password-reset-email') }}
+
+      <div class="c-form__errors js-errors"></div>
+      <div class="c-form__message js-message"></div>
+      
+      <div class="c-form__group">
+        <label>Email</label>
+        <input type="email" name="loginName" required />
+      </div>        
+      <div class="c-form__actions">
+        <button class="o-button o-button--primary">Send Password Reset</button>
+      </div>
+      <div class="c-form__footer">
+        <a class="js-toggle-form" data-form="sign-in">Already a member?</a>
+      </div>
+    </form>
+    
+    <form id="inquire" class="c-form c-form--ko js-form" method="post" accept-charset="UTF-8">
+      {{ csrfInput() }}
+      {{ actionInput('contact-form/send') }}
+      <input type="hidden" name="subject" value="Membership Inquiry" />
+      <input type="hidden" name="message" value="I'm interested in a Rarities membership." />
+      
+      <div class="c-form__errors js-errors"></div>
+      <div class="c-form__message js-message"></div>
+      
+      <div class="c-form__group">
+        <label>Email</label>
+        <input type="email" name="fromEmail" required />
+        <p>Get exclusive access to our most exceptional domains with Moët Hennessy Private.</p>
+      </div>        
+      <div class="c-form__actions">
+        <button class="o-button o-button--primary">Inquire</button>
+      </div>
+      <div class="c-form__footer">
+        <a class="js-toggle-form" data-form="sign-in">Already a member?</a>
+      </div>
+    </form>    
+  </div>
+</div>
+
+{% endblock %}

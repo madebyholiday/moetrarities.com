@@ -79,7 +79,7 @@
     {% for node in nodes %}
     {% if node.subNavigationBlocks | length > 0 %}
     <div class="c-nav-dropdown js-nav-dropdown" data-id="{{ node.id }}">
-      {% for block in node.subNavigationBlocks %}
+      {% for block in node.subNavigationBlocks.all() %}
       <div class="c-nav-dropdown-block c-nav-dropdown-block--{{ block.type | kebab }}">
         {% if block.type == 'linkList' %}          
         <div class="c-nav-dropdown-block__title">
@@ -87,7 +87,7 @@
         </div>
         <div class="c-nav-dropdown-block__links c-nav-dropdown-block__links--{{ block.items | length > 6 ? 'long' : 'short' }}">
           <ul>
-            {% for item in block.items %}
+            {% for item in block.items.all() %}
             <li>
               <a href="{{ item.itemLink.url }}">
                 {{ item.itemTitle }}
@@ -127,7 +127,7 @@
             {% if node.subNavigationBlocks | length > 0 %}            
             <div class="c-mobile-menu-link-lists js-link-lists">
               <div class="c-mobile-menu-link-lists__inner">
-                {% for block in node.subNavigationBlocks %}
+                {% for block in node.subNavigationBlocks.all() %}
                 {% if block.type == 'linkList' %}
                 <div class="c-mobile-menu-link-list">
                   <div class="c-mobile-menu-link-list__title">
@@ -135,7 +135,7 @@
                   </div>
                   <div class="c-mobile-menu-link-list__links">
                     <ul>
-                      {% for item in block.items %}
+                      {% for item in block.items.all() %}
                       <li>
                         <a href="{{ item.itemLink.url }}">
                           {{ item.itemTitle }}

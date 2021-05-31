@@ -42,9 +42,15 @@ body {
     padding-top: 0;
   }
 
-  &.page-home {
+  &.page-home,
+  &.page-login {
     color: $color-white;
     background-color: $color-black;
+    padding-top: 0;
+  }
+
+  &.page-login {
+    background-color: grey;
   }
    
   &.is-loading,
