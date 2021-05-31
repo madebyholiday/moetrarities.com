@@ -18,12 +18,14 @@
     <div class="m-page-hero__title">
       <div class="container">
         <div class="row">
-          <div class="col-mb-9 col-mb-push-1 col-dk-6">
-            <h1>{{ entry.title }}</h1>
-            {% if entry.excerpt %}
-            <p>{{ entry.excerpt }}</p>
-            {% endif %}
+          <div class="col-mb-9 col-mb-push-1 col-tb-8 col-tb-lg-7 col-lg-7">
+            <h1>{{ entry.title }}</h1>          
           </div>
+          {% if entry.excerpt %}
+          <div class="col-mb-9 col-mb-push-1 col-dk-6">
+            <p>{{ entry.excerpt }}</p>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

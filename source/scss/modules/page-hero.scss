@@ -69,14 +69,14 @@
 
 .m-page-hero__title {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   width: 100%;
   color: $color-white;
   z-index: 3;
   text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 
   .m-page-hero--has-entity & {
-    bottom: 25%;
+    bottom: 20%;
   }
 }
 
@@ -88,11 +88,15 @@
   font-weight: 400;
 
   @include breakpoint(tablet) {
-    font-size: 100px;    
+    font-size: 75px;
+  }
+  
+  @include breakpoint(desktop) {
+    font-size: 90px;    
   }
 
-  @include breakpoint(desktop) {
-    font-size: 120px;    
+  @include breakpoint(large) {
+    font-size: 110px;
   }
 }
 
