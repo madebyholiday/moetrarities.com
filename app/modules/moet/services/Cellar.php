@@ -2,8 +2,10 @@
 
 namespace moet\services;
 
+use Craft;
 use yii\base\Component;
-
+use craft\helpers\Queue;
+use moet\jobs\SendRequestPurchase;
 use moet\models\CellarItem;
 
 class Cellar extends Component
@@ -21,6 +23,10 @@ class Cellar extends Component
         $item->user_id = $userId;
         $item->product_id = $productId;
         $item->request_purchase = $requestPurchase;
+
+        if ( $requestPurchase ) {
+            $this->sendRequestPurchase($productId, $userId);
+        }
         
         try {
             return $item->save();
@@ -33,8 +39,8 @@ class Cellar extends Component
     {
         $item = CellarItem::find()
             ->where([
-              'id' => $itemId,
-              'user_id' => $userId
+                'id' => $itemId,
+                'user_id' => $userId
             ])->one();
         
         if ( $item && $item->delete() > 0) {
@@ -46,6 +52,8 @@ class Cellar extends Component
 
     public function requestPurchase ( $productId, $userId )
     {
+        $this->sendRequestPurchase($productId, $userId);
+            
         $item = CellarItem::find()
             ->where([
                 'product_id' => $productId,
@@ -55,5 +63,13 @@ class Cellar extends Component
         $item->request_purchase = true;
 
         return $item->save();
+    }
+    
+    public function sendRequestPurchase ( $productId, $userId )
+    {
+        Queue::push(new SendRequestPurchase([
+            'productId' => $productId,
+            'userId' => $userId
+        ]));
     }
 }

@@ -13,7 +13,7 @@ class CellarController extends Controller
     public function actionIndex ()
     {
         $currentUser = Craft::$app->getUser()->getIdentity();
-        
+
         return $this->asJson(
             Moet::getInstance()
             ->cellar
@@ -62,7 +62,7 @@ class CellarController extends Controller
     {
         $this->requirePostRequest();
 
-        $currentUser = Craft::$app->getUser()->getIdentity();
+        $currentUser = Craft::$app->getUser()->getIdentity();        
         
         $request = Craft::$app->getRequest();
         $id = $request->getBodyParam('itemId');
