@@ -4,16 +4,13 @@ name: 'Private Client Managers'
 permissions:
   - accesssitewhensystemisoff
   - accesscpwhensystemisoff
-  - performupdates
-  - accessplugin-navigation
-  - accessplugin-seomatic
   - accesscp
-  - customizesources
   - registerusers
   - moderateusers
   - assignuserpermissions
+  - 'assignusergroup:5353754a-7fa0-42d4-a51a-befd6e2f70de' # Private Clients
   - assignusergroups
   - administrateusers
-  - impersonateusers
   - editusers
   - deleteusers
+  - 'utility:queue-manager'

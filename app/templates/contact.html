@@ -1,6 +1,8 @@
 {% extends "/_application" %}
 
 {% block content %}
+{% set pcm = currentUser.privateClientManager.one() %}
+
 <div class="m-page-header">
   <div class="container">
     <div class="row">
@@ -14,12 +16,19 @@
 </div>
 
 <div class="m-contact">
+  {% if not pcm %}
   <div class="container">
     <div class="row">
       <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-7 col-dk-push-2">
-        <h2>My Advisor</h2>
-        
-        {% set pcm = currentUser.privateClientManager.one() %}
+        <p class="t-normal">You don't have an advisor yet. Please check back soon for contact info.</p>
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-7 col-dk-push-2">
+        <h2>My Advisor</h2>        
         
         <div class="c-pcm-summary">
           <div class="c-pcm-summary__avatar">
@@ -48,7 +57,7 @@
           <input type="hidden" name="message[Last Name]" value="{{ currentUser.lastName }}">
           <input type="hidden" name="message[Phone]" value="{{ currentUser.phone }}">
           <input type="hidden" name="toEmail" value="{{ pcm.email | hash }}" />
-                             
+          
           <div class="c-form__errors js-errors"></div>
           <div class="c-form__message js-message"></div>
           
@@ -66,6 +75,7 @@
         </form>         
       </div>
     </div>
-  </div>
+  </div>  
+  {% endif %}  
 </div>
 {% endblock %}

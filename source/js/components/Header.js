@@ -11,6 +11,10 @@ import {
 class Header {
   constructor () {
     this.$el = $('.js-header')
+
+    if ( !this.$el.length )
+      return
+    
     this.$window = $(window)
     this.$document = $(document)
     this.$body = $('body')
