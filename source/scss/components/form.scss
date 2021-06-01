@@ -59,6 +59,10 @@ select:-webkit-autofill:focus {
   
   &.is-loading {
     opacity: .5;
+    cursor: wait;
+    * {
+      cursor: wait;
+    }
   }
 }
 

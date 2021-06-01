@@ -44,14 +44,13 @@ class Login {
       dataType: 'json',
       type:'POST',
       data: data,
-      success: data => {
-        $form.removeClass('is-loading')
-        
+      success: data => {        
         if ( data.success ) {
           if ( data.returnUrl ) {
             window.location = data.returnUrl
           } else {
             $form.find('input:not([type="hidden"])').val('')
+            $form.removeClass('is-loading')
           }
           
           if ( $form.attr('id') === 'forgot-password' ) {
