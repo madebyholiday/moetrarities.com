@@ -46,8 +46,6 @@ class Login {
       data: data,
       success: data => {
         $form.removeClass('is-loading')
-
-        console.log(data)
         
         if ( data.success ) {
           if ( data.returnUrl ) {

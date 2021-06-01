@@ -1,0 +1,41 @@
+.m-contact h2 {
+  @extend .t-h3;
+  margin: 0 0 30px 0;
+}
+
+.c-pcm-summary {
+  display: flex;
+  align-items: center;
+  margin: 0 0 50px 0;
+}
+
+.c-pcm-summary__avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: solid 5px $color-white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.15);
+  margin: 0 30px 0 0;
+  
+  img {
+    @include fill(absolute);
+    object-fit: cover;    
+  }
+}
+
+.c-pcm-summary__info {
+  @extend .t-normal;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-pcm-summary__name {
+  font-weight: bold;
+  margin: 0 0 .5em 0;
+}

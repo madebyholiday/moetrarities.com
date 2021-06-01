@@ -24,6 +24,12 @@
   &:hover {
     background-color: darken($color-rhino, 10%);
   }
+
+  &:disabled {
+    background-color: $color-xltgray;
+    color: $color-rhino;
+    cursor: not-allowed;
+  }
 }
 
 .o-button--secondary {

@@ -1,0 +1,8 @@
+.m-account h2 {
+  @extend .t-h3;
+}
+
+.m-account__logout {
+  @extend .t-small-caps;
+  @extend .t-link-decoration;
+}

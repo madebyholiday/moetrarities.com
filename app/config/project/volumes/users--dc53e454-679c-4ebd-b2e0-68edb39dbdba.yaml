@@ -29,12 +29,12 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 handle: users
-hasUrls: false
+hasUrls: true
 name: Users
 settings:
   path: '@assetBasePath/uploads/users'
-sortOrder: 2
+sortOrder: 0
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
 type: craft\volumes\Local
-url: ''
+url: '@assetBaseUrl/uploads/users'

@@ -42,6 +42,22 @@ class CellarController extends Controller
         );
     }
 
+  public function actionRequestPurchase ()
+    {
+        $this->requirePostRequest();
+
+        $currentUser = Craft::$app->getUser()->getIdentity();
+        
+        $request = Craft::$app->getRequest();
+        $id = $request->getBodyParam('productId');
+
+        return $this->asJson(
+            Moet::getInstance()
+            ->cellar
+            ->requestPurchase($id, $currentUser->id)
+        );        
+    }
+
     public function actionDelete ()
     {
         $this->requirePostRequest();
@@ -56,21 +72,5 @@ class CellarController extends Controller
             ->cellar
             ->delete($id, $currentUser->id)
         );
-    }
-
-    public function actionRequestPurchase ()
-    {
-        $this->requirePostRequest();
-
-        $currentUser = Craft::$app->getUser()->getIdentity();
-        
-        $request = Craft::$app->getRequest();
-        $id = $request->getBodyParam('itemId');
-
-        return $this->asJson(
-            Moet::getInstance()
-            ->cellar
-            ->requestPurchase($id, $currentUser->id)
-        );        
     }
 }

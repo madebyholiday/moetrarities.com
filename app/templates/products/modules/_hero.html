@@ -1,4 +1,4 @@
-<div class="m-product-hero">
+<div class="m-product-hero js-product-hero">
   <div class="container">
     <div class="row">
       <div class="col-xl-10 col-xl-push-1">
@@ -16,7 +16,18 @@
           </div>
           <div class="col-tb-6 col-lg-5">
             <div class="c-product-details">
-              <h2 class="c-product-details__brand">{{ entry.brand.one().title }}</h2>
+
+              <div class="c-product-details__eyebrow">
+                <h2 class="c-product-details__brand">
+                  {{ entry.brand.one().title }}
+                </h2>
+                <div class="c-product-details__add">
+                  <button class="js-add" data-product-id="{{ entry.id }}">
+                    <span class="icon-star-empty"></span>
+                    <span class="icon-star-full"></span>
+                  </button>
+                </div>
+              </div>
               <h1 class="c-product-details__title">{{ entry.title }}</h1>
 
               {% set details = [
@@ -79,7 +90,9 @@
 
               <div class="c-product-actions">
                 <button class="c-product-actions__request o-button o-button--primary js-request-purchase" data-product-id="{{ entry.id }}">
-                  Request to Purchase
+                  <span>Request to Purchase</span>
+                  <span>Requesting</span>
+                  <span>Requested</span>
                 </button>
               </div>
             </div>

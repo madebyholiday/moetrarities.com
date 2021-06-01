@@ -27,6 +27,8 @@ import Home from 'views/Home'
 import Product from 'views/Product'
 import Login from 'views/Login'
 import Cellar from 'views/Cellar'
+import Account from 'views/Account'
+import Contact from 'views/Contact'
 
 class Application {
   constructor () {
@@ -85,7 +87,9 @@ class Application {
         new Home,
         new Product,
         new Login,
-        new Cellar
+        new Cellar,
+        new Account,
+        new Contact
       ],
       transitions: [
         new Wipe
@@ -143,7 +147,13 @@ class Application {
     $(video).closest('.js-video').addClass('is-playing-video')
   }  
 
-  onBeforeEnter () {
+  onBeforeEnter ( data ) {
+    $(data.next.container)
+      .find('script[type="application/javascript"]')
+      .each((k,v) => {
+        eval(v.innerHTML)
+      })
+    
     this.init()    
   }  
 

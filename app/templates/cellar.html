@@ -1,27 +1,54 @@
 {% extends "/_application" %}
 
 {% block content %}
-<div class="container">
-  <h1>Cellar</h1>
-  
+<div class="m-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-6 col-dk-push-2">
+        <div class="m-page-header__content">
+          <h1>My Cellar</h1>
+          <p class="t-normal">
+            Your curated selection of coveted products. Save them for later or request to purchase from your Private Advisor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">     
   {% set items = craft.cellar.fetch(currentUser.id) %}  
   {% set productIds = items | map(i => i.product_id) %}
   {% set products = craft.entries.section('products').id(productIds) %}
   
   <div class="m-cellar">
-    <div class="c-cellar-items">
+    <div class="c-cellar-items js-cellar-items {% if products | length == 0 %}is-empty{% endif %}">
+      <div class="m-cellar__empty">
+        <div class="row">
+          <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-6 col-dk-push-2">
+            <p>There are no items in your Cellar.</p>
+          </div>
+        </div>
+      </div>
+      
       {% for product in products %}
       {% set item = items | filter(i => i.product_id == product.id ) | first %}
       <div class="c-cellar-item js-item {% if item.request_purchase %}is-requested{% endif %}">
         <div class="row">
           <div class="col-mb-12 col-tb-6 col-dk-4">
-            {% include '/partials/_image' with {
-              'image': product.image.one()
-            }%}
+            <div class="c-cellar-item__image">
+              <a href="{{ product.url }}">
+                {% include '/partials/_image' with {
+                'image': product.image.one()
+                }%}
+              </a>
+            </div>
           </div>
           <div class="col-mb-12 col-tb-6 col-dk-8">
             <div class="c-cellar-item__brand">{{ product.brand.one().title }}</div>
-            <h3 class="c-cellar-item__title">{{ product.title }}</h3>
+            <h3 class="c-cellar-item__title">
+              <a href="{{ product.url }}">{{ product.title }}</a>
+            </h3>
             <div class="c-cellar-item__excerpt">
               <div class="rte">
                 <p>{{ product.excerpt }}</p>
@@ -33,7 +60,9 @@
             
             <div class="c-cellar-item__actions">
               <div class="c-cellar-item__request">
-                <button class="o-button o-button--secondary">
+                <button
+                   class="o-button o-button--secondary js-request-purchase"
+                   data-product-id="{{ product.id }}">
                   Request to Purchase
                 </button>
               </div>

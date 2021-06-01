@@ -1,10 +1,82 @@
 {% extends "/_application" %}
 
 {% block content %}
-<div class="container">
-  <h1>Account</h1>
-  <p>In Development</p>
-  <p>{{ currentUser.id }}</p>
-  <a class="no-pjax" href="{{ logoutUrl }}">Logout</a>
+<div class="m-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-6 col-dk-push-2">
+        <div class="m-page-header__content">
+          <h1>My Account</h1>
+          <a href="{{ logoutUrl }}" class="m-account__logout no-pjax">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-account">
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-dk-10 col-dk-push-1 col-xl-8 col-xl-push-2">
+        <div class="row">
+          <div class="col-tb-6">
+            <h2>Personal Information</h2>
+            <form id="update-account" class="c-form js-form" method="post">
+              {{ csrfInput() }}
+              {{ actionInput('users/save-user') }}
+              <input type="hidden" name="userId" value="{{ currentUser.id }}" />
+
+              <div class="c-form__errors js-errors"></div>
+              <div class="c-form__message js-message"></div>
+              
+              <div class="c-form__group">
+                <label>Email</label>
+                <input type="text" name="email" value="{{ currentUser.email }}" disabled />
+              </div>
+              <div class="c-form__group">
+                <label>First Name</label>
+                <input type="text" name="firstName" value="{{ currentUser.firstName }}" />
+              </div>
+              <div class="c-form__group">
+                <label>Last Name</label>
+                <input type="text" name="lastName" value="{{ currentUser.lastName }}" />
+              </div>
+              <div class="c-form__group">
+                <label>Phone</label>
+                <input type="text" name="fields[phone]" value="{{ currentUser.phone }}" />
+              </div>
+              <div class="c-form__actions">
+                <button class="o-button o-button--primary">Update</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-tb-6">
+            <h2>Reset Your Password</h2>
+            <form id="reset-password" class="c-form js-form" method="post">
+              {{ csrfInput() }}
+              {{ actionInput('users/save-user') }}
+              <input type="hidden" name="userId" value="{{ currentUser.id }}" />
+
+              <div class="c-form__errors js-errors"></div>
+              <div class="c-form__message js-message"></div>
+              
+              <div class="c-form__group">
+                <label>Current Password</label>
+                <input type="password" name="currentPassword" />
+              </div>
+              <div class="c-form__group">
+                <label>New Password</label>
+                <input type="text" name="newPassword" />
+              </div>
+              <div class="c-form__actions">
+                <button class="o-button o-button--primary">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}

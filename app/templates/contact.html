@@ -1,0 +1,73 @@
+{% extends "/_application" %}
+
+{% block content %}
+<div class="m-page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-6 col-dk-push-2">
+        <div class="m-page-header__content">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="m-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-7 col-dk-push-2">
+        <h2>My Advisor</h2>
+        
+        {% set pcm = currentUser.privateClientManager.one() %}
+        
+        <div class="c-pcm-summary">
+          <div class="c-pcm-summary__avatar">
+            <img src="{{ pcm.photo.url }}" />
+          </div>
+          <div class="c-pcm-summary__info">
+            <div class="c-pcm-summary__name">
+              {{ pcm.firstName }} {{ pcm.lastName }}
+            </div>
+            <div class="c-pcm-summary__email">
+              <a class="no-pjax" href="mailto:{{ pcm.email }}">{{ pcm.email }}</a>
+            </div>
+            {% if pcm.phone %}
+            <div class="c-pcm-summary__phone">
+              <a class="no-pjax" href="tel:{{ pcm.phone }}">{{ pcm.phone }}</a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <form class="c-form js-form" method="post" accept-charset="UTF-8">
+          {{ csrfInput() }}
+          {{ actionInput('contact-form/send') }}
+          <input type="hidden" name="fromEmail" value="{{ currentUser.email }}" />
+          <input type="hidden" name="message[First Name]" value="{{ currentUser.firstName }}">
+          <input type="hidden" name="message[Last Name]" value="{{ currentUser.lastName }}">
+          <input type="hidden" name="message[Phone]" value="{{ currentUser.phone }}">
+          <input type="hidden" name="toEmail" value="{{ pcm.email | hash }}" />
+         
+          
+          
+          <div class="c-form__errors js-errors"></div>
+          <div class="c-form__message js-message"></div>
+          
+          <div class="c-form__group">
+            <label>Subject</label>
+            <input type="text" name="subject" />
+          </div>
+          <div class="c-form__group">
+            <label>Message</label>
+            <textarea name="message[body]" rows="5"></textarea>
+          </div>        
+          <div class="c-form__actions">
+            <button class="o-button o-button--primary">Send</button>
+          </div>
+        </form>         
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

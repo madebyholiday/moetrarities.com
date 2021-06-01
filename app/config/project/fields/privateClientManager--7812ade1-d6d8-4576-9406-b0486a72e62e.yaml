@@ -1,18 +1,18 @@
 contentColumnType: string
 fieldGroup: 2c323421-38b1-4c3a-a8de-f758dfba032f # Common
-handle: privateClients
+handle: privateClientManager
 instructions: ''
-name: 'Private Clients'
+name: 'Private Client Manager'
 searchable: false
 settings:
   allowSelfRelations: false
-  limit: ''
+  limit: '1'
   localizeRelations: false
-  selectionLabel: 'Add a client'
-  showSiteMenu: false
+  selectionLabel: 'Add a client manager'
+  showSiteMenu: true
   source: null
   sources:
-    - 'group:5353754a-7fa0-42d4-a51a-befd6e2f70de' # Private Clients
+    - 'group:da8682f2-1ea6-4e2b-9990-d28c2d0df716' # Private Client Managers
   targetSiteId: null
   validateRelatedElements: false
   viewMode: null

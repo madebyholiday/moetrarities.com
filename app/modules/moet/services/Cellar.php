@@ -31,10 +31,10 @@ class Cellar extends Component
 
     public function delete ( $itemId, $userId )
     {
-        $item = CellarItem::find($itemId)
+        $item = CellarItem::find()
             ->where([
-                'id' => $itemId,
-                'user_id' => $userId
+              'id' => $itemId,
+              'user_id' => $userId
             ])->one();
         
         if ( $item && $item->delete() > 0) {
@@ -44,15 +44,15 @@ class Cellar extends Component
         }
     }
 
-    public function requestPurchase ( $itemId, $userId )
+    public function requestPurchase ( $productId, $userId )
     {
-        $item = CellarItem::find($itemId)
+        $item = CellarItem::find()
             ->where([
-                'id' => $itemId,
+                'product_id' => $productId,
                 'user_id' => $userId
             ])->one();
 
-        $item->purchase_request = true;
+        $item->request_purchase = true;
 
         return $item->save();
     }

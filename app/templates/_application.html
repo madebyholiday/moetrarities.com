@@ -25,7 +25,7 @@
     {%- elseif category is defined -%}
       page-category-{{ category.group | kebab }}  
     {%- else -%}
-      page-404 
+      page-{{ craft.app.request.segments | last | kebab }}  
     {%- endif -%}
   {% if (entry is defined and entry.type == 'home') or
         (entry is defined and entry.type == 'brand') or

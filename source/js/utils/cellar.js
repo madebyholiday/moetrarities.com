@@ -14,6 +14,16 @@ export const addItem = ( productId, requestPurchase=false ) => {
   )
 }
 
+export const requestPurchase = ( productId ) => {
+  return Promise.resolve(
+    $.ajax({
+      url: '/actions/moet/cellar/request-purchase',
+      type: 'POST',
+      data: { productId }
+    })
+  )
+}
+
 export const deleteItem = ( itemId ) => {
   return Promise.resolve(
     $.ajax({

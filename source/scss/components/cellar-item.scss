@@ -1,5 +1,37 @@
+.c-cellar-item {
+  margin: 0 0 40px 0;
+  
+  &.is-loading {
+    opacity: .5;
+    pointer-events: none;
+  }
+}
+
+.c-cellar-item__brand {
+  @extend .t-h6;
+  margin: 0 0 20px 0;
+}
+
+.c-cellar-item__title {
+  @extend .t-h2;
+  margin: 0 0 30px 0;
+}
+
+.c-cellar-item__image {
+  margin: 0 0 30px 0;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+}
+
+.c-cellar-item__actions {
+  margin: 30px 0;
+}
+
 .c-cellar-item__request {
   display: block;
+  margin: 0 0 20px 0;
 
   .c-cellar-item.is-requested & {
     display: none;
@@ -7,9 +39,36 @@
 }
 
 .c-cellar-item__requested-message {
+  @extend .t-normal;
   display: none;
+  font-weight: 500;
+  align-items: flex-start;
+  margin: 0 0 20px 0;
+
+  span {
+    display: inline-block;    
+  }
+  
+  span[class*=icon] {
+    font-size: 20px;
+    margin: 0 5px 0 0;    
+  }
 
   .c-cellar-item.is-requested & {
-    display: block;
+    display: flex;
   }  
+}
+
+.c-cellar-item__remove {
+  @extend .t-small-caps;
+  color: $color-gray;
+}
+
+.m-cellar__empty {
+  display: none;
+  @extend .t-normal;
+
+  .is-empty & {
+    display: block;
+  }
 }
