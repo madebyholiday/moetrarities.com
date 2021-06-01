@@ -6,19 +6,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 9b19314d-ab73-4751-a481-4653a510e2d5 # Raw Images
-            instructions: ''
-            label: Images
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Images
-        sortOrder: 1
-      -
-        elements:
-          -
             fieldUid: 6a195cfb-9bdd-4b9c-9c29-f238997bff25 # Eyebrow
             instructions: null
             label: null
@@ -55,6 +42,19 @@ fieldLayouts:
             warning: null
             width: 100
         name: Text
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 9b19314d-ab73-4751-a481-4653a510e2d5 # Raw Images
+            instructions: ''
+            label: Images
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
         sortOrder: 2
       -
         elements:

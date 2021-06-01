@@ -6,19 +6,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 9b19314d-ab73-4751-a481-4653a510e2d5 # Raw Images
-            instructions: ''
-            label: Images
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: Images
-        sortOrder: 1
-      -
-        elements:
-          -
             fieldUid: b4704f34-c3e9-4bdf-8ff3-b4eb73cdcce1 # Excerpt
             instructions: ''
             label: Body
@@ -37,6 +24,19 @@ fieldLayouts:
             warning: null
             width: 100
         name: Text
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 9b19314d-ab73-4751-a481-4653a510e2d5 # Raw Images
+            instructions: ''
+            label: Images
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Images
         sortOrder: 2
       -
         elements:
@@ -53,7 +53,7 @@ fieldLayouts:
             fieldUid: cc646fda-a838-4ede-ae03-065f3918d03c # Left / Right - Select
             instructions: ''
             label: 'Text Position'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
