@@ -17,7 +17,7 @@
 </div>
 
 <div class="container">     
-  {% set items = craft.cellar.fetch(currentUser.id) %}  
+  {% set items = craft.cellar.fetch(currentUser.id) %}
   {% set productIds = items | map(i => i.product_id) %}
   {% set products = craft.entries.section('products').id(productIds).all() %}
   

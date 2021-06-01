@@ -59,7 +59,7 @@ fieldLayouts:
             width: 100
           -
             fieldUid: 5a3762c3-bdd5-4e14-9b14-254a7c6ee23e # Image Gallery
-            instructions: 'Images display at 3:2 on desktop'
+            instructions: "Images display at 3:2 on desktop\r\nImages display at 2:3 on mobile"
             label: ''
             required: ''
             tip: null

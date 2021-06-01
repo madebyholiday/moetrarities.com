@@ -1,0 +1,123 @@
+.c-pcm-message {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  max-width: 400px;
+  pointer-events: none;
+
+  @include breakpoint(tablet) {
+    right: 50px;
+  }
+}
+
+.o-pcm-message-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $color-rhino;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  font-size: 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.15);
+  z-index: $z-index-7;
+  pointer-events: all;
+  
+  span:nth-child(1) {
+    display: block;
+    
+    .c-pcm-message.is-open & {
+      display: none;      
+    }
+  }
+
+  span:nth-child(2) {
+    display: none;
+    font-size: 16px;
+    
+    .c-pcm-message.is-open & {
+      display: block;
+    }
+  }
+}
+
+.c-pcm-message-form-wrapper {
+  margin: 0 0 30px 0;
+  background-color: $color-rhino;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.15);
+  z-index: $z-index-7;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: all;
+  transform: translateY(20px);
+  transition:
+    opacity 200ms ease,
+    visibility 200ms ease,
+    transform 200ms ease 200ms;
+
+  .c-pcm-message.is-open & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    
+    transition:
+      opacity 300ms ease,
+      visibility 300ms ease,
+      transform 300ms ease;
+  }
+}
+
+.c-pcm-message-form__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-white;
+  background-color: $color-rhino;
+  padding: 30px;
+
+  @include breakpoint(tablet) {
+    padding: 30px 50px;
+  }
+}
+
+.c-pcm-message-form__name {
+  @extend .t-normal;
+  font-weight: 500;
+}
+
+.c-pcm-message-form__question {
+  @extend .t-normal;
+  margin: 0;
+}
+
+.c-pcm-message-form__avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: solid 3px $color-white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.15);
+  margin: 0 0 10px 0;
+  
+  img {
+    @include fill(absolute);
+    object-fit: cover;    
+  }
+}
+
+.c-pcm-message-form__body {
+  color: $color-black;
+  background-color: $color-spring-wood;
+  padding: 10px 30px 30px 30px;
+
+  @include breakpoint(tablet) {
+    
+  }
+}
+
