@@ -2,6 +2,15 @@ tabs:
   -
     elements:
       -
+        fieldUid: 99f92f86-a977-4d67-aefd-17c5a60d5e52 # Address
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 50
+      -
         fieldUid: 3f7c64ea-5c54-49fa-9321-1ef66f2fe27b # Phone
         instructions: null
         label: null
@@ -9,7 +18,7 @@ tabs:
         tip: null
         type: craft\fieldlayoutelements\CustomField
         warning: null
-        width: 25
+        width: 50
     name: Contact
     sortOrder: 1
   -
