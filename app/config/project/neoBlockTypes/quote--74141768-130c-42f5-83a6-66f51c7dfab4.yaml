@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 4a186240-4cb8-4774-8782-4e0d96e7e0d2 # Page Modules
 fieldLayouts:
   919d7140-dcf3-492c-b844-4fdf1a389b4b:
@@ -30,5 +30,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: Quote
-sortOrder: 5
+sortOrder: 4
 topLevel: true

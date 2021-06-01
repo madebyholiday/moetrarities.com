@@ -26,6 +26,24 @@
   }
 }
 
+.o-button--secondary {
+  font-family: 'Gotham';
+  font-size: 12px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 500;
+  color: $color-white;
+  background-color: $color-rhino;
+  padding: 15px;
+  border-radius: 3px;
+  transition: background-color 250ms ease;
+
+  &:hover {
+    background-color: darken($color-rhino, 10%);
+  }
+}
+
 .o-button--icon {
   display: inline-flex;
   align-items: center;

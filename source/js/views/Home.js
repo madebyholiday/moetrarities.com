@@ -111,7 +111,7 @@ class Home {
   }
 
   afterLeave ( data ) {
-
+    this.$window.off('resize', this.onWindowResize)
   }
 
   setCanvasDims () {

@@ -1,0 +1,15 @@
+.c-cellar-item__request {
+  display: block;
+
+  .c-cellar-item.is-requested & {
+    display: none;
+  }  
+}
+
+.c-cellar-item__requested-message {
+  display: none;
+
+  .c-cellar-item.is-requested & {
+    display: block;
+  }  
+}

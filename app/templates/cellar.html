@@ -3,6 +3,55 @@
 {% block content %}
 <div class="container">
   <h1>Cellar</h1>
-  <p>In Development</p>
+  
+  {% set items = craft.cellar.fetch(currentUser.id) %}  
+  {% set productIds = items | map(i => i.product_id) %}
+  {% set products = craft.entries.section('products').id(productIds) %}
+  
+  <div class="m-cellar">
+    <div class="c-cellar-items">
+      {% for product in products %}
+      {% set item = items | filter(i => i.product_id == product.id ) | first %}
+      <div class="c-cellar-item js-item {% if item.request_purchase %}is-requested{% endif %}">
+        <div class="row">
+          <div class="col-mb-12 col-tb-6 col-dk-4">
+            {% include '/partials/_image' with {
+              'image': product.image.one()
+            }%}
+          </div>
+          <div class="col-mb-12 col-tb-6 col-dk-8">
+            <div class="c-cellar-item__brand">{{ product.brand.one().title }}</div>
+            <h3 class="c-cellar-item__title">{{ product.title }}</h3>
+            <div class="c-cellar-item__excerpt">
+              <div class="rte">
+                <p>{{ product.excerpt }}</p>
+              </div>
+            </div>
+            <div class="c-product-price">
+              Suggested Retail Price: {{ product.price | currency(stripZeros=true) }} ({{ product.size }})
+            </div>
+            
+            <div class="c-cellar-item__actions">
+              <div class="c-cellar-item__request">
+                <button class="o-button o-button--secondary">
+                  Request to Purchase
+                </button>
+              </div>
+
+              <p class="c-cellar-item__requested-message">
+                <span class="icon-chat"></span>
+                <span>Your personal representative has received your request.</span>
+              </p>
+
+              <button
+                class="c-cellar-item__remove js-remove"
+                data-item-id="{{ item.id }}">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 {% endblock %}

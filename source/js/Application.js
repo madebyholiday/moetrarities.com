@@ -26,6 +26,7 @@ import Wipe from 'transitions/Wipe'
 import Home from 'views/Home'
 import Product from 'views/Product'
 import Login from 'views/Login'
+import Cellar from 'views/Cellar'
 
 class Application {
   constructor () {
@@ -61,7 +62,7 @@ class Application {
     this.$body = $('body')
     this.$body.on('lazyloaded', this.onBodyLazyloaded)
 
-    this.pageLoader = new PageLoader
+    this.pageLoader = new PageLoader    
     
     barba.hooks.beforeEnter(this.onBeforeEnter)
     barba.hooks.leave(this.onLeave)   
@@ -69,6 +70,8 @@ class Application {
     
     barba.init({
       timeout: 10000,
+      cacheIgnore: ['/cellar', '/account'],
+      prefetchIgnore: true,
       debug: process.env.NODE_ENV !== 'production',
       prevent: ({ el }) => {
         let $el = $(el)
@@ -81,7 +84,8 @@ class Application {
       views: [
         new Home,
         new Product,
-        new Login
+        new Login,
+        new Cellar
       ],
       transitions: [
         new Wipe

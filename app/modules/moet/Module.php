@@ -2,20 +2,25 @@
 namespace moet;
 
 use Craft;
+use craft\web\twig\variables\CraftVariable;
+use yii\base\Event;
+use moet\services\Cellar;
 
 class Module extends \yii\base\Module
 {
   public function init()
   {        
-    /* if ( Craft::$app->getRequest()->getPathInfo() === 'fuck' ) {
-
-     * } else {
-     *   Craft::$app->getResponse()->redirect('/fuck')->send();
-     *   die();
-     * }*/
-    
     parent::init();
 
-    // Custom initialization code goes here...
+    Event::on(CraftVariable::class, CraftVariable::EVENT_INIT, function(Event $e) {
+      /** @var CraftVariable $variable */
+      $variable = $e->sender;
+           
+      $variable->set('cellar', Cellar::class);
+    });
+    
+    $this->setComponents([
+        'cellar' => \moet\services\Cellar::class,
+    ]);
   }
 }

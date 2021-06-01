@@ -1,4 +1,4 @@
-childBlocks: ''
+childBlocks: null
 field: 4a186240-4cb8-4774-8782-4e0d96e7e0d2 # Page Modules
 fieldLayouts:
   17406d13-9397-4faf-8635-52185c898b61:
@@ -86,5 +86,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Media + Text'
-sortOrder: 3
+sortOrder: 2
 topLevel: true

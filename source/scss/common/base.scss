@@ -58,8 +58,19 @@ body {
   }
 }
 
-main {
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - #{$header-height-mobile});
+
+  @include breakpoint(desktop) {
+    min-height: calc(100vh - #{$header-height-desktop + $header-eyebrow-height-desktop});
+  }
+}
+
+.c-main {
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 

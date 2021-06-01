@@ -4,6 +4,10 @@ import {
   isDesktop
 } from 'utils/media'
 
+import {
+  fetchItems
+} from 'utils/cellar'
+
 class Header {
   constructor () {
     this.$el = $('.js-header')
@@ -12,17 +16,20 @@ class Header {
     this.$body = $('body')
     this.$mobileMenu = this.$el.find('.js-mobile-menu');
     this.$menuToggle = this.$el.find('.js-menu-toggle')
+    this.$cellarCount = $('.js-cellar-count')
 
     this.onMobileMenuItemHasLinkListsClick = this.onMobileMenuItemHasLinkListsClick.bind(this)
     this.onMenuToggleClick = this.onMenuToggleClick.bind(this)
     this.onNavPrimaryItemClick = this.onNavPrimaryItemClick.bind(this)
     this.onMouseleave = this.onMouseleave.bind(this)
     this.onDocumentClick = this.onDocumentClick.bind(this)
-    this.onWindowResize = this.onWindowResize.bind(this)    
+    this.onWindowResize = this.onWindowResize.bind(this)
+    this.onWindowCellarUpdated = this.onWindowCellarUpdated.bind(this)
 
     this.$menuToggle.on('click', this.onMenuToggleClick)
     this.$document.on('click', this.onDocumentClick)
     this.$window.on('resize', this.onWindowResize);
+    this.$window.on('cellar_updated', this.onWindowCellarUpdated)
     
     this.$mobileMenu
         .find('.js-has-link-lists > a')
@@ -30,12 +37,14 @@ class Header {
     
     this.$el.on('mouseleave', this.onMouseleave)
     this.$el.find('.js-nav-primary-item > a').on('click', this.onNavPrimaryItemClick)
-    
+
+    this.fetchCellar()
   }
 
   destroy () {
     this.$document.off('click', this.onDocumentClick)
-    this.$window.off('resize', this.onWindowResize);    
+    this.$window.off('resize', this.onWindowResize);
+    this.$window.off('cellar_updated', this.onWindowCellarUpdated)
   }
 
   openMobileMenu () {
@@ -109,6 +118,12 @@ class Header {
     })
   }
 
+  fetchCellar () {
+    fetchItems().then(data => {
+      this.$cellarCount.html(data.length)
+    })
+  }
+
   onMenuToggleClick () {
     if ( this.$body.hasClass('is-menu-open') ) {
       this.closeMobileMenu()
@@ -151,6 +166,10 @@ class Header {
   onWindowResize () {
     if ( isDesktop() && this.$body.hasClass('is-menu-open') )
       this.closeMobileMenu()
+  }
+
+  onWindowCellarUpdated () {
+    this.fetchCellar()
   }
 
   onDocumentClick ( e ) {
