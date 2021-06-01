@@ -5,8 +5,9 @@
   position: fixed;
   right: 30px;
   bottom: 50px;
-  max-width: 400px;
+  max-width: 350px;
   pointer-events: none;
+  z-index: $z-index-7;
 
   @include breakpoint(tablet) {
     right: 50px;
@@ -25,7 +26,6 @@
   align-self: flex-end;
   font-size: 20px;
   box-shadow: 5px 5px 15px rgba(0,0,0,.15);
-  z-index: $z-index-7;
   pointer-events: all;
   
   span:nth-child(1) {

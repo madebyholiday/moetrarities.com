@@ -342,9 +342,20 @@
     width: 75%;
     bottom: 0;
   }
+
+  body.is-menu-open & {    
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 0;
+    }
+    
+    &:nth-child(2) {
+      width: 100%;
+    }    
+  }
 }
 
-.c-menu-toggle:hover {
+html.notouchy .c-menu-toggle:hover {
   span {
     &:nth-child(2),
     &:nth-child(3) {
@@ -455,6 +466,10 @@
     content: "\e900";
     font-size: 22px;    
   }  
+}
+
+.c-nav-primary ul li.is-open a i:after {
+  content: "\e902";
 }
 
 .c-nav-dropdowns {
