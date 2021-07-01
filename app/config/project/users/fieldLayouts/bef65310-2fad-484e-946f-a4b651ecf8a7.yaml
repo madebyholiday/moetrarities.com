@@ -31,6 +31,10 @@ tabs:
         tip: null
         type: craft\fieldlayoutelements\CustomField
         warning: null
-        width: 100
-    name: Manager
+        width: 50
+      -
+        template: admin/users/_cellar
+        type: craft\fieldlayoutelements\Template
+        width: 50
+    name: Cellar
     sortOrder: 2

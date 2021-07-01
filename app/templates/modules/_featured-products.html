@@ -18,7 +18,7 @@
         </div>
         {% endif %}
 
-        <div class="m-featured-products__products">
+        <div class="m-featured-products__products m-products">
           <div class="row">
             {% for product in module.products.all() %}
               {% if loop.index == 1 and module.normalHeroSelect == 'hero' %}

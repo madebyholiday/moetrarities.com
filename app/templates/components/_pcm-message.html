@@ -1,0 +1,50 @@
+{% set pcm = currentUser.privateClientManager.one() %}
+
+{% if pcm %}
+<div class="c-pcm-message js-pcm-message">
+  <div class="c-pcm-message-form-wrapper">
+    <div class="c-pcm-message-form__header">
+      <div class="c-pcm-message-form__avatar">
+        <img src="{{ pcm.photo.url }}" />
+      </div>
+      <div class="c-pcm-message-form__name">
+        {{ pcm.firstName }} {{ pcm.lastName }}
+      </div>
+      <p class="c-pcm-message-form__question">
+        How can I help?
+      </p>
+    </div>
+    <div class="c-pcm-message-form__body">
+      <form class="c-form js-pcm-message-form" method="post" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        {{ actionInput('contact-form/send') }}
+        <input type="hidden" name="fromEmail" value="{{ currentUser.email }}" />
+        <input type="hidden" name="message[First Name]" value="{{ currentUser.firstName }}">
+        <input type="hidden" name="message[Last Name]" value="{{ currentUser.lastName }}">
+        <input type="hidden" name="message[Phone]" value="{{ currentUser.phone }}">
+        <input type="hidden" name="toEmail" value="{{ pcm.email | hash }}" />
+        
+        <div class="c-form__errors js-errors"></div>
+        <div class="c-form__message js-message"></div>
+        
+        <div class="c-form__group">
+          <label>Subject</label>
+          <input type="text" name="subject" required />
+        </div>
+        <div class="c-form__group">
+          <label>Message</label>
+          <textarea name="message[body]" rows="3" required></textarea>
+        </div>        
+        <div class="c-form__actions">
+          <button class="o-button o-button--primary">Send a message</button>
+        </div>
+      </form>         
+    </div>
+  </div>
+  
+  <button class="o-pcm-message-toggle js-pcm-message-toggle">
+    <span class="icon-chat"></span>
+    <span class="icon-close"></span>
+  </button>
+</div>
+{% endif %}

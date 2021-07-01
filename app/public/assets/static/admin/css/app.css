@@ -75,3 +75,12 @@
 /* ul#alerts { */
 /*   display: none !important; */
 /* } */
+
+.c-cellar-list {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.c-cellar-list li {
+  margin: 0 0 7px 0;
+}

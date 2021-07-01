@@ -16,7 +16,12 @@
 
 .m-brand-summary__logo {
   width: 150px;
+  margin: 0 auto 30px auto;
 
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+  
   @include breakpoint(desktop) {
     width: 200px;
   }
@@ -24,6 +29,11 @@
 
 .m-brand-summary__eyebrow {
   margin: 0 0 40px 0;
+  text-align: center;
+  
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
 }
 
 .m-brand-summary__eyebrow h6 {

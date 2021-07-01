@@ -53,7 +53,7 @@ fieldLayouts:
             fieldUid: cc646fda-a838-4ede-ae03-065f3918d03c # Left / Right - Select
             instructions: ''
             label: 'Text Position'
-            required: ''
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null

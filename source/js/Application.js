@@ -19,6 +19,7 @@ import AnimationManager from 'utils/AnimationManager'
 
 import Header from 'components/Header'
 import Footer from 'components/Footer'
+import PcmMessage from 'components/PcmMessage'
 import PageLoader from 'components/PageLoader'
 
 import Wipe from 'transitions/Wipe'
@@ -106,6 +107,7 @@ class Application {
     this.animationManager = new AnimationManager
     this.header = new Header
     this.footer = new Footer
+    this.pcmMessage = new PcmMessage
             
     this.setScrollRestoration('manual')
     this.playInlineVideos()
@@ -116,7 +118,8 @@ class Application {
   destroy () {
     this.animationManager.destroy()
     this.header.destroy()
-    this.footer.destroy()   
+    this.footer.destroy()
+    this.pcmMessage.destroy()
   }
 
   setScrollRestoration ( type ) {

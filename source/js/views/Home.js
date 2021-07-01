@@ -34,7 +34,7 @@ class Home {
       imgs.push(img)
     })
 
-    let pxPerImg = 35,
+    let pxPerImg = 25,
         pxEndPause = $this.data('pause-duration')   
     
     let scene = new ScrollMagic.Scene({
@@ -90,8 +90,8 @@ class Home {
           let { width, height, x, y } = cover(
             $canvas.width(),
             $canvas.height(),
-            1920,
-            1080
+            4,
+            3
           )
 
           let context = $canvas[0].getContext('2d')

@@ -83,6 +83,8 @@ class Header {
     if ( this.activeDropdownId )
       this.closeDropdown(this.activeDropdownId)
 
+    this.$el.find(`.js-nav-primary-item[data-id="${id}"]`).addClass('is-open')
+    
     if ( this.activeDropdownId === id )
       return
     
@@ -106,6 +108,8 @@ class Header {
   
   closeDropdown ( id ) {
     let $dropdown = $(`.js-nav-dropdown[data-id="${id}"]`)
+
+    this.$el.find(`.js-nav-primary-item[data-id="${id}"]`).removeClass('is-open')
     
     if ( this.dropdownTl )
       this.dropdownTl.kill()

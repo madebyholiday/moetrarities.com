@@ -33,4 +33,6 @@
   @extend .t-small-caps;
 }  
 
-
+.c-tabs__items {
+  user-select: auto !important; 
+}

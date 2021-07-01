@@ -1,0 +1,23 @@
+<div class="field">
+  {% set items = craft.cellar.fetch(element.id) %}
+  {% set productIds = items | map(i => i.product_id) %}
+  {% set products = craft.entries.section('products').id(productIds).all() %}
+  
+  <div class="heading">
+    <label>Products</label>
+  </div>
+
+  {% if products | length > 0 %}
+  <ul class="c-cellar-list">
+    {% for product in products %}
+    {% set item = items | filter(i => i.product_id == product.id ) | first %}
+    <li>
+      <a href="{{ product.cpEditUrl }}">{{ product.title }}</a>
+      {% if item.request_purchase %}- <a href="mailto:{{ element.email }}?subject=Regarding {{ product.title }}&body={{ product.url }}">Requested</a>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>There are no products in the Cellar.</p>
+  {% endif %}
+</div>
