@@ -31,9 +31,14 @@ class Login {
   }
 
   onFormSubmit ( e ) {
+    e.preventDefault()
+    
     let $form = $(e.currentTarget),
         data = $form.serialize()
 
+    if ( $form.attr('id') == 'sign-in' && !$form.find('input[name="agree"]').is(':checked') )
+      return alert('Please agree to receive Moët Hennessy Private offers')
+    
     $form.addClass('is-loading')
     $form.find('.js-errors').empty()
     $form.find('.js-message').empty()
@@ -70,9 +75,7 @@ class Login {
           }
         }     
       }
-    })
-    
-    e.preventDefault()
+    })    
   }
   
   get namespace () {
