@@ -57,6 +57,7 @@
 }
 
 .c-product-details__add {
+  position: relative;
   margin: 2px 0 0 0;
   
   button {
@@ -82,6 +83,43 @@
         display: block;
       }
     }
+  }
+}
+
+.c-product-details__add-tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) translateY(-10px);
+  font-family: 'Gotham';
+  font-size: 12px;
+  font-weight: 400;
+  background-color: darken($color-pampas, 2%);
+  border-radius: 3px;
+  white-space: nowrap;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 300ms ease,
+    visibility 300ms ease,
+    transform 300ms ease;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: darken($color-pampas, 2%);
+  }
+
+  .c-product-details__add:hover & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-100%) translateY(-15px);
   }
 }
 

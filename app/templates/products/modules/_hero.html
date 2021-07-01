@@ -21,11 +21,14 @@
                 <h2 class="c-product-details__brand">
                   {{ entry.brand.one().title }}
                 </h2>
-                <div class="c-product-details__add">
+                <div class="c-product-details__add">                  
                   <button class="js-add" data-product-id="{{ entry.id }}">
                     <span class="icon-star-empty"></span>
                     <span class="icon-star-full"></span>
                   </button>
+                  <div class="c-product-details__add-tooltip">
+                    Add to your Cellar
+                  </div>
                 </div>
               </div>
               <h1 class="c-product-details__title">{{ entry.title }}</h1>
