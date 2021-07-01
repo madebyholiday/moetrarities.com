@@ -105,6 +105,10 @@
     visibility 300ms ease,
     transform 300ms ease;
 
+  html.touchy & {
+    display: none;
+  }
+  
   &:after {
     position: absolute;
     bottom: 0;
