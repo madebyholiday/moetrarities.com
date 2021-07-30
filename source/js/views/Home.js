@@ -112,7 +112,8 @@ class Home {
       triggerElement: element,
       duration: (imgs.length * pxPerImg)
     }).on('enter', e => {      
-      this.setCanvasDims()      
+      this.setCanvasDims()
+      $this.css('zIndex', 10)
     }).on('progress', e => {
       let index = Math.floor(e.progress * imgs.length),
           img = imgs[index]
@@ -144,6 +145,8 @@ class Home {
             height * devicePixelRatio
           )       
         })      
+    }).on('leave', e => {
+      $this.css('zIndex', 1)
     }).setPin(element).addTo(this.controller)    
   }
 
@@ -208,7 +211,8 @@ class Home {
       triggerElement: element,
       duration: (imgs.length * pxPerImg)
     }).on('enter', e => {      
-      this.setCanvasDims()      
+      this.setCanvasDims()
+      $this.css('zIndex', 10)
     }).on('progress', e => {
       let index = Math.floor(e.progress * imgs.length),
           img = imgs[index]
@@ -240,6 +244,8 @@ class Home {
             height * devicePixelRatio
           )       
         })      
+    }).on('leave', e => {
+      $this.css('zIndex', 1)
     }).setPin(element).addTo(this.controller)    
   }
   
@@ -275,6 +281,7 @@ class Home {
       duration: (imgs.length * pxPerImg)
     }).on('enter', e => {            
       this.setCanvasDims()
+      $this.css('zIndex', 10)
     }).on('progress', e => {
       let index = Math.floor(e.progress * imgs.length),
           img = imgs[index]
@@ -306,6 +313,8 @@ class Home {
             height * devicePixelRatio
           )       
         })      
+    }).on('leave', e => {
+      $this.css('zIndex', 1)
     }).setPin(element).addTo(this.controller)    
   }
 
@@ -387,9 +396,11 @@ class Home {
       triggerElement: element,
       duration: window.innerHeight
     }).on('enter', e => {
-      
+      $this.css('zIndex', 10)      
     }).on('progress', e => {
       tl.progress(Math.round(e.progress * 100) / 100)                 
+    }).on('leave', e => {
+      $this.css('zIndex', 1)
     }).setPin(element).addTo(this.controller)        
   }
 

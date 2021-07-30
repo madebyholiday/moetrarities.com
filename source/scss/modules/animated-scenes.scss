@@ -1,6 +1,15 @@
 .m-animated-scenes {
   min-height: 100vh;
   margin-bottom: 50vh;
+  transition: opacity 100ms ease;
+
+  body.is-navigating & {
+    opacity: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .c-animated-scene {
