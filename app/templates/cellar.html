@@ -1,20 +1,7 @@
 {% extends "/_application" %}
 
 {% block content %}
-<div class="m-page-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-mb-12 col-tb-10 col-tb-push-1 col-dk-6 col-dk-push-2">
-        <div class="m-page-header__content">
-          <h1>My Cellar</h1>
-          <p class="t-normal">
-            Your curated selection of coveted products. Save them for later or request to purchase from your Private Advisor.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+{% include '/modules/_page-hero' %}
 
 <div class="container">     
   {% set items = craft.cellar.fetch(currentUser.id) %}
