@@ -4,7 +4,13 @@
 <div class="m-animated-scenes js-animated-scenes">
   {% for scene in entry.animatedScenes.all() %}
   <div class="c-animated-scene js-animated-scene"
+       data-type="{{ scene.type }}"
+       {% if scene.rawImages is not null %}
+       data-preload="{{ scene.rawImages.all() | map(i => i.url) | json_encode }}"
+       data-preload-mobile="{{ scene.rawImagesMobile.all() | map(i => i.url) | json_encode }}"
        data-images="{{ scene.rawImages.all() | map(i => i.url) | json_encode }}"
+       data-images-mobile="{{ scene.rawImagesMobile.all() | map(i => i.url) | json_encode }}"
+       {% endif %}
        data-pause-duration="{{ scene.pixels }}">
     {% if scene.type == 'productIntro' or
           scene.type == 'productDetail' %}
@@ -26,8 +32,23 @@
         </a>
       </div>
     </div>
-    {% endif %}
-    
+    {% elseif scene.type == 'quote' %}
+    <div class="c-animated-scene-overlay c-animated-scene-overlay--center">
+      <div class="c-animated-scene-overlay__text js-text">
+        <blockquote>
+          <p>{{ scene.quote }}</p>
+          <cite>{{ scene.attribution }}</cite>
+        </blockquote>        
+      </div>
+    </div>
+    {% elseif scene.type == 'text' %}
+    <div class="c-animated-scene-overlay c-animated-scene-overlay--center">
+      <div class="c-animated-scene-overlay__text js-text">
+        <h2>{{ scene.entityTitle }}</h2>
+        <div class="rte">{{ scene.body }}</div>
+      </div>
+    </div>
+    {% endif %}    
     <canvas class="js-canvas"></canvas>
   </div>
   {% endfor %}

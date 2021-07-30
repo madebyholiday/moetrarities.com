@@ -1,6 +1,39 @@
 .c-page-loader {
   @include fill(fixed);
-  background-color: $color-white;
+  background-color: $color-black;
   z-index: $z-index-9;
   pointer-events: none;
+}
+
+.c-page-loader__content {
+  width: 300px;
+  @include center(absolute);
+}
+
+.c-page-loader__logo {
+  margin: 0 auto;
+  width: 250px;
+  
+  @include breakpoint(tablet) {
+    width: 275px;    
+  }
+}
+
+.c-page-loader-progress {
+  margin: 40px auto 0 auto;
+  background-color: $color-dkgray;
+  height: 3px;
+  width: 275px;
+  border-radius: 5px;
+
+  @include breakpoint(tablet) {
+    width: 300px;
+  }
+}
+
+.c-page-loader-progress__current {
+  height: 100%;
+  width: 0;
+  background-color: $color-white;
+  border-radius: 5px;
 }

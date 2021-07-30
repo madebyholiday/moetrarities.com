@@ -116,6 +116,7 @@ select:-webkit-autofill:focus {
       display: inline-block;
       width: 14px;
       height: 14px;
+      flex: 0 0 14px;
       border: solid 1px $color-white;
       margin: 0 10px 0 0;
       vertical-align: middle;

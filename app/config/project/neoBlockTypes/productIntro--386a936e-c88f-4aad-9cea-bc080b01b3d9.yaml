@@ -14,6 +14,15 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: d8cb790f-1501-4525-877f-d8af104c51b2 # Raw Images - Mobile
+            instructions: ''
+            label: 'Image - Mobile'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Images
         sortOrder: 1
       -
@@ -83,5 +92,5 @@ maxBlocks: 0
 maxChildBlocks: 0
 maxSiblingBlocks: 0
 name: 'Product Intro'
-sortOrder: 2
+sortOrder: 3
 topLevel: true
