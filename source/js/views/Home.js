@@ -19,7 +19,7 @@ class Home {
     this.onWindowWillreveal = this.onWindowWillreveal.bind(this)
     
     this.controller = new ScrollMagic.Controller({
-      addIndicators: true
+//      addIndicators: true
     })
 
     this.$window.on('resize', this.onWindowResize)
