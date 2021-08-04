@@ -8,8 +8,7 @@ class Login {
     this.onFormSubmit = this.onFormSubmit.bind(this)
 
     this.$formToggle.on('click', this.onFormToggleClick)
-    this.$form.on('submit', this.onFormSubmit)
-    
+    this.$form.on('submit', this.onFormSubmit) 
   }
 
   afterLeave ( data ) {

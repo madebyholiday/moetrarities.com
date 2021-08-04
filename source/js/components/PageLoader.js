@@ -25,6 +25,8 @@ class PageLoader {
     preloader.onprogress = this.onPreloadProgress
 
     this.preload().then(() => {
+      this.$current.width(`100%`)
+      
       this.tl = gsap.timeline({
         onUpdate: () => {
           if ( this.tl.progress() >= .2 && !this.triggeredWillReveal ) {
