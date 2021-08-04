@@ -58,7 +58,7 @@ class Home {
         $text = $this.find('.js-text'),
         $canvas = $this.find('.js-canvas')
 
-    let pxPerImg = 50,
+    let pxPerImg = 25,
         imgs = [],
         tl
 
@@ -67,6 +67,10 @@ class Home {
       img.src = v
       imgs.push(img)
     })
+
+    for (let i=0; i<75; i++) {
+      imgs.push(imgs[imgs.length - 1])
+    }
 
     tl = gsap.timeline({ paused: true })
     
@@ -96,21 +100,23 @@ class Home {
     }, {
       autoAlpha: 0,
       y: -30,
-      ease: 'power4.in'
-    })
+      ease: 'power4.inOut'
+    }, 'out')
     
     tl.fromTo($canvas, 1, {
       autoAlpha: 1
     }, {
-      autoAlpha: 0
+      autoAlpha: 0,
+      ease: 'power4.inOut'
     }, 'out')
 
     tl.progress(1)
-    
+
+    let duration = (imgs.length * pxPerImg)
     let scene = new ScrollMagic.Scene({
       triggerHook: 0,
       triggerElement: element,
-      duration: (imgs.length * pxPerImg)
+      duration
     }).on('enter', e => {      
       this.setCanvasDims()
       $this.css('zIndex', 10)
@@ -176,16 +182,16 @@ class Home {
       autoAlpha: 1
     }, 'in')
 
-    tl.fromTo($text, 2, {
+    tl.fromTo($text, 1, {
       autoAlpha: 0,
       y: 30
     }, {
       autoAlpha: 1,
-      delay: 4,
+      delay: 1,
       y: 0
     })
 
-    tl.fromTo($text, 3, {
+    tl.fromTo($text, 4, {
       autoAlpha: 1
     }, {
       autoAlpha: 1
@@ -365,6 +371,18 @@ class Home {
 
     let tl = gsap.timeline({ paused: true })
 
+    if ( index === 0 )
+      gsap.fromTo($text.find('h2,.rte > *'), 2, {
+        y: 40,
+        autoAlpha: 0,        
+      }, {
+        y: 0,
+        autoAlpha: 1,
+        stagger: .15,
+        delay: 1.5,
+        ease: 'power4.out'
+      })
+    
     if ( index !== 0 )
       tl.fromTo($text, 1.5, {
         autoAlpha: 0,
