@@ -12,11 +12,14 @@ class Home {
     this.$window = $(window)
     this.$animatedScenes = $('.js-animated-scenes')
     this.$scenes = $('.js-animated-scene')
+    this.$scrollToExplore = $('a[href="#scroll-to-explore"]')
+    this.$scrollToExplore.css('cursor', 'auto')
     
     this.initScene = this.initScene.bind(this)
     this.onWindowResize = this.onWindowResize.bind(this)
     this.onWindowResizeend = this.onWindowResizeend.bind(this)
     this.onWindowWillreveal = this.onWindowWillreveal.bind(this)
+    this.onScrollToExploreClick = this.onScrollToExploreClick.bind(this)
     
     this.controller = new ScrollMagic.Controller({
 //      addIndicators: true
@@ -25,6 +28,7 @@ class Home {
     this.$window.on('resize', this.onWindowResize)
     this.$window.on('resizeend', this.onWindowResizeend)
     this.$window.on('willreveal', this.onWindowWillreveal)
+    this.$scrollToExplore.on('click', this.onScrollToExploreClick)
   }
 
   initScenes () {
@@ -438,6 +442,10 @@ class Home {
     })
   }
 
+  onScrollToExploreClick ( e ) {
+    e.preventDefault()
+  }
+  
   onWindowWillreveal () {
     this.initScenes()
   }
